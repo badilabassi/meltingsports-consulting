@@ -1,12 +1,10 @@
-import React, {Component, Fragment} from "react"
-import Link from "gatsby-link"
+import React from "react"
 import * as PropTypes from "prop-types"
-import { rhythm } from "../utils/typography"
 import emergence from 'emergence.js'
+
 import 'animate.css/animate.css'
 import "../styles/main.scss"
 
-import Nav from '../components/nav'
 import Header from "../components/Header/Header";
 import HeaderLinks from "../components/Header/HeaderLinks";
 
@@ -14,7 +12,7 @@ const propTypes = {
   children: PropTypes.func.isRequired,
 }
 
-class DefaultLayout extends Component {
+class DefaultLayout extends React.Component {
   componentDidMount() {
     emergence.init()
   }
@@ -25,8 +23,7 @@ class DefaultLayout extends Component {
 
   render() {
     const {
-      location,
-      children, ...rest
+      children
     } = this.props
 
     const dashboardRoutes = [];
@@ -45,7 +42,6 @@ class DefaultLayout extends Component {
             height: 200,
             color: "white"
           }}
-          {...rest}
         />
         {children()}
       </div>

@@ -1,5 +1,5 @@
 import React from "react"
-import Link from "gatsby-link"
+// import Link from "gatsby-link"
 import * as PropTypes from "prop-types"
 import classNames from 'classnames'
 import { rhythm } from "../utils/typography"
@@ -14,7 +14,6 @@ import CardBody from "../components/Card/CardBody.jsx";
 import landingPageStyle from "../jss/material-kit-react/views/landingPage.jsx";
 import Hero from '../components/hero';
 import TeamSection from '../components/team';
-import { Grid } from "material-ui";
 
 const propTypes = {
   data: PropTypes.object.isRequired,
@@ -22,20 +21,18 @@ const propTypes = {
 
 class IndexPage extends React.Component {
   render() {
-    console.log(this.props.data);
-    const {classes} = this.props;
-    const heroEdges = this.props.data.hero.edges
-    const aboutEdges = this.props.data.about.edges
-    const teamEdges = this.props.data.team.edges
-    console.log(teamEdges);
+
+    const {classes, data} = this.props;
+    const heroEdges = data.hero.edges
+    const aboutEdges = data.about.edges
+    const teamEdges = data.team.edges
+
     return (
       <div style={{ marginBottom: rhythm(2) }}>
-        {heroEdges.map(({node}, i) => (
-          <Hero node={node} key={node.id} classes={this.props.classes} />
-        ))}
-         <div id="about" className={classNames(classes.main, classes.mainRaised)}>
+        {heroEdges.map(({node}) => <Hero node={node} key={node.id} classes={this.props.classes} />)}
+         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
-            <GridContainer>
+            <GridContainer id="about">
               {aboutEdges.map(({node}, id) => {
                 const isOdd = id % 2 !== 0
                 return (
@@ -57,6 +54,7 @@ class IndexPage extends React.Component {
             <TeamSection team={teamEdges} />
           </div>
         </div>
+
       </div>
     )
   }
