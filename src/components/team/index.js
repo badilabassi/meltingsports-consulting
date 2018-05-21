@@ -27,7 +27,7 @@ class TeamSection extends React.Component {
     );
     return (
       <div id="team" className={classes.section}>
-        <h2 className={classes.title}>Here is our team</h2>
+        <h2 className={classes.title}>Notre équipe</h2>
         <div>
           <GridContainer>
             {team.map(({node}) => {
@@ -55,7 +55,7 @@ class TeamSection extends React.Component {
                         {summary.summary}
                       </p>
                     </CardBody>
-                    <CardFooter className={classes.justifyCenter}>
+                    {/* <CardFooter className={classes.justifyCenter}>
                       <IconButton color="transparent" className={classes.margin5}>
                         <i className={classes.socials + " fab fa-twitter"} />
                       </IconButton>
@@ -65,7 +65,7 @@ class TeamSection extends React.Component {
                       <IconButton color="transparent" className={classes.margin5}>
                         <i className={classes.socials + " fab fa-facebook"} />
                       </IconButton>
-                    </CardFooter>
+                    </CardFooter> */}
                   </Card>
                 </GridItem>
               )

@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import { rhythm } from "../utils/typography"
 import Img from "gatsby-image"
 import withStyles from "material-ui/styles/withStyles";
+import 'font-awesome/css/font-awesome.min.css'
 
 import GridContainer from "../components/Grid/GridContainer.jsx";
 import GridItem from "../components/Grid/GridItem.jsx";
@@ -14,12 +15,20 @@ import CardBody from "../components/Card/CardBody.jsx";
 import landingPageStyle from "../jss/material-kit-react/views/landingPage.jsx";
 import Hero from '../components/hero';
 import TeamSection from '../components/team';
+import ContactUs from '../components/contact';
+
+import { initGoogleMaps } from '../utils/googleMaps';
 
 const propTypes = {
   data: PropTypes.object.isRequired,
 }
 
 class IndexPage extends React.Component {
+  componentDidMount() {
+    window.initGoogleMaps = initGoogleMaps;
+    initGoogleMaps();
+  }
+
   render() {
 
     const {classes, data} = this.props;
@@ -52,9 +61,15 @@ class IndexPage extends React.Component {
               )})}
             </GridContainer>
             <TeamSection team={teamEdges} />
+            <GridContainer id="services">
+              <GridItem xs={12} sm={12} md={12}>
+                <h2 className={classes.aboutTitle}>Nos Services</h2>
+                <h5 className={classes.aboutDescription}>Pas fini de faire cette section.</h5>
+              </GridItem>
+            </GridContainer>
           </div>
         </div>
-
+        <ContactUs />
       </div>
     )
   }

@@ -3,6 +3,7 @@ import { TypographyStyle } from "react-typography"
 import * as PropTypes from "prop-types"
 import typography from "./utils/typography"
 
+
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
   try {
@@ -49,6 +50,7 @@ class Html extends React.Component {
           <title>Melting Sports | Consulting</title>
           <TypographyStyle typography={typography} />
           {css}
+          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0GE3dFR0orMQ7l8PJKtRU_3p99pgbrmw"></script>
         </head>
         <body>
           <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
