@@ -6,7 +6,7 @@ const ContactUs = () => {
       <div id="contactUs2Map" className="map" />
       <div className="col-md-6">
           <div className="card card-contact card-raised">
-              <form id="contact-form2" netlify>
+              <form id="contact-form2" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                   <div className="card-header card-header-blue text-center">
                       <h4 className="card-title">Nous contacter</h4>
                   </div>
