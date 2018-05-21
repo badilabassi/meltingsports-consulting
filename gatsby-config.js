@@ -9,7 +9,6 @@ module.exports = {
         trackingId: `UA-XXXXXXX-Y`,
       },
     },
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-contentful`,
       options: {
