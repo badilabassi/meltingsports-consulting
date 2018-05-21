@@ -21,7 +21,8 @@ const landingPageStyle = {
     marginTop: "30px",
     minHeight: "32px",
     textDecoration: "none",
-    color: "#222"
+    color: "#222",
+    textAlign: "center"
   },
   aboutDescription: {
     color: "#222"

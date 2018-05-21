@@ -12,8 +12,12 @@ import Card from '../components/Card/Card.jsx'
 import CardBody from '../components/Card/CardBody.jsx'
 
 import landingPageStyle from '../jss/material-kit-react/views/landingPage.jsx'
+
+
 import Hero from '../components/hero'
+import About from '../components/about'
 import TeamSection from '../components/team'
+import Services from '../components/services'
 import ContactUs from '../components/contact'
 
 import { initGoogleMaps } from '../utils/googleMaps'
@@ -33,54 +37,27 @@ class IndexPage extends React.Component {
     const heroEdges = data.hero.edges
     const aboutEdges = data.about.edges
     const teamEdges = data.team.edges
+    const servicesEdges = data.services.edges
 
     return (
       <div style={{ marginBottom: rhythm(2) }}>
         {heroEdges.map(({ node }) => (
-          <Hero node={node} key={node.id} classes={this.props.classes} />
+          <Hero key={node.id} {...node} />
         ))}
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
-            <GridContainer id="about">
-              {aboutEdges.map(({ node }, id) => {
-                const isOdd = id % 2 !== 0
-                return (
-                  <GridItem
-                    className="about-item"
-                    key={node.id}
-                    xs={12}
-                    sm={12}
-                    md={12}
-                    style={{
-                      justifyContent: 'space-between',
-                      display: 'flex',
-                      flexDirection: isOdd ? 'row-reverse' : 'row'
-                    }}
-                  >
-                    <GridItem xs={12} sm={12} md={5}>
-                  {!!node.image && <img src={node.image.resolutions.src} alt="" /> }
-                    </GridItem>
-                    <GridItem xs={12} sm={12} md={7}>
-                      <h2 className={classes.aboutTitle}>{node.title}</h2>
-                      <h5 className={classes.aboutDescription}>
-                        {node.description.description}
-                      </h5>
-                    </GridItem>
-                  </GridItem>
-                )
-              })}
-            </GridContainer>
-            {teamEdges.map(({node}) => (
+
+            {aboutEdges.map(({ node }) => (
+              <About key={node.id} {...node} />
+            ))}
+
+            {teamEdges.map(({ node }) => (
               <TeamSection key={node.id} {...node} />
             ))}
-            <GridContainer id="services">
-              <GridItem xs={12} sm={12} md={12}>
-                <h2 className={classes.aboutTitle}>Nos Services</h2>
-                <h5 className={classes.aboutDescription}>
-                  Pas fini de faire cette section.
-                </h5>
-              </GridItem>
-            </GridContainer>
+
+            {servicesEdges.map(({node}) => (
+              <Services key={node.id} {...node} />
+            ))}
           </div>
         </div>
         <ContactUs />
@@ -160,26 +137,28 @@ export const pageQuery = graphql`
         }
       }
     }
-    # team: allContentfulTeam {
-    #   edges {
-    #     node {
-    #       id
-    #       image {
-    #         resolutions(width: 1920) {
-    #           width
-    #           height
-    #           src
-    #           srcSet
-    #         }
-    #       }
-    #       name
-    #       position
-    #       summary {
-    #         summary
-    #       }
-    #       experience
-    #     }
-    #   }
-    # }
+    services: allContentfulServices {
+      edges {
+        node {
+          id
+          title
+          service {
+            id
+            image {
+              resolutions(width: 1920) {
+                width
+                height
+                src
+                srcSet
+              }
+            }
+            title
+            description {
+              description
+            }
+          }
+        }
+      }
+    }
   }
 `

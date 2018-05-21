@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactUs = () => {
   return(
-    <div className="contactus-2">
+    <div id="contact" className="contactus-2">
       <div id="contactUs2Map" className="map" />
       <div className="col-md-6">
           <div className="card card-contact card-raised">
