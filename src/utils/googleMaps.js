@@ -10,8 +10,6 @@ export const initGoogleMaps = () => {
   const mapOptions = {
     zoom: 17,
     center: centerPosition,
-    gestureHandling: 'none',
-    zoomControl: false,
     styles: [{
       "featureType": "water",
       "stylers": [{
