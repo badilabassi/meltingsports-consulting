@@ -10,6 +10,15 @@
   padding-top: 2rem;
 }
 
+.about-item {
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+
+  @media screen (min-width: 768px) {
+    flex-wrap: nowrap;
+  }
+}
+
 #hero::before {
   content: "";
   position: absolute;

@@ -36,7 +36,7 @@ class IndexPage extends React.Component {
               {aboutEdges.map(({node}, id) => {
                 const isOdd = id % 2 !== 0
                 return (
-                <GridItem key={node.id} xs={12} sm={12} md={12} style={{
+                <GridItem className="about-item" key={node.id} xs={12} sm={12} md={12} style={{
                   justifyContent: "space-between",
                   display: "flex",
                   flexDirection: isOdd ? "row-reverse" : "row"
