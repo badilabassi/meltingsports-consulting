@@ -47,14 +47,15 @@ const teamStyle = {
   },
   projectTitle: {
     lineHeight: '1.5',
-    fontSize: '.9rem',
+    fontSize: '1.125rem',
     fontWeight: "bold",
     color: '#fff',
-    textAlign: 'center'
+    textAlign: 'center',
+    textTransform: 'uppercase'
   },
   projectDescription: {
     lineHeight: '1.5',
-    fontSize: '.9rem',
+    fontSize: '1rem',
     color: '#fff',
     textAlign: 'center'
   }

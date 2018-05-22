@@ -58,7 +58,7 @@ const ContactUs = () => {
                               </span>
                           </label>
                       </div>
-                      <button type="submit" className="btn btn-blue pull-right">Send Message</button>
+                      <button type="submit" className="btn btn-blue pull-right">Envoyer</button>
                   </div>
               </form>
           </div>

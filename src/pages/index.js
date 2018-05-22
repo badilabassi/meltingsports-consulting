@@ -10,7 +10,7 @@ import GridContainer from '../components/Grid/GridContainer.jsx'
 import GridItem from '../components/Grid/GridItem.jsx'
 import Card from '../components/Card/Card.jsx'
 import CardBody from '../components/Card/CardBody.jsx'
-
+import Footer from '../components/Footer/Footer.jsx'
 import landingPageStyle from '../jss/material-kit-react/views/landingPage.jsx'
 
 
@@ -40,7 +40,7 @@ class IndexPage extends React.Component {
     const servicesEdges = data.services.edges
 
     return (
-      <div style={{ marginBottom: rhythm(2) }}>
+      <div>
         {heroEdges.map(({ node }) => (
           <Hero key={node.id} {...node} />
         ))}
@@ -61,6 +61,7 @@ class IndexPage extends React.Component {
           </div>
         </div>
         <ContactUs />
+        <Footer />
       </div>
     )
   }
