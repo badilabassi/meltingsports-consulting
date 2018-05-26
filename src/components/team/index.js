@@ -53,8 +53,9 @@ class TeamSection extends React.Component {
                       >
                         {!!image && (
                           <img
-                            src={image.resolutions.srcWebp}
-                            alt="..."
+                            src={image.resolutions.src}
+                            srcSet={image.resolutions.srcSet}
+                            alt={name}
                             className={imageClasses}
                           />
                         )}

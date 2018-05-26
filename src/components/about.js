@@ -29,8 +29,8 @@ const About = ({
           <GridItem xs={12} sm={12} md={5} style={{ padding: '0 1rem 0 0' }}>
             {!!image && (
               <img
-                src={image.resolutions.srcWebp}
-                srcSet={image.resolutions.srcSetWebp}
+                src={image.resolutions.src}
+                srcSet={image.resolutions.srcSet}
                 alt={title}
               />
             )}
