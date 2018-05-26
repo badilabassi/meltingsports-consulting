@@ -26,6 +26,7 @@ module.exports = {
         host: 'cdn.contentful.com'
       }
     },
+    'gatsby-plugin-offline',
     'gatsby-transformer-remark'
   ]
 };
