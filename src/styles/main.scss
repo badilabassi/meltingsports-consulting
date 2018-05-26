@@ -7,10 +7,15 @@ html * {
  font-family:  "Roboto", "Times New Roman", serif;
 }
 
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
 ul {
     list-style-type: square;
     text-align: left;
-    margin: 0 0 0 4em;
 }
 
 p {

@@ -53,7 +53,7 @@ class TeamSection extends React.Component {
                       >
                         {!!image && (
                           <img
-                            src={image.resolutions.src}
+                            src={image.resolutions.srcWebp}
                             alt="..."
                             className={imageClasses}
                           />
@@ -71,6 +71,7 @@ class TeamSection extends React.Component {
                             __html: summary.markdown.html
                           }}
                         />
+                        {!!experience && <p>Experiences:</p>}
                         <ul>
                           {!!experience &&
                             experience.map((xp, i) => (

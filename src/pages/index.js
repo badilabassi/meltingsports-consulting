@@ -1,7 +1,7 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { rhythm } from '../utils/typography';
+// import { rhythm } from '../utils/typography';
 import Img from 'gatsby-image';
 import withStyles from 'material-ui/styles/withStyles';
 import 'font-awesome/css/font-awesome.min.css';
@@ -61,7 +61,9 @@ class IndexPage extends React.Component {
 
 IndexPage.propTypes = propTypes;
 
-export default withStyles(landingPageStyle)(IndexPage);
+const Index = withStyles(landingPageStyle)(IndexPage);
+
+export default Index;
 
 export const pageQuery = graphql`
   query PageQueryFr {
@@ -106,6 +108,8 @@ export const pageQuery = graphql`
               height
               src
               srcSet
+              srcWebp
+              srcSetWebp
             }
           }
           backgroundImageToggle
@@ -125,6 +129,8 @@ export const pageQuery = graphql`
                 height
                 src
                 srcSet
+                srcWebp
+                srcSetWebp
               }
             }
             name
@@ -155,6 +161,8 @@ export const pageQuery = graphql`
                 height
                 src
                 srcSet
+                srcWebp
+                srcSetWebp
               }
             }
             description {
