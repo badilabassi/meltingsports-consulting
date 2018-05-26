@@ -3,6 +3,25 @@
 @import "material-kit-react";
 @import "mkp";
 
+html * {
+ font-family:  "Roboto", "Times New Roman", serif;
+}
+
+ul {
+    list-style-type: square;
+    text-align: left;
+    margin: 0 0 0 4em;
+}
+
+p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.ul, li {
+  font-size: 14px;
+}
+
 #hero {
   color: $white;
 }

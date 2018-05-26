@@ -25,47 +25,13 @@ const propTypes = {
   data: PropTypes.object.isRequired
 };
 
-class IndexPage extends React.Component {
-  componentDidMount() {
-    window.initGoogleMaps = initGoogleMaps;
-    initGoogleMaps();
-  }
-
-  render() {
-    const { classes, data } = this.props;
-    const heroEdges = data.hero.edges;
-    const aboutEdges = data.about.edges;
-    const teamEdges = data.team.edges;
-    const servicesEdges = data.services.edges;
-
-    return (
-      <div>
-        {heroEdges.map(({ node }) => <Hero key={node.id} {...node} />)}
-        <div className={classNames(classes.main, classes.mainRaised)}>
-          <div className={classes.container}>
-            {aboutEdges.map(({ node }) => <About key={node.id} {...node} />)}
-            {teamEdges.map(({ node }) => (
-              <TeamSection key={node.id} {...node} />
-            ))}
-            {servicesEdges.map(({ node }) => (
-              <Services key={node.id} {...node} />
-            ))}
-          </div>
-        </div>
-        <ContactUs />
-        <Footer />
-      </div>
-    );
-  }
-}
-
-IndexPage.propTypes = propTypes;
+import IndexPage from './index';
 
 export default withStyles(landingPageStyle)(IndexPage);
 
 export const pageQuery = graphql`
-  query PageQueryFr {
-    hero: allContentfulHero(filter: { node_locale: { eq: "fr" } }) {
+  query PageQueryEn {
+    hero: allContentfulHero(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           id
@@ -90,7 +56,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    about: allContentfulAbout(filter: { node_locale: { eq: "fr" } }) {
+    about: allContentfulAbout(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           id
@@ -100,7 +66,7 @@ export const pageQuery = graphql`
               html
             }
           }
-          image: aboutImage {
+          aboutImage {
             resolutions(width: 1920) {
               width
               height
@@ -112,14 +78,14 @@ export const pageQuery = graphql`
         }
       }
     }
-    team: allContentfulTeamSection(filter: { node_locale: { eq: "fr" } }) {
+    team: allContentfulTeamSection(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           id
           title
           team {
             id
-            image: teamImage {
+            teamImage {
               resolutions(width: 1920) {
                 width
                 height
@@ -141,7 +107,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    services: allContentfulServices(filter: { node_locale: { eq: "fr" } }) {
+    services: allContentfulServices(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           id
@@ -158,6 +124,7 @@ export const pageQuery = graphql`
               }
             }
             description {
+              description
               markdown: childMarkdownRemark {
                 html
               }
