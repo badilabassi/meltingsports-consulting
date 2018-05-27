@@ -5,6 +5,7 @@ module.exports = {
     title: 'Melting Sports | Consulting'
   },
   plugins: [
+    'gatsby-plugin-react-next',
     {
       resolve: 'gatsby-plugin-postcss-sass',
       options: {

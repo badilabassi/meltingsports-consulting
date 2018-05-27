@@ -1,11 +1,9 @@
 // @import "bootstrap";
-@import "airspace";
-@import "material-kit-react";
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 @import "mkp";
+@import "./material-kit-react.css";
+@import "material-kit-react";
 
-html * {
- font-family:  "Roboto", "Times New Roman", serif;
-}
 
 img {
   width: auto;
@@ -23,13 +21,13 @@ p {
   hyphens: auto;
 }
 
-.ul, li {
-  font-size: 14px;
-}
+// .ul, li {
+//   font-size: 14px;
+// }
 
-#hero {
-  color: $white;
-}
+// #hero {
+//   color: $white;
+// }
 
 #about {
   padding-top: 2rem;
@@ -104,6 +102,14 @@ p {
 
 }
 
+footer {
+  background: #000;
+  color: #fff;
+}
+
+footer a:hover {
+  color: #6b92bd;
+}
 
 #hero::before {
   content: "";

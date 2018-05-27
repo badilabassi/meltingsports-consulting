@@ -66,7 +66,6 @@ class Hero extends React.Component {
               <div
                 dangerouslySetInnerHTML={{ __html: description.markdown.html }}
               />
-              {/* <h4>{description.description}</h4> */}
             </GridItem>
           </GridContainer>
         </div>

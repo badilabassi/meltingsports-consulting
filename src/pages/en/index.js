@@ -48,7 +48,7 @@ export const pageQuery = graphql`
             }
           }
           image: aboutImage {
-            resolutions(width: 1920) {
+            resolutions(width: 500) {
               width
               height
               src
@@ -69,7 +69,7 @@ export const pageQuery = graphql`
           team {
             id
             image: teamImage {
-              resolutions(width: 1920) {
+              resolutions(width: 500) {
                 width
                 height
                 src
@@ -101,7 +101,7 @@ export const pageQuery = graphql`
             id
             title
             image: serviceImage {
-              resolutions(width: 1920) {
+              resolutions(width: 500) {
                 width
                 height
                 src
@@ -114,6 +114,36 @@ export const pageQuery = graphql`
               markdown: childMarkdownRemark {
                 html
               }
+            }
+          }
+        }
+      }
+    }
+    contact: allContentfulContactForm(
+      filter: { node_locale: { eq: "en-US" } }
+    ) {
+      edges {
+        node {
+          id
+          title
+          officeTitleField
+          officeAddressField {
+            markdown: childMarkdownRemark {
+              html
+            }
+          }
+          mapCoordinate {
+            longitude: lon
+            latitude: lat
+          }
+          nameField
+          emailField
+          messageField
+          submitButton
+          robot
+          disclaimer {
+            markdown: childMarkdownRemark {
+              html
             }
           }
         }

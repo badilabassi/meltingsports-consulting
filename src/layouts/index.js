@@ -1,35 +1,33 @@
-import React from "react"
-import * as PropTypes from "prop-types"
-import emergence from 'emergence.js'
+import React from 'react';
+import * as PropTypes from 'prop-types';
+import emergence from 'emergence.js';
 
-import 'animate.css/animate.css'
-import "../styles/main.scss"
+import 'animate.css/animate.css';
+import '../styles/main.scss';
 
-import Header from "../components/Header/Header";
-import HeaderLinks from "../components/Header/HeaderLinks";
+import Header from '../components/Header/Header';
+import HeaderLinks from '../components/Header/HeaderLinks';
 
 const propTypes = {
-  children: PropTypes.func.isRequired,
-}
+  children: PropTypes.func.isRequired
+};
 
 class DefaultLayout extends React.Component {
   componentDidMount() {
-    emergence.init()
+    emergence.init();
   }
 
   componentDidUpdate() {
-    emergence.init()
+    emergence.init();
   }
 
   render() {
-    const {
-      children
-    } = this.props
+    const { children } = this.props;
 
     const dashboardRoutes = [];
 
     return (
-      <div>
+      <React.Fragment>
         <Header
           color="transparent"
           routes={dashboardRoutes}
@@ -40,15 +38,15 @@ class DefaultLayout extends React.Component {
           alternateColor="#0b3e79"
           changeColorOnScroll={{
             height: 200,
-            color: "white"
+            color: 'white'
           }}
         />
         {children()}
-      </div>
-    )
+      </React.Fragment>
+    );
   }
 }
 
-DefaultLayout.propTypes = propTypes
+DefaultLayout.propTypes = propTypes;
 
-export default DefaultLayout
+export default DefaultLayout;

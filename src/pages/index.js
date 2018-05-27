@@ -28,18 +28,24 @@ const propTypes = {
 class IndexPage extends React.Component {
   componentDidMount() {
     window.initGoogleMaps = initGoogleMaps;
-    initGoogleMaps();
+    {
+      initGoogleMaps({
+        ...this.props.data.contact.edges[0].node.mapCoordinate
+      });
+    }
   }
 
   render() {
     const { classes, data } = this.props;
+
     const heroEdges = data.hero.edges;
     const aboutEdges = data.about.edges;
     const teamEdges = data.team.edges;
     const servicesEdges = data.services.edges;
+    const contactEdges = data.contact.edges;
 
     return (
-      <div>
+      <React.Fragment>
         {heroEdges.map(({ node }) => <Hero key={node.id} {...node} />)}
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
@@ -52,9 +58,10 @@ class IndexPage extends React.Component {
             ))}
           </div>
         </div>
-        <ContactUs />
+        {contactEdges.map(({ node }) => <ContactUs key={node.id} {...node} />)}
+
         <Footer />
-      </div>
+      </React.Fragment>
     );
   }
 }
@@ -103,7 +110,7 @@ export const pageQuery = graphql`
             }
           }
           image: aboutImage {
-            resolutions(width: 1920) {
+            resolutions(width: 500) {
               width
               height
               src
@@ -124,7 +131,7 @@ export const pageQuery = graphql`
           team {
             id
             image: teamImage {
-              resolutions(width: 1920) {
+              resolutions(width: 500) {
                 width
                 height
                 src
@@ -156,7 +163,7 @@ export const pageQuery = graphql`
             id
             title
             image: serviceImage {
-              resolutions(width: 1920) {
+              resolutions(width: 500) {
                 width
                 height
                 src
@@ -169,6 +176,34 @@ export const pageQuery = graphql`
               markdown: childMarkdownRemark {
                 html
               }
+            }
+          }
+        }
+      }
+    }
+    contact: allContentfulContactForm(filter: { node_locale: { eq: "fr" } }) {
+      edges {
+        node {
+          id
+          title
+          officeTitleField
+          officeAddressField {
+            markdown: childMarkdownRemark {
+              html
+            }
+          }
+          mapCoordinate {
+            longitude: lon
+            latitude: lat
+          }
+          nameField
+          emailField
+          messageField
+          submitButton
+          robot
+          disclaimer {
+            markdown: childMarkdownRemark {
+              html
             }
           }
         }

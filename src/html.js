@@ -22,7 +22,7 @@ class Html extends React.Component {
   render() {
     const { headComponents, body, postBodyComponents } = this.props;
     let css;
-    if (process.env.NODE_ENV === `production`) {
+    if (process.env.NODE_ENV === 'production') {
       css = (
         <style
           id="gatsby-inlined-css"
@@ -32,9 +32,8 @@ class Html extends React.Component {
     }
 
     return (
-      <html op="news" lang="en">
+      <html>
         <head>
-          {headComponents}
           <meta name="referrer" content="origin" />
           <meta charSet="utf-8" />
           <meta
@@ -47,20 +46,25 @@ class Html extends React.Component {
             content="width=device-width, initial-scale=1.0"
           />
           <title>Melting Sports | Consulting</title>
+          {headComponents}
+          {css}
+
           {/* <TypographyStyle typography={typography} /> */}
+          {process.env.NODE_ENV === 'production' ? (
+            <link href="/styles.css" rel="stylesheet" />
+          ) : null}
           <link
             href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
             rel="stylesheet"
-          />
-          {css}
-          <script
-            type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0GE3dFR0orMQ7l8PJKtRU_3p99pgbrmw"
           />
         </head>
         <body>
           <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
           {postBodyComponents}
+          <script
+            type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0GE3dFR0orMQ7l8PJKtRU_3p99pgbrmw"
+          />
         </body>
       </html>
     );

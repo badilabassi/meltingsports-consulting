@@ -1,6 +1,18 @@
 import React from 'react';
+import { initGoogleMaps } from '../utils/googleMaps';
 
-const ContactUs = () => {
+const ContactUs = ({
+  classes = {},
+  title = '',
+  officeTitleField,
+  officeAddressField,
+  nameField,
+  emailField,
+  messageField,
+  submitButton,
+  robot,
+  disclaimer
+}) => {
   return (
     <div id="contact" className="contactus-2">
       <div id="contactUs2Map" className="map" />
@@ -13,7 +25,7 @@ const ContactUs = () => {
             data-netlify-honeypot="bot-field"
           >
             <div className="card-header card-header-blue text-center">
-              <h4 className="card-title">Nous contacter</h4>
+              <h4 className="card-title">{title}</h4>
             </div>
             <div className="card-body">
               <div className="row">
@@ -23,13 +35,15 @@ const ContactUs = () => {
                       <i className="fa fa-map-marker" aria-hidden="true" />
                     </div>
                     <div className="description">
-                      <h5 className="info-title">Nos bureaux</h5>
-                      <p>
-                        {' '}
-                        157 Quai du President Roosevelt
-                        <br /> 92130 Issy les Moulineaux
-                        <br /> France
-                      </p>
+                      <h5 className="info-title">{officeTitleField}</h5>
+                      <div
+                        dangerouslySetInnerHTML={{
+                          __html: officeAddressField.markdown.html.replace(
+                            /\n/g,
+                            '<br/>'
+                          )
+                        }}
+                      />
                     </div>
                   </div>
                 </div>
@@ -37,16 +51,14 @@ const ContactUs = () => {
               <div className="row">
                 <div className="col-md-6">
                   <div className="form-group label-floating is-empty has-blue">
-                    <label className="bmd-label-floating">Nom</label>
+                    <label className="bmd-label-floating">{nameField}</label>
                     <input type="text" name="name" className="form-control" />
                     <span className="material-input" />
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="form-group label-floating is-empty has-blue">
-                    <label className="bmd-label-floating">
-                      Adresse courriel
-                    </label>
+                    <label className="bmd-label-floating">{emailField}</label>
                     <input type="email" name="email" className="form-control" />
                     <span className="material-input" />
                   </div>
@@ -54,7 +66,7 @@ const ContactUs = () => {
               </div>
               <div className="form-group label-floating has-blue is-empty">
                 <label htmlFor="exampleMessage" className="bmd-label-floating">
-                  Votre Message
+                  {messageField}
                 </label>
                 <textarea
                   name="message"
@@ -72,17 +84,23 @@ const ContactUs = () => {
                     className="form-check-input"
                     type="checkbox"
                     value=""
-                  />{' '}
-                  Je ne suis pas un robot
+                  />
+                  {robot}
                   <span className="form-check-sign">
                     <span className="check" />
                   </span>
                 </label>
               </div>
               <button type="submit" className="btn btn-blue pull-right">
-                Envoyer
+                {submitButton}
               </button>
             </div>
+            <div
+              className="card-footer justify-content-between"
+              dangerouslySetInnerHTML={{
+                __html: disclaimer.markdown.html.replace(/\n/g, '<br/>')
+              }}
+            />
           </form>
         </div>
       </div>

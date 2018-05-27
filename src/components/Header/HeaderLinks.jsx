@@ -59,6 +59,22 @@ function HeaderLinks({ ...props }) {
           Contact
         </a>
       </ListItem>
+      <ListItem className={classes.listItem}>
+        <a
+          href="/"
+          color="transparent"
+          className={classes.navLink}
+        >
+          Fr
+        </a>
+        <a
+          href="/en"
+          color="transparent"
+          className={classes.navLink}
+        >
+          En
+        </a>
+      </ListItem>
     </List>
   )
 }
