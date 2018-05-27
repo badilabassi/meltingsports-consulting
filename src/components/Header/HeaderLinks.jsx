@@ -24,52 +24,16 @@ function HeaderLinks({ ...props }) {
   return (
     <List className={classes.list}>
       {routes.map(({id, navId, title}) => (
-              <ListItem key={navId} className={classes.listItem}>
-              <a
-                href={`#${navId}`}
-                color="transparent"
-                className={classes.navLink}
-              >
-                {title}
-              </a>
-            </ListItem>
+        <ListItem key={navId} className={classes.listItem}>
+          <a
+            href={`#${navId}`}
+            color="transparent"
+            className={classes.navLink}
+          >
+            {title}
+          </a>
+        </ListItem>
       ))}
-      {/* <ListItem className={classes.listItem}>
-        <a
-          href="#about"
-          color="transparent"
-          className={classes.navLink}
-        >
-          A propos
-        </a>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <a
-          href="#team"
-          color="transparent"
-          className={classes.navLink}
-        >
-          Notre Equipe
-        </a>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <a
-          href="#services"
-          color="transparent"
-          className={classes.navLink}
-        >
-          Services
-        </a>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <a
-          href="#contact"
-          color="transparent"
-          className={classes.navLink}
-        >
-          Contact
-        </a>
-      </ListItem> */}
       <ListItem className={classes.listItem}>
         <a
           href="/"

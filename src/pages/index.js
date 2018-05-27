@@ -88,7 +88,7 @@ class IndexPage extends React.Component {
         </div>
         {contactEdges.map(({ node }) => <ContactUs key={node.id} {...node} />)}
 
-        <Footer />
+        <Footer routes={navLinks} />
       </React.Fragment>
     );
   }
