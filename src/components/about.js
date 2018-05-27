@@ -36,7 +36,7 @@ const About = ({
             )}
           </GridItem>
           <GridItem xs={12} sm={12} md={7}>
-            <p
+            <div
               className={classes.description}
               dangerouslySetInnerHTML={{ __html: description.markdown.html }}
             />
