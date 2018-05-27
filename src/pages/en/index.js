@@ -41,6 +41,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          navId
           title
           description {
             markdown: childMarkdownRemark {
@@ -65,6 +66,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          navId
           title
           team {
             id
@@ -96,6 +98,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          navId
           title
           service {
             id
@@ -125,6 +128,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          navId
           title
           officeTitleField
           officeAddressField {

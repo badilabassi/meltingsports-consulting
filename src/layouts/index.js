@@ -5,9 +5,6 @@ import emergence from 'emergence.js';
 import 'animate.css/animate.css';
 import '../styles/main.scss';
 
-import Header from '../components/Header/Header';
-import HeaderLinks from '../components/Header/HeaderLinks';
-
 const propTypes = {
   children: PropTypes.func.isRequired
 };
@@ -24,26 +21,7 @@ class DefaultLayout extends React.Component {
   render() {
     const { children } = this.props;
 
-    const dashboardRoutes = [];
-
-    return (
-      <React.Fragment>
-        <Header
-          color="transparent"
-          routes={dashboardRoutes}
-          brand="Melting Sports Consulting"
-          rightLinks={<HeaderLinks />}
-          fixed
-          defaultColor="white"
-          alternateColor="#0b3e79"
-          changeColorOnScroll={{
-            height: 200,
-            color: 'white'
-          }}
-        />
-        {children()}
-      </React.Fragment>
-    );
+    return <React.Fragment>{children()}</React.Fragment>;
   }
 }
 

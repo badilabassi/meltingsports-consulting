@@ -13,6 +13,8 @@ import CardBody from '../components/Card/CardBody.jsx';
 import Footer from '../components/Footer/Footer.jsx';
 import landingPageStyle from '../jss/material-kit-react/views/landingPage.jsx';
 
+import Header from '../components/Header/Header';
+import HeaderLinks from '../components/Header/HeaderLinks';
 import Hero from '../components/hero';
 import About from '../components/about';
 import TeamSection from '../components/team';
@@ -20,6 +22,8 @@ import Services from '../components/services';
 import ContactUs from '../components/contact';
 
 import { initGoogleMaps } from '../utils/googleMaps';
+
+const _ = require('lodash');
 
 const propTypes = {
   data: PropTypes.object.isRequired
@@ -44,8 +48,32 @@ class IndexPage extends React.Component {
     const servicesEdges = data.services.edges;
     const contactEdges = data.contact.edges;
 
+    let pages = [
+      aboutEdges[0].node,
+      teamEdges[0].node,
+      servicesEdges[0].node,
+      contactEdges[0].node
+    ];
+
+    const navLinks = pages.map(page => {
+      const { title, id, navId } = page;
+      return { id, navId, title };
+    });
+
     return (
       <React.Fragment>
+        <Header
+          color="transparent"
+          brand="Melting Sports Consulting"
+          rightLinks={<HeaderLinks routes={navLinks} />}
+          fixed
+          defaultColor="white"
+          alternateColor="#0b3e79"
+          changeColorOnScroll={{
+            height: 200,
+            color: 'white'
+          }}
+        />
         {heroEdges.map(({ node }) => <Hero key={node.id} {...node} />)}
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
@@ -103,6 +131,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          navId
           title
           description {
             markdown: childMarkdownRemark {
@@ -127,6 +156,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          navId
           title
           team {
             id
@@ -158,6 +188,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          navId
           title
           service {
             id
@@ -185,6 +216,7 @@ export const pageQuery = graphql`
       edges {
         node {
           id
+          navId
           title
           officeTitleField
           officeAddressField {

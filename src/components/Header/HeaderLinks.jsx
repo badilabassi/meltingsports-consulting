@@ -20,10 +20,21 @@ import IconButton from '../CustomButtons/IconButton.jsx'
 import headerLinksStyle from '../../jss/material-kit-react/components/headerLinksStyle.jsx'
 
 function HeaderLinks({ ...props }) {
-  const { classes } = props
+  const { classes, routes } = props
   return (
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
+      {routes.map(({id, navId, title}) => (
+              <ListItem key={navId} className={classes.listItem}>
+              <a
+                href={`#${navId}`}
+                color="transparent"
+                className={classes.navLink}
+              >
+                {title}
+              </a>
+            </ListItem>
+      ))}
+      {/* <ListItem className={classes.listItem}>
         <a
           href="#about"
           color="transparent"
@@ -58,7 +69,7 @@ function HeaderLinks({ ...props }) {
         >
           Contact
         </a>
-      </ListItem>
+      </ListItem> */}
       <ListItem className={classes.listItem}>
         <a
           href="/"
