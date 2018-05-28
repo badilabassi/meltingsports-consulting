@@ -4,6 +4,7 @@ import classNames from 'classnames';
 // import { rhythm } from '../utils/typography';
 import Img from 'gatsby-image';
 import withStyles from 'material-ui/styles/withStyles';
+import withRoot from '../withRoot';
 import 'font-awesome/css/font-awesome.min.css';
 
 import GridContainer from '../components/Grid/GridContainer.jsx';
@@ -96,7 +97,7 @@ class IndexPage extends React.Component {
 
 IndexPage.propTypes = propTypes;
 
-const Index = withStyles(landingPageStyle)(IndexPage);
+const Index = withRoot(withStyles(landingPageStyle)(IndexPage));
 
 export default Index;
 
@@ -178,6 +179,7 @@ export const pageQuery = graphql`
                 html
               }
             }
+            experienceTitle
             experience
             linkedInLink
           }

@@ -88,6 +88,7 @@ export const pageQuery = graphql`
                 html
               }
             }
+            experienceTitle
             experience
             linkedInLink
           }

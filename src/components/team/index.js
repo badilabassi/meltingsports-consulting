@@ -38,6 +38,7 @@ class TeamSection extends React.Component {
                 name,
                 position,
                 experience,
+                experienceTitle,
                 summary,
                 image,
                 linkedInLink = '/'
@@ -72,7 +73,7 @@ class TeamSection extends React.Component {
                             __html: summary.markdown.html
                           }}
                         />
-                        {!!experience && <p>Experiences:</p>}
+                        {!!experience && <p>{experienceTitle}</p>}
                         <ul>
                           {!!experience &&
                             experience.map((xp, i) => (
