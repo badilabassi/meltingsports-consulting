@@ -73,13 +73,6 @@ class TeamSection extends React.Component {
                             __html: summary.markdown.html
                           }}
                         />
-                        {!!experience && <p>{experienceTitle}</p>}
-                        <ul>
-                          {!!experience &&
-                            experience.map((xp, i) => (
-                              <li key={`${xp}-${i}`}>{xp}</li>
-                            ))}
-                        </ul>
                       </CardBody>
                       {!!(linkedInLink !== '/') && (
                         <CardFooter className={classes.justifyCenter}>
