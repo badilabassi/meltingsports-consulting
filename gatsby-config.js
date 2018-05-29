@@ -2,7 +2,8 @@ var autoprefixer = require('autoprefixer');
 
 module.exports = {
   siteMetadata: {
-    title: 'Melting Sports | Consulting'
+    title: 'Melting Sports | Consulting',
+    siteUrl: 'https://www.meltingsports-consulting.com'
   },
   plugins: [
     'gatsby-plugin-react-next',
@@ -41,11 +42,27 @@ module.exports = {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590
+              maxWidth: 590,
+              sizeByPixelDensity: true
             }
           }
         ]
       }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Melting Sports Consulting',
+        short_name: 'Melting Sports Consulting',
+        start_url: '/',
+        background_color: '#f7f0eb',
+        theme_color: '#0b3e79',
+        display: 'minimal-ui',
+        icon: 'src/images/icon.png' // This path is relative to the root of the site.
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap'
     }
   ]
 };

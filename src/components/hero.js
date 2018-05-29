@@ -23,7 +23,6 @@ class Hero extends React.Component {
       setTimeout(() => {
         !!this.state.images &&
           this.setState({ background: this.state.images[k] });
-
         if (k + 1 === this.state.images.length) {
           setTimeout(() => {
             this.backgroundSequence();

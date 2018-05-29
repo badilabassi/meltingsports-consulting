@@ -1,7 +1,6 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
-// import { rhythm } from '../utils/typography';
 import Img from 'gatsby-image';
 import withStyles from 'material-ui/styles/withStyles';
 import withRoot from '../withRoot';
@@ -101,6 +100,17 @@ const Index = withRoot(withStyles(landingPageStyle)(IndexPage));
 
 export default Index;
 
+const contentfulAssetSizesPreferWebpNoBase64 = graphql`
+  fragment GatsbyContentfulSizes_withWebp_noBase64 on ContentfulSizes {
+    aspectRatio
+    src
+    srcSet
+    srcWebp
+    srcSetWebp
+    sizes
+  }
+`;
+
 export const pageQuery = graphql`
   query PageQueryFr {
     hero: allContentfulHero(filter: { node_locale: { eq: "fr" } }) {
@@ -114,15 +124,12 @@ export const pageQuery = graphql`
             }
           }
           image: slideshow {
-            resolutions(width: 1920) {
-              base64
-              width
-              height
+            resolutions(width: 1920, quality: 90) {
+              aspectRatio
               src
               srcSet
               srcWebp
               srcSetWebp
-              aspectRatio
             }
           }
         }
@@ -140,9 +147,8 @@ export const pageQuery = graphql`
             }
           }
           image: aboutImage {
-            resolutions(width: 500) {
-              width
-              height
+            resolutions(width: 500, quality: 80) {
+              aspectRatio
               src
               srcSet
               srcWebp
@@ -162,9 +168,8 @@ export const pageQuery = graphql`
           team {
             id
             image: teamImage {
-              resolutions(width: 500) {
-                width
-                height
+              resolutions(width: 400, quality: 80) {
+                aspectRatio
                 src
                 srcSet
                 srcWebp
@@ -174,7 +179,6 @@ export const pageQuery = graphql`
             name
             position
             summary {
-              summary
               markdown: childMarkdownRemark {
                 html
               }
@@ -194,9 +198,8 @@ export const pageQuery = graphql`
             id
             title
             image: serviceImage {
-              resolutions(width: 500) {
-                width
-                height
+              resolutions(width: 300, quality: 50) {
+                aspectRatio
                 src
                 srcSet
                 srcWebp

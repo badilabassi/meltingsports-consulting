@@ -49,7 +49,8 @@ class Html extends React.Component {
           {headComponents}
           {css}
 
-          {/* <TypographyStyle typography={typography} /> */}
+          <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+          <link rel="icon" href="/favicon.ico" type="image/x-icon">
           {process.env.NODE_ENV === 'production' ? (
             <link href="/styles.css" rel="stylesheet" />
           ) : null}

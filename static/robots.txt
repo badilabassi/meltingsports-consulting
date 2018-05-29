@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Allow search crawlers to discover the sitemap.
+Sitemap: https://www.meltingsports-consulting.com/sitemap.xml
