@@ -23,6 +23,18 @@ export const pageQuery = graphql`
             }
           }
           image: slideshow {
+            file {
+              url
+              fileName
+              contentType
+              details {
+                image {
+                  width
+                  height
+                }
+                size
+              }
+            }
             resolutions(width: 1920, quality: 90) {
               aspectRatio
               src

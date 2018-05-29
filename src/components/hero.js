@@ -51,7 +51,7 @@ class Hero extends React.Component {
     } = this.props;
 
     return (
-      <Parallax filter image={this.state.background.resolutions.src}>
+      <Parallax filter image={this.state.background.file.url}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={10}>

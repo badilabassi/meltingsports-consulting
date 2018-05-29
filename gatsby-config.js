@@ -30,8 +30,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-offline',
-    'gatsby-transformer-remark',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -49,6 +47,8 @@ module.exports = {
         ]
       }
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
