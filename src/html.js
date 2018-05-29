@@ -58,14 +58,14 @@ class Html extends React.Component {
             href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
             rel="stylesheet"
           />
-        </head>
-        <body>
-          <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
-          {postBodyComponents}
           <script
             type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0GE3dFR0orMQ7l8PJKtRU_3p99pgbrmw"
           />
+        </head>
+        <body>
+          <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
+          {postBodyComponents}
         </body>
       </html>
     );
