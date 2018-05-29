@@ -20,24 +20,18 @@ class Hero extends React.Component {
     let k = 0;
     let secs = 5;
     for (let i = 0; i < this.state.images.length; i++) {
-      setTimeout(
-        function() {
-          !!this.state.images &&
-            this.setState({ background: this.state.images[k] });
+      setTimeout(() => {
+        !!this.state.images &&
+          this.setState({ background: this.state.images[k] });
 
-          if (k + 1 === this.state.images.length) {
-            setTimeout(
-              function() {
-                this.backgroundSequence();
-              }.bind(this),
-              secs * 1000
-            );
-          } else {
-            k++;
-          }
-        }.bind(this),
-        secs * 1000 * i
-      );
+        if (k + 1 === this.state.images.length) {
+          setTimeout(() => {
+            this.backgroundSequence();
+          }, secs * 1000);
+        } else {
+          k++;
+        }
+      }, secs * 1000 * i);
     }
   }
 

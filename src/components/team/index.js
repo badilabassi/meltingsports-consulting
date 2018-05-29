@@ -66,6 +66,21 @@ class TeamSection extends React.Component {
                         <br />
                         <small className={classes.smallTitle}>{position}</small>
                       </h4>
+                      {!!(linkedInLink !== '/') && (
+                        <a
+                          className={`${classes.button} ${
+                            classes.linkedInButton
+                          } ${classes['white']} `}
+                          href={linkedInLink}
+                          target="__blank"
+                        >
+                          <i
+                            className={`${classes.socials} ${
+                              classes.linkedIn
+                            } fab fa-linkedin`}
+                          />
+                        </a>
+                      )}
                       <CardBody>
                         <div
                           className={classes.description}
@@ -74,21 +89,6 @@ class TeamSection extends React.Component {
                           }}
                         />
                       </CardBody>
-                      {!!(linkedInLink !== '/') && (
-                        <CardFooter className={classes.justifyCenter}>
-                          <a
-                            className={`${classes.button} ${classes['white']}`}
-                            href={linkedInLink}
-                            target="__blank"
-                          >
-                            <i
-                              className={`${classes.socials} ${
-                                classes.linkedIn
-                              } fab fa-linkedin`}
-                            />
-                          </a>
-                        </CardFooter>
-                      )}
                     </Card>
                   </GridItem>
                 );

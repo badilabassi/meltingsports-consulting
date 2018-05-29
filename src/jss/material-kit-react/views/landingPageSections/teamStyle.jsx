@@ -53,6 +53,10 @@ const teamStyle = {
     fontSize: '20px',
     color: '#999',
   },
+  linkedInButton: {
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
   linkedIn: {
     color: '#0073b1',
     "&:hover,&:focus": {

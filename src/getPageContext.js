@@ -7,24 +7,24 @@ import { createMuiTheme, createGenerateClassName } from 'material-ui/styles';
 
 // A theme with custom primary and secondary color.
 // It's optional.
-// const theme = createMuiTheme({
-//   palette: {
-//     primary: {
-//       light: purple[300],
-//       main: purple[500],
-//       dark: purple[700],
-//     },
-//     secondary: {
-//       light: green[300],
-//       main: green[500],
-//       dark: green[700],
-//     },
-//   },
-// });
+const theme = createMuiTheme({
+  // palette: {
+  //   primary: {
+  //     light: purple[300],
+  //     main: purple[500],
+  //     dark: purple[700],
+  //   },
+  //   secondary: {
+  //     light: green[300],
+  //     main: green[500],
+  //     dark: green[700],
+  //   },
+  // },
+});
 
 function createPageContext() {
   return {
-    // theme,
+    theme,
     // This is needed in order to deduplicate the injection of CSS in the page.
     sheetsManager: new Map(),
     // This is needed in order to inject the critical CSS.
