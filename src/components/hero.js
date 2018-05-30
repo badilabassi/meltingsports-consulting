@@ -5,42 +5,68 @@ import GridItem from './Grid/GridItem.jsx';
 import withStyles from 'material-ui/styles/withStyles';
 import landingPageStyle from '../jss/material-kit-react/views/landingPage.jsx';
 
+import classNames from 'classnames';
+import parallaxStyle from '../jss/material-kit-react/components/parallaxStyle.jsx';
+
+import Carousel from './Carousel';
+
 class Hero extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      currSeq: 0,
       images: this.props.image || [],
       background: this.props.image[0]
     };
-    this.backgroundSequence = this.backgroundSequence.bind(this);
+    // this.backgroundSequence = this.backgroundSequence.bind(this);
   }
 
-  backgroundSequence() {
-    !!window && window.clearTimeout();
-    let k = 0;
-    let secs = 5;
-    for (let i = 0; i < this.state.images.length; i++) {
-      setTimeout(() => {
-        !!this.state.images &&
-          this.setState({ background: this.state.images[k] });
-        if (k + 1 === this.state.images.length) {
-          setTimeout(() => {
-            this.backgroundSequence();
-          }, secs * 1000);
-        } else {
-          k++;
-        }
-      }, secs * 1000 * i);
-    }
-  }
+  // backgroundSequence() {
+  //   !!window && window.clearTimeout();
+  //   let k = 0;
+  //   let secs = 5;
+  //   for (let i = 0; i < this.state.images.length; i++) {
+  //     setTimeout(() => {
+  //       if (k + 1 === this.state.images.length) {
+  //         setTimeout(() => {
+  //           this.backgroundSequence();
+  //         }, secs * 1000);
+  //       } else {
+  //         k++;
+  //       }
+  //     }, secs * 1000 * i);
+  //   }
+  // }
 
-  componentDidMount() {
-    this.backgroundSequence();
-  }
+  // resetSeq() {
+  //   this.setState({ currSeq: 0 });
+  // }
 
-  componentWillUnmount() {
-    window.clearTimeout();
-  }
+  // updateBackground() {
+  //   this.setState(prevState => ({
+  //     currSeq: prevState.currSeq + 1
+  //   }));
+
+  //   if (this.state.currSeq > this.state.images.length - 1) {
+  //     this.resetSeq();
+  //   }
+
+  //   console.log(this.state.currSeq);
+
+  //   const background = this.state.images[this.state.currSeq];
+  //   this.setState({ background });
+  // }
+
+  // componentDidMount() {
+  //   this.interval = setInterval(() => {
+  //     this.updateBackground();
+  //   }, 5000);
+  //   // this.backgroundSequence();
+  // }
+
+  // componentWillUnmount() {
+  //   clearInterval(this.interval);
+  // }
 
   render() {
     const {
@@ -50,8 +76,14 @@ class Hero extends React.Component {
       image = null
     } = this.props;
 
+    // const parallaxClasses = classNames({
+    //   [classes.parallax]: true,
+    //   [classes.filter]: true,
+    //   [classes.small]: false
+    // });
+
     return (
-      <Parallax filter image={this.state.background.file.url}>
+      <Carousel filter images={image}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={10}>
@@ -62,7 +94,7 @@ class Hero extends React.Component {
             </GridItem>
           </GridContainer>
         </div>
-      </Parallax>
+      </Carousel>
     );
   }
 }

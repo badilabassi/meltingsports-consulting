@@ -11,7 +11,6 @@ const parallaxStyle = {
     display: "flex",
     alignItems: "center",
     backgroundBlendMode: 'darken',
-    transition: '3s'
   },
   filter: {
     "&:before": {
