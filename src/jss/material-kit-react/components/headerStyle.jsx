@@ -59,6 +59,8 @@ const headerStyle = {
     borderRadius: '3px',
     textTransform: 'none',
     color: 'inherit',
+    paddingLeft: 0,
+    justifyContent: 'flex-start',
     '&:hover,&:focus': {
       color: 'inherit',
       background: 'transparent'

@@ -77,7 +77,7 @@ class Header extends React.Component {
       [classes.fixed]: fixed
     })
     const brandComponent = (
-      <Button href="/" className={classes.title}>
+      <Button href="#hero" className={classes.title}>
         {/* {brand} */}
         <svg
           style={{ width: '90%', fill: this.state.color }}

@@ -76,7 +76,7 @@ class Carousel extends Component {
     });
 
     return (
-      <div className={parallaxClasses}>
+      <div id="hero" className={parallaxClasses}>
         <div className="react-slideshow-container">
           {/* <div className="nav" onClick={() => this.fadeImages('prev')}>
           {' '}
