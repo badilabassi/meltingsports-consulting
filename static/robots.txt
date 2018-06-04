@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Allow search crawlers to discover the sitemap.
-Sitemap: https://www.meltingsports-consulting.com/sitemap.xml
+Sitemap: https://www.meltingsportsconsulting.com/sitemap.xml
