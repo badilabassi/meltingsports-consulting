@@ -1,11 +1,11 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Img from 'gatsby-image';
 import withStyles from 'material-ui/styles/withStyles';
 import withRoot from '../withRoot';
 import 'font-awesome/css/font-awesome.min.css';
+import Helmet from 'react-helmet';
 
 import GridContainer from '../components/Grid/GridContainer.jsx';
 import GridItem from '../components/Grid/GridItem.jsx';
@@ -30,112 +30,98 @@ const propTypes = {
   data: PropTypes.object.isRequired
 };
 
-class IndexPage extends React.Component {
-  componentDidMount() {
-    window.initGoogleMaps = initGoogleMaps;
-    {
-      initGoogleMaps({
-        ...this.props.data.contact.edges[0].node.mapCoordinate
-      });
-    }
-  }
+const CguPage = ({ classes, data }) => {
+  const heroEdges = data.hero.edges;
+  const aboutEdges = data.about.edges;
+  const teamEdges = data.team.edges;
+  const servicesEdges = data.services.edges;
+  const contactEdges = data.contact.edges;
+  const cguEdges = data.page.edges;
 
-  render() {
-    const { classes, data } = this.props;
-    console.log(data);
-    const heroEdges = data.hero.edges;
-    const aboutEdges = data.about.edges;
-    const teamEdges = data.team.edges;
-    const servicesEdges = data.services.edges;
-    const contactEdges = data.contact.edges;
-    const cguEdges = data.cgu.edges;
+  const pages = [
+    aboutEdges[0].node,
+    teamEdges[0].node,
+    servicesEdges[0].node,
+    contactEdges[0].node
+  ];
 
-    const locale = cguEdges[0].node.locale === 'fr' ? 'fr' : 'en';
+  const locale = cguEdges[0].node.locale === 'fr' ? 'fr' : 'en';
 
-    cguEdges[0].node.navId = locale === 'fr' ? '/cgu' : `/en/tos`;
+  cguEdges[0].node.navId = locale === 'fr' ? '/cgu' : `/en/tos`;
 
-    const pages = [
-      aboutEdges[0].node,
-      teamEdges[0].node,
-      servicesEdges[0].node,
-      contactEdges[0].node
-    ];
+  const footerPages = [
+    aboutEdges[0].node,
+    teamEdges[0].node,
+    servicesEdges[0].node,
+    contactEdges[0].node,
+    cguEdges[0].node
+  ];
 
-    const footerPages = [
-      aboutEdges[0].node,
-      teamEdges[0].node,
-      servicesEdges[0].node,
-      contactEdges[0].node,
-      cguEdges[0].node
-    ];
+  const navLinks = pages.map(page => {
+    const { title, id, navId } = page;
+    return { id, navId, title };
+  });
 
-    const navLinks = pages.map(page => {
-      const { title, id, navId } = page;
-      return { id, navId, title };
-    });
+  const footerNavLinks = footerPages.map(page => {
+    const { title, id, navId, locale } = page;
+    return { id, navId, title, locale };
+  });
 
-    const footerNavLinks = footerPages.map(page => {
-      const { title, id, navId } = page;
-      return { id, navId, title };
-    });
-
-    return (
-      <React.Fragment>
-        <Helmet>
-          <html lang={locale} />
-        </Helmet>
-        <Header
-          color="transparent"
-          brand="Melting Sports Consulting"
-          rightLinks={<HeaderLinks routes={navLinks} />}
-          fixed
-          defaultColor="white"
-          alternateColor="#0b3e79"
-          changeColorOnScroll={{
-            height: 200,
-            color: 'white'
-          }}
-        />
-        {heroEdges.map(({ node }) => <Hero key={node.id} {...node} />)}
-        <div className={classNames(classes.main, classes.mainRaised)}>
-          <div className={classes.container}>
-            {aboutEdges.map(({ node }) => <About key={node.id} {...node} />)}
-            {teamEdges.map(({ node }) => (
-              <TeamSection key={node.id} {...node} />
-            ))}
-            {servicesEdges.map(({ node }) => (
-              <Services key={node.id} {...node} />
-            ))}
+  return (
+    <React.Fragment>
+      <Helmet>
+        <html lang={locale} />
+      </Helmet>
+      <Header
+        color="transparent"
+        brand="Melting Sports Consulting"
+        rightLinks={<HeaderLinks routes={navLinks} />}
+        fixed
+        defaultColor="white"
+        alternateColor="#0b3e79"
+        changeColorOnScroll={{
+          height: 200,
+          color: 'white'
+        }}
+      />
+      {cguEdges.map(({ node }) => (
+        <React.Fragment key={node.id}>
+          <div className={classes.staticHeroContainer}>
+            <div className={classes.staticHero}>
+              <GridContainer style={{ width: '100%', margin: '0 auto' }}>
+                <GridItem xs={12} sm={12} md={12}>
+                  <h1 className={classes.genericTitle}>{node.title}</h1>
+                </GridItem>
+              </GridContainer>
+            </div>
           </div>
-        </div>
-        {contactEdges.map(({ node }) => <ContactUs key={node.id} {...node} />)}
+          <div className={classNames(classes.main, classes.mainRaised)}>
+            <div className={classes.container}>
+              <div className={classes.section}>
+                <div
+                  className={classes.aboutDescription}
+                  dangerouslySetInnerHTML={{ __html: node.body.markdown.html }}
+                />
+              </div>
+            </div>
+          </div>
+        </React.Fragment>
+      ))}
 
-        <Footer isRoot routes={footerNavLinks} />
-      </React.Fragment>
-    );
-  }
-}
+      <Footer routes={footerNavLinks} />
+    </React.Fragment>
+  );
+};
 
-IndexPage.propTypes = propTypes;
+CguPage.propTypes = propTypes;
 
-// const Index =
+const Cgu = withRoot(withStyles(landingPageStyle)(CguPage));
 
-export default withRoot(withStyles(landingPageStyle)(IndexPage));
-
-const contentfulAssetSizesPreferWebpNoBase64 = graphql`
-  fragment GatsbyContentfulSizes_withWebp_noBase64 on ContentfulSizes {
-    aspectRatio
-    src
-    srcSet
-    srcWebp
-    srcSetWebp
-    sizes
-  }
-`;
+export default Cgu;
 
 export const pageQuery = graphql`
-  query PageQueryFr {
-    cgu: allContentfulTermsOfService(filter: { node_locale: { eq: "fr" } }) {
+  query TosQueryFr {
+    page: allContentfulTermsOfService(filter: { node_locale: { eq: "fr" } }) {
       edges {
         node {
           id

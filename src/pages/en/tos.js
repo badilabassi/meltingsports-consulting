@@ -6,13 +6,15 @@ import React from 'react';
 // import 'font-awesome/css/font-awesome.min.css';
 // import landingPageStyle from '../jss/material-kit-react/views/landingPage.jsx';
 
-import Index from '../index';
+import Cgu from '../cgu';
 
-export default Index;
+export default Cgu;
 
-export const pageQueryEn = graphql`
-  query PageQueryEn {
-    cgu: allContentfulTermsOfService(filter: { node_locale: { eq: "en-US" } }) {
+export const tosQueryEn = graphql`
+  query TosQueryEn {
+    page: allContentfulTermsOfService(
+      filter: { node_locale: { eq: "en-US" } }
+    ) {
       edges {
         node {
           id

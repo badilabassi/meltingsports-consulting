@@ -3,9 +3,10 @@ var autoprefixer = require('autoprefixer');
 module.exports = {
   siteMetadata: {
     title: 'Melting Sports | Consulting',
-    siteUrl: 'https://www.meltingsports-consulting.com'
+    siteUrl: 'https://www.meltingsportsconsulting.com'
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-react-next',
     {
       resolve: 'gatsby-plugin-postcss-sass',

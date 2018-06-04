@@ -11,7 +11,7 @@ import Favorite from "@material-ui/icons/Favorite";
 import footerStyle from "../../jss/material-kit-react/components/footerStyle.jsx";
 
 function Footer({ ...props }) {
-  const { classes, whiteFont, routes } = props;
+  const { classes, whiteFont, routes, isRoot = false } = props;
   const footerClasses = classNames({
     [classes.footer]: true,
     [classes.footerWhiteFont]: whiteFont
@@ -20,21 +20,27 @@ function Footer({ ...props }) {
     [classes.a]: true,
     [classes.footerWhiteFont]: whiteFont
   });
+  const generateLink = navId => {
+    return !!navId && navId.includes('/') ? navId : `/#${navId}`
+  }
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
         <div className={classes.left}>
           <List className={classes.list}>
-            {routes.map(({id, navId, title}) => (
-              <ListItem key={`footer-${navId}`} className={classes.inlineBlock}>
-                <a
-                  href={`#${navId}`}
-                  className={classes.block}
-                >
-                  {title}
-                </a>
-              </ListItem>
-            ))}
+            {routes.map(({id, navId, title}) => {
+              return (
+                <ListItem key={`footer-${navId}`} className={classes.inlineBlock}>
+                  <a
+                    href={generateLink(navId)}
+                    className={classes.block}
+                  >
+                    {title}
+                  </a>
+                </ListItem>
+              )
+              
+            })}
           </List>
         </div>
         <div className={classes.right}>

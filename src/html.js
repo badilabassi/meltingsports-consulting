@@ -55,12 +55,12 @@ class Html extends React.Component {
             <link href="/styles.css" rel="stylesheet" />
           ) : null}
           <link
-            href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+            href="//use.fontawesome.com/releases/v5.0.10/css/all.css"
             rel="stylesheet"
           />
           <script
             type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0GE3dFR0orMQ7l8PJKtRU_3p99pgbrmw"
+            src="//maps.googleapis.com/maps/api/js?key=AIzaSyA0GE3dFR0orMQ7l8PJKtRU_3p99pgbrmw"
           />
         </head>
         <body>

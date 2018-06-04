@@ -118,7 +118,9 @@ class Carousel extends Component {
     let { images } = this.state;
     let newImageArr = [];
     clearTimeout(this.timeout);
-    const lastImage = this.imageContainer.children[images.length - 1];
+    const lastImage = !!this.imageContainer
+      ? this.imageContainer.children[images.length - 1]
+      : null;
     if (type === 'prev') {
       newImageArr = images.slice(1);
       newImageArr.splice(newImageArr.length - 1, 0, images[0]);
