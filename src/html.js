@@ -45,6 +45,10 @@ class Html extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <meta
+            name="google-site-verification"
+            content="4lxgx9-_75_XuakOAjyifgn8CveDRUBoI8e6Fycb368"
+          />
           <title>Melting Sports | Consulting</title>
           {headComponents}
           {css}
