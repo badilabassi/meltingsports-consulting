@@ -3,6 +3,7 @@ import React from 'react'
 import classNames from 'classnames'
 // nodejs library to set properties for components
 import PropTypes from 'prop-types'
+import Link from "gatsby-link"
 // material-ui components
 import withStyles from 'material-ui/styles/withStyles'
 import AppBar from 'material-ui/AppBar'
@@ -77,7 +78,8 @@ class Header extends React.Component {
       [classes.fixed]: fixed
     })
     const brandComponent = (
-      <Button href="#hero" className={classes.title}>
+      <Link to="/#hero">
+        <Button className={classes.title}>
         <svg
           style={{ width: '90%', fill: this.state.color }}
           xmlns="http://www.w3.org/2000/svg"
@@ -189,7 +191,8 @@ class Header extends React.Component {
             height="24.36"
           />
         </svg>
-      </Button>
+        </Button>
+      </Link>
     )
     return (
       <AppBar className={appBarClasses}>

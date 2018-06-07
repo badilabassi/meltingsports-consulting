@@ -87,7 +87,7 @@ class IndexPage extends React.Component {
         <Header
           color="transparent"
           brand="Melting Sports Consulting"
-          rightLinks={<HeaderLinks routes={navLinks} />}
+          rightLinks={<HeaderLinks isRoot routes={navLinks} />}
           fixed
           defaultColor="white"
           alternateColor="#0b3e79"

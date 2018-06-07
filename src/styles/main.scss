@@ -1,9 +1,7 @@
-// @import "bootstrap";
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
 @import "mkp";
 @import "./material-kit-react.css";
 @import "material-kit-react";
-
 
 img {
   width: auto;
@@ -20,14 +18,6 @@ p {
   text-align: justify;
   hyphens: auto;
 }
-
-// .ul, li {
-//   font-size: 14px;
-// }
-
-// #hero {
-//   color: $white;
-// }
 
 #about {
   padding-top: 2rem;

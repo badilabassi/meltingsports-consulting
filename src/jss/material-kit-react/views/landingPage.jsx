@@ -81,7 +81,7 @@ const landingPageStyle = {
     alignItems: "center",
     backgroundBlendMode: 'darken',
     "@media screen and (min-width: 768px)": {
-      height: '40vh',
+      height: '80vh',
     },
     marginRight: "auto",
     marginLeft: "auto",

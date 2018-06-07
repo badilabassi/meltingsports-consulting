@@ -78,10 +78,6 @@ class Carousel extends Component {
     return (
       <div id="hero" className={parallaxClasses}>
         <div className="react-slideshow-container">
-          {/* <div className="nav" onClick={() => this.fadeImages('prev')}>
-          {' '}
-          &lt;{' '}
-        </div> */}
           <div className={`react-slideshow-fade-wrapper ${type}`}>
             <div
               className="images-wrap"
@@ -104,10 +100,6 @@ class Carousel extends Component {
               ))}
             </div>
           </div>
-          {/* <div className="nav" onClick={() => this.fadeImages('next')}>
-          {' '}
-          &gt;{' '}
-        </div> */}
         </div>
         {children}
       </div>
@@ -132,17 +124,20 @@ class Carousel extends Component {
         images.slice(0, images.length - 1)
       );
     }
-    lastImage.style.transition = `all ${this.props.transitionDuration / 1000}s`;
-    lastImage.style.opacity = '0';
-    setTimeout(() => {
-      lastImage.style.opacity = '1';
-      lastImage.style.transition = 'none';
-      this.timeout = setTimeout(
-        () => this.fadeImages('next'),
-        this.props.duration
-      );
-      this.setState({ images: newImageArr });
-    }, this.props.transitionDuration);
+    if (!!lastImage) {
+      lastImage.style.transition = `all ${this.props.transitionDuration /
+        1000}s`;
+      lastImage.style.opacity = '0';
+      setTimeout(() => {
+        lastImage.style.opacity = '1';
+        lastImage.style.transition = 'none';
+        this.timeout = setTimeout(
+          () => this.fadeImages('next'),
+          this.props.duration
+        );
+        this.setState({ images: newImageArr });
+      }, this.props.transitionDuration);
+    }
   }
 }
 

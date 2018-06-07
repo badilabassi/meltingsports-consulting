@@ -29,8 +29,10 @@
     "react-dom": "^16.4.0",
     "react-helmet": "^5.2.0",
     "react-jss": "^8.4.0",
+    "react-scrollable-anchor": "^0.6.1",
     "react-typography": "^0.15.0",
     "slash": "^1.0.0",
+    "smooth-scroll": "^14.2.0",
     "typography": "^0.15.8",
     "typography-breakpoint-constants": "^0.14.0"
   },

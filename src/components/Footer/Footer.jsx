@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "gatsby-link"
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // nodejs library that concatenates classes
@@ -31,12 +32,12 @@ function Footer({ ...props }) {
             {routes.map(({id, navId, title}) => {
               return (
                 <ListItem key={`footer-${navId}`} className={classes.inlineBlock}>
-                  <a
-                    href={generateLink(navId)}
+                  <Link
+                    to={generateLink(navId)}
                     className={classes.block}
                   >
                     {title}
-                  </a>
+                  </Link>
                 </ListItem>
               )
               
@@ -45,8 +46,9 @@ function Footer({ ...props }) {
         </div>
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()}
+          <Link to='/' style={{ width: '50%', marginLeft: "1em" }}>
             <svg
-          style={{ width: '50%', fill: '#fff', marginLeft: "1em" }}
+          style={{ width: '100%', fill: '#fff' }}
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 158.97 25.75"
@@ -158,6 +160,7 @@ function Footer({ ...props }) {
             height="24.36"
           />
         </svg>
+        </Link>
         </div>
       </div>
     </footer>
