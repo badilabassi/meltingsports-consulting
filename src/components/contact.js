@@ -80,6 +80,11 @@ export default class Contact extends React.Component {
               data-netlify-recaptcha="true"
               onSubmit={this.handleSubmit}
             >
+              <input
+                type="hidden"
+                name="form-name"
+                value="Formulaire de contact: MeltingSports Consulting"
+              />
               <div className="card-header card-header-blue text-center">
                 <h4 className="card-title">{title}</h4>
               </div>
