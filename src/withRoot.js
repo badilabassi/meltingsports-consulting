@@ -23,6 +23,9 @@ function withRoot(Component) {
     pageContext = null;
 
     render() {
+      const locale = this.props.location.pathname.includes('/en')
+        ? 'en-US'
+        : 'fr';
       // MuiThemeProvider makes the theme available down the React tree thanks to React context.
       return (
         <MuiThemeProvider
@@ -31,7 +34,7 @@ function withRoot(Component) {
         >
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          <Component {...this.props} />
+          <Component {...this.props} locale={locale} />
         </MuiThemeProvider>
       );
     }

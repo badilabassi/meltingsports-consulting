@@ -3,6 +3,8 @@ import React from 'react';
 import * as PropTypes from 'prop-types';
 // import typography from "./utils/typography"
 
+// import '@fortawsome/font-awesome/css/font-awesome.min.css';
+
 let stylesStr;
 if (process.env.NODE_ENV === 'production') {
   try {
@@ -58,10 +60,10 @@ class Html extends React.Component {
           {process.env.NODE_ENV === 'production' ? (
             <link href="/styles.css" rel="stylesheet" />
           ) : null}
-          <link
+          {/* <link
             href="//use.fontawesome.com/releases/v5.0.10/css/all.css"
             rel="stylesheet"
-          />
+          /> */}
           <script
             type="text/javascript"
             src="//maps.googleapis.com/maps/api/js?key=AIzaSyA0GE3dFR0orMQ7l8PJKtRU_3p99pgbrmw"

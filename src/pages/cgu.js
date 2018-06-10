@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import Img from 'gatsby-image';
 import withStyles from 'material-ui/styles/withStyles';
 import withRoot from '../withRoot';
-import 'font-awesome/css/font-awesome.min.css';
+// import 'font-awesome/css/font-awesome.min.css';
 import Helmet from 'react-helmet';
 
 import GridContainer from '../components/Grid/GridContainer.jsx';
@@ -59,12 +59,14 @@ const CguPage = ({ classes, data }) => {
 
   const navLinks = pages.map(page => {
     const { title, id, navId } = page;
-    return { id, navId, title };
+    const isPage = navId.includes('/');
+    return { id, navId, title, isPage };
   });
 
   const footerNavLinks = footerPages.map(page => {
     const { title, id, navId, locale } = page;
-    return { id, navId, title, locale };
+    const isPage = navId.includes('/');
+    return { id, navId, title, locale, isPage };
   });
 
   return (

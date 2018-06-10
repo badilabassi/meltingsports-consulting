@@ -1,5 +1,9 @@
 var autoprefixer = require('autoprefixer');
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Melting Sports | Consulting',
@@ -18,16 +22,27 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-120526839-1'
+        trackingId: process.env.GATSBY_GA_TRACKING_ID,
+        // Puts tracking script in the head instead of the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true
       }
     },
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: '3rkpxhjpyn87',
-        accessToken:
-          '8f981a8b3b32f5975475a5f45322d6e2f84fdbd8dfee0f90e8d2f60930453a24',
-        host: 'cdn.contentful.com'
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_API_KEY,
+        host: process.env.CONTENTFUL_HOST
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Roboto\:300,400,500,700`]
       }
     },
     'gatsby-plugin-offline',

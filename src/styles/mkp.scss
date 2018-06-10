@@ -12742,7 +12742,11 @@ fieldset[disabled] .form-check .form-check-input,
   -ms-flex-align: center;
   align-items: center;
   background-color: transparent;
-  border: 0
+  border: 0;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .card .card-footer .author,
@@ -23405,7 +23409,7 @@ footer .pull-center {
   height: 400px;
   position: relative;
   @media screen and (min-width: 768px) {
-    height: 800px;
+    height: 100%;
     position: absolute
   }
 }
