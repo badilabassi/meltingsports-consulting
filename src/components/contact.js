@@ -28,9 +28,9 @@ export default class Contact extends React.Component {
     const form = e.target;
     fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest' },
       body: encode({
-        'form-name': 'contact-form',
+        'form-name': 'Formulaire de contact: MeltingSports Consulting',
         ...this.state
       })
     })
