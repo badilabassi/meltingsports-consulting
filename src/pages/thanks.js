@@ -7,9 +7,17 @@ import landingPageStyle from '../jss/material-kit-react/views/landingPage.jsx';
 import GridContainer from '../components/Grid/GridContainer.jsx';
 import GridItem from '../components/Grid/GridItem.jsx';
 
-const ThankYouPage = ({ classes, data, locale }) => {
-  const { title, copy, backToHome } = data.contact.edges[0].node;
+const ThankYouPage = ({ classes, data }) => {
+  let locale = 'fr'
+  if (typeof window !== 'undefined') {
+    locale = localStorage.getItem('locale')
+  }
   const isFr = locale === 'fr';
+  // localStorage.getItem('locale')
+
+  const localizedData = isFr ? data.fr.edges[0].node : data.en.edges[0].node;
+  const { title, copy, backToHome } = localizedData;
+
   return (
     <React.Fragment>
       <div className={classes.staticHeroContainer}>
@@ -39,7 +47,22 @@ export default withRoot(withStyles(landingPageStyle)(ThankYouPage));
 
 export const thanksQuery = graphql`
   query ThanksFr {
-    contact: allContentfulContactForm(filter: { node_locale: { eq: "fr" } }) {
+    fr: allContentfulContactForm(filter: { node_locale: { eq: "fr" } }) {
+      edges {
+        node {
+          id
+          locale: node_locale
+          title: thanksTitle
+          backToHome
+          copy: thanksCopy {
+            markdown: childMarkdownRemark {
+              html
+            }
+          }
+        }
+      }
+    }
+    en: allContentfulContactForm(filter: { node_locale: { eq: "en-US" } }) {
       edges {
         node {
           id

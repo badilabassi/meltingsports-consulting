@@ -90,12 +90,12 @@ export default class Contact extends React.Component {
               <form
                 id="contact-form2"
                 method="post"
-                action={locale === 'fr' ? '/thanks/' : '/en/thanks/'}
+                action='/thanks/'
                 netlify=""
                 netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
-              <p class="hidden" style={{display: 'none'}}>
+              <p className="hidden" style={{display: 'none'}}>
                 <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
               </p>
                 <div className="row">

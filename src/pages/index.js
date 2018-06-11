@@ -37,6 +37,9 @@ class IndexPage extends React.Component {
       initGoogleMaps({
         ...this.props.data.contact.edges[0].node.mapCoordinate
       });
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('locale', this.props.locale)
+      }
     }
   }
 
