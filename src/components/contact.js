@@ -1,7 +1,7 @@
 import React from 'react';
-import { initGoogleMaps } from '../utils/googleMaps';
 import { navigateTo } from 'gatsby-link';
 import Recaptcha from 'react-google-recaptcha';
+import axios from 'axios';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
@@ -26,16 +26,20 @@ export default class Contact extends React.Component {
 
   handleSubmit = e => {
     const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest' },
-      body: encode({
-        'form-name': 'Formulaire de contact: MeltingSports Consulting',
-        ...this.state
-      })
-    })
-      .then(() => navigateTo(form.getAttribute('action')))
-      .catch(error => alert(error));
+    axios.post('/', encode({ 'form-name': 'Formulaire de contact: MeltingSports Consulting', ...this.state }), {
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    }).then(() => navigateTo(form.getAttribute('action')))
+    .catch(error => alert(error));
+    // fetch('/', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest' },
+    //   body: encode({
+    //     'form-name': 'Formulaire de contact: MeltingSports Consulting',
+    //     ...this.state
+    //   })
+    // })
+    //   .then(() => navigateTo(form.getAttribute('action')))
+    //   .catch(error => alert(error));
     e.preventDefault();
   };
 
@@ -69,8 +73,8 @@ export default class Contact extends React.Component {
               id="contact-form2"
               method="post"
               action={locale === 'fr' ? '/thanks/' : '/en/thanks/'}
-              data-netlify="true"
-              data-netlify-recaptcha="true"
+              netlify="true"
+              netlify-recaptcha="true"
               onSubmit={this.handleSubmit}
             >
               <div className="card-header card-header-blue text-center">
