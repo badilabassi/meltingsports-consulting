@@ -26,20 +26,19 @@ export default class Contact extends React.Component {
 
   handleSubmit = e => {
     const form = e.target;
-    axios.post('/', encode({ 'form-name': 'Formulaire de contact: MeltingSports Consulting', ...this.state }), {
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    }).then(() => navigateTo(form.getAttribute('action')))
-    .catch(error => alert(error));
-    // fetch('/', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'X-Requested-With': 'XMLHttpRequest' },
-    //   body: encode({
-    //     'form-name': 'Formulaire de contact: MeltingSports Consulting',
-    //     ...this.state
-    //   })
-    // })
-    //   .then(() => navigateTo(form.getAttribute('action')))
-    //   .catch(error => alert(error));
+    axios
+      .post(
+        '/',
+        encode({
+          'form-name': 'contact',
+          ...this.state
+        }),
+        {
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }
+      )
+      .then(() => navigateTo(form.getAttribute('action')))
+      .catch(error => alert(error));
     e.preventDefault();
   };
 
@@ -64,43 +63,38 @@ export default class Contact extends React.Component {
       !!this.state.email &&
       !!this.state.message;
 
+    const officeInfo = officeAddressField.markdown.html.replace(/\n/g, '<br/>');
+
     return (
       <div id="contact" className="contactus-2">
         <div id="contactUs2Map" className="map" />
         <div className="col-md-6">
           <div className="card card-contact card-raised">
-            <form
-              id="contact-form2"
-              method="post"
-              action={locale === 'fr' ? '/thanks/' : '/en/thanks/'}
-              netlify="true"
-              netlify-recaptcha="true"
-              onSubmit={this.handleSubmit}
-            >
-              <div className="card-header card-header-blue text-center">
-                <h4 className="card-title">{title}</h4>
-              </div>
-              <div className="card-body">
-                <div className="row">
-                  <div className="col-md-12">
-                    <div className="info info-horizontal">
-                      <div className="icon icon-rose">
-                        <i className="fa fa-map-marker" aria-hidden="true" />
-                      </div>
-                      <div className="description">
-                        <h5 className="info-title">{officeTitleField}</h5>
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: officeAddressField.markdown.html.replace(
-                              /\n/g,
-                              '<br/>'
-                            )
-                          }}
-                        />
-                      </div>
+            <div className="card-header card-header-blue text-center">
+              <h4 className="card-title">{title}</h4>
+            </div>
+            <div className="card-body">
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="info info-horizontal">
+                    <div className="icon icon-rose">
+                      <i className="fa fa-map-marker" aria-hidden="true" />
+                    </div>
+                    <div className="description">
+                      <h5 className="info-title">{officeTitleField}</h5>
+                      <div dangerouslySetInnerHTML={{ __html: officeInfo }} />
                     </div>
                   </div>
                 </div>
+              </div>
+              <form
+                id="contact-form2"
+                method="post"
+                action={locale === 'fr' ? '/thanks/' : '/en/thanks/'}
+                netlify="true"
+                netlify-recaptcha="true"
+                onSubmit={this.handleSubmit}
+              >
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group label-floating is-empty has-blue">
@@ -145,8 +139,7 @@ export default class Contact extends React.Component {
                   />
                   <span className="material-input" />
                 </div>
-              </div>
-              <div className="card-footer justify-content-between">
+
                 <div className="form-check">
                   <Recaptcha
                     ref="recaptcha"
@@ -161,14 +154,15 @@ export default class Contact extends React.Component {
                 >
                   {submitButton}
                 </button>
-              </div>
-              <div
-                className="card-footer justify-content-between"
-                dangerouslySetInnerHTML={{
-                  __html: disclaimer.markdown.html.replace(/\n/g, '<br/>')
-                }}
-              />
-            </form>
+              </form>
+            </div>
+
+            <div
+              className="card-footer justify-content-between"
+              dangerouslySetInnerHTML={{
+                __html: disclaimer.markdown.html.replace(/\n/g, '<br/>')
+              }}
+            />
           </div>
         </div>
       </div>
