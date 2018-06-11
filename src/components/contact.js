@@ -30,7 +30,7 @@ export default class Contact extends React.Component {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': 'Formulaire de contact: MeltingSports Consulting',
+        'form-name': 'contact-form',
         ...this.state
       })
     })

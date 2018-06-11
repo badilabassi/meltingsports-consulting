@@ -37,7 +37,10 @@ class Carousel extends Component {
   }
 
   componentDidMount() {
-    this.getWrapperWidth();
+    const width = document.querySelector('.react-slideshow-fade-wrapper')
+    .clientWidth;
+  this.setState({ width });
+  this.applyStyle();
     this.addResizeListener();
   }
 
