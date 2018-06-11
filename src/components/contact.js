@@ -14,10 +14,6 @@ export default class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleRecaptcha = this.handleRecaptcha.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = e => {
@@ -29,14 +25,12 @@ export default class Contact extends React.Component {
   };
 
   handleSubmit = e => {
-    // e.preventDefault();
     const form = e.target;
-    console.log(this.state);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': form.getAttribute('name'),
+        'form-name': 'Formulaire de contact: MeltingSports Consulting',
         ...this.state
       })
     })
@@ -73,18 +67,12 @@ export default class Contact extends React.Component {
           <div className="card card-contact card-raised">
             <form
               id="contact-form2"
-              name="Formulaire de contact: MeltingSports Consulting"
               method="post"
               action={locale === 'fr' ? '/thanks/' : '/en/thanks/'}
               data-netlify="true"
               data-netlify-recaptcha="true"
               onSubmit={this.handleSubmit}
             >
-              <input
-                type="hidden"
-                name="form-name"
-                value="Formulaire de contact: MeltingSports Consulting"
-              />
               <div className="card-header card-header-blue text-center">
                 <h4 className="card-title">{title}</h4>
               </div>
@@ -114,11 +102,11 @@ export default class Contact extends React.Component {
                     <div className="form-group label-floating is-empty has-blue">
                       <label className="bmd-label-floating">{nameField}</label>
                       <input
-                        type="text"
-                        name="name"
                         className="form-control"
+                        name="name"
                         onChange={this.handleChange}
                         required
+                        type="text"
                       />
                       <span className="material-input" />
                     </div>
@@ -127,11 +115,11 @@ export default class Contact extends React.Component {
                     <div className="form-group label-floating is-empty has-blue">
                       <label className="bmd-label-floating">{emailField}</label>
                       <input
-                        type="email"
-                        name="email"
                         className="form-control"
+                        name="email"
                         onChange={this.handleChange}
                         required
+                        type="email"
                       />
                       <span className="material-input" />
                     </div>
@@ -145,11 +133,11 @@ export default class Contact extends React.Component {
                     {messageField}
                   </label>
                   <textarea
-                    name="message"
                     className="form-control"
-                    rows="6"
+                    name="message"
                     onChange={this.handleChange}
                     required
+                    rows="6"
                   />
                   <span className="material-input" />
                 </div>

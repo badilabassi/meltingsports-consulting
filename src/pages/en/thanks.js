@@ -20,6 +20,7 @@ export const thanksQueryEn = graphql`
           id
           locale: node_locale
           title: thanksTitle
+          backToHome
           copy: thanksCopy {
             markdown: childMarkdownRemark {
               html

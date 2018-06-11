@@ -8,7 +8,7 @@ import GridContainer from '../components/Grid/GridContainer.jsx';
 import GridItem from '../components/Grid/GridItem.jsx';
 
 const ThankYouPage = ({ classes, data, locale }) => {
-  const { title, copy } = data.contact.edges[0].node;
+  const { title, copy, backToHome } = data.contact.edges[0].node;
   const isFr = locale === 'fr';
   return (
     <React.Fragment>
@@ -24,10 +24,7 @@ const ThankYouPage = ({ classes, data, locale }) => {
               />
               <div>
                 <a href={isFr ? '/' : '/en/'} style={{ color: '#fff' }}>
-                  ←{' '}
-                  {isFr
-                    ? 'Retourner a la page principe'
-                    : 'Go back to homepage'}
+                  ← {backToHome}
                 </a>
               </div>
             </GridItem>
@@ -48,6 +45,7 @@ export const thanksQuery = graphql`
           id
           locale: node_locale
           title: thanksTitle
+          backToHome
           copy: thanksCopy {
             markdown: childMarkdownRemark {
               html

@@ -42,7 +42,6 @@ class IndexPage extends React.Component {
 
   render() {
     const { classes, data } = this.props;
-    console.log(data);
     const heroEdges = data.hero.edges;
     const aboutEdges = data.about.edges;
     const teamEdges = data.team.edges;

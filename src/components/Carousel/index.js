@@ -14,7 +14,8 @@ class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: []
+      images: [],
+      width: 0
     };
     this.imageRefs = [];
     this.width = 0;
@@ -22,6 +23,7 @@ class Carousel extends Component {
     this.timeout = null;
     this.imageContainer = null;
     this.getImageDim = this.getImageDim.bind(this);
+    this.getWrapperWidth = this.getWrapperWidth.bind(this);
   }
 
   componentWillMount() {
@@ -35,11 +37,19 @@ class Carousel extends Component {
   }
 
   componentDidMount() {
-    this.width = document.querySelector(
-      '.react-slideshow-fade-wrapper'
-    ).clientWidth;
-    this.applyStyle();
+    this.getWrapperWidth();
     this.addResizeListener();
+  }
+
+  getWrapperWidth() {
+    const width = document.querySelector('.react-slideshow-fade-wrapper')
+      .clientWidth;
+    this.setState({ width });
+    this.applyStyle();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.getWrapperWidth);
   }
 
   getImageDim() {
@@ -49,18 +59,13 @@ class Carousel extends Component {
   }
 
   addResizeListener() {
-    window.addEventListener('resize', () => {
-      this.width = document.querySelector(
-        '.react-slideshow-fade-wrapper'
-      ).clientWidth;
-      this.applyStyle();
-    });
+    window.addEventListener('resize', this.getWrapperWidth);
   }
 
   applyStyle() {
     this.imageRefs.forEach((eachImage, index) => {
       if (!!eachImage) {
-        eachImage.style.width = `${this.width}px`;
+        eachImage.style.width = `${this.state.width}px`;
       }
     });
   }
