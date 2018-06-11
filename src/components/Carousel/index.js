@@ -27,6 +27,10 @@ class Carousel extends Component {
   }
 
   componentWillMount() {
+    if (typeof window != "undefined") {
+      const width = window.innerWidth;
+      this.setState({ width });
+    }
     this.timeout = setTimeout(
       () => this.fadeImages('next'),
       this.props.duration
@@ -37,17 +41,19 @@ class Carousel extends Component {
   }
 
   componentDidMount() {
-    const width = document.querySelector('.react-slideshow-fade-wrapper')
-    .clientWidth;
-  this.setState({ width });
-  this.applyStyle();
+    if (typeof window != "undefined") {
+      const width = window.innerWidth;
+      this.setState({ width });
+    }
+    this.applyStyle();
     this.addResizeListener();
   }
 
   getWrapperWidth() {
-    const width = document.querySelector('.react-slideshow-fade-wrapper')
-      .clientWidth;
-    this.setState({ width });
+    if (typeof window != "undefined") {
+      const width = window.innerWidth;
+      this.setState({ width });
+    }
     this.applyStyle();
   }
 
