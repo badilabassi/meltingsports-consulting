@@ -1,9 +1,9 @@
 import React from 'react';
 import { navigateTo } from 'gatsby-link';
-import Recaptcha from 'react-google-recaptcha';
+// import Recaptcha from 'react-google-recaptcha';
 import axios from 'axios';
 
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
+// const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
 function encode(data) {
   return Object.keys(data)
@@ -58,7 +58,7 @@ export default class Contact extends React.Component {
     } = this.props;
 
     const formValid =
-      !!this.state['g-recaptcha-response'] &&
+      // !!this.state['g-recaptcha-response'] &&
       !!this.state.name &&
       !!this.state.email &&
       !!this.state.message;
@@ -91,10 +91,13 @@ export default class Contact extends React.Component {
                 id="contact-form2"
                 method="post"
                 action={locale === 'fr' ? '/thanks/' : '/en/thanks/'}
-                netlify="true"
-                netlify-recaptcha="true"
+                netlify=""
+                netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
+              <p class="hidden" style={{display: 'none'}}>
+                <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+              </p>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group label-floating is-empty has-blue">
@@ -141,11 +144,11 @@ export default class Contact extends React.Component {
                 </div>
 
                 <div className="form-check">
-                  <Recaptcha
+                  {/* <Recaptcha
                     ref="recaptcha"
                     sitekey={RECAPTCHA_KEY}
                     onChange={this.handleRecaptcha}
-                  />
+                  /> */}
                 </div>
                 <button
                   disabled={!formValid}
