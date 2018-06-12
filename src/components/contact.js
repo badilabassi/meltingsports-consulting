@@ -51,7 +51,7 @@ export default class Contact extends React.Component {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact-form2', ...this.state })
+      body: encode({ 'form-name': 'contact', ...this.state })
     })
       .then(() => navigateTo(form.getAttribute('action')))
       .catch((error) => alert(error));
@@ -105,15 +105,14 @@ export default class Contact extends React.Component {
                 </div>
               </div>
               <form
-                id="contact-form2"
                 method="post"
                 action="thanks"
-                name="contact-form2"
+                name="contact"
                 data-netlify="true"
                 data-netlify-recaptcha="true"
                 onSubmit={this.handleSubmit}
               >
-                <input type="hidden" name="form-name" value="contact-form2" />
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group label-floating is-empty has-blue">
