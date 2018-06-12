@@ -108,8 +108,6 @@ export default class Contact extends React.Component {
                 method="post"
                 action="thanks"
                 name="contact"
-                data-netlify="true"
-                data-netlify-recaptcha="true"
                 onSubmit={this.handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
