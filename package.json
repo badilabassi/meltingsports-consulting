@@ -31,6 +31,7 @@
     "gatsby-transformer-sharp": "^1.6.24",
     "jss": "^9.8.1",
     "lodash": "^4.16.4",
+    "query-string": "^6.1.0",
     "react": "^16.4.0",
     "react-async-script": "^0.9.1",
     "react-dom": "^16.4.0",

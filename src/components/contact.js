@@ -3,6 +3,8 @@ import { navigateTo } from 'gatsby-link';
 import Recaptcha from 'react-google-recaptcha';
 import axios from 'axios';
 
+const queryString = require('query-string');
+
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
 function encode(data) {
@@ -26,17 +28,21 @@ export default class Contact extends React.Component {
 
   handleSubmit = e => {
     const form = e.target;
-    axios
-      .post(
-        '/',
-        encode({
-          'form-name': 'contact',
-          ...this.state
-        }),
-        {
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-        }
-      )
+    const data = Object.assign({}, this.state, {'form-name': 'contact'});
+    // console.log(data);
+    // console.log(queryString.stringify(data));
+    // console.log(encode(data));
+    // console.log(new FormData(form));
+    axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+    axios.defaults.transformRequest = [function (data, headers) {
+        var str = [];
+        for(var p in data)
+          if (data.hasOwnProperty(p) && data[p]) {
+            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(data[p]));
+          }
+        return str.join("&");
+      }];
+    axios.post('/', data)
       .then(() => navigateTo(form.getAttribute('action')))
       .catch(error => alert(error));
     e.preventDefault();
