@@ -27,7 +27,7 @@ class Carousel extends Component {
   }
 
   componentWillMount() {
-    if (typeof window != "undefined") {
+    if (typeof window != 'undefined') {
       const width = window.innerWidth;
       this.setState({ width });
     }
@@ -41,7 +41,7 @@ class Carousel extends Component {
   }
 
   componentDidMount() {
-    if (typeof window != "undefined") {
+    if (typeof window != 'undefined') {
       const width = window.innerWidth;
       this.setState({ width });
     }
@@ -50,7 +50,7 @@ class Carousel extends Component {
   }
 
   getWrapperWidth() {
-    if (typeof window != "undefined") {
+    if (typeof window != 'undefined') {
       const width = window.innerWidth;
       this.setState({ width });
     }
@@ -95,11 +95,11 @@ class Carousel extends Component {
           <div className={`react-slideshow-fade-wrapper ${type}`}>
             <div
               className="images-wrap"
-              ref={wrap => (this.imageContainer = wrap)}
+              ref={(wrap) => (this.imageContainer = wrap)}
             >
               {images.map((each, key) => (
                 <div
-                  ref={el => {
+                  ref={(el) => {
                     this.imageRefs.push(el);
                   }}
                   onLoad={key === 0 ? this.getImageDim : null}

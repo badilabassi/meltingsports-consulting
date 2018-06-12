@@ -5,5 +5,17 @@
   },
   "globals": {
     "graphql": false
+  },
+  "extends": ["prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error", {
+      "arrowParens": "always",
+      "singleQuote": true,
+      "trailingComma": "none"
+    }],
+    "react/jsx-filename-extension": [0],
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0
   }
 }

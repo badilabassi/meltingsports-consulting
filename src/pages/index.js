@@ -38,7 +38,7 @@ class IndexPage extends React.Component {
         ...this.props.data.contact.edges[0].node.mapCoordinate
       });
       if (typeof window !== 'undefined') {
-        localStorage.setItem('locale', this.props.locale)
+        localStorage.setItem('locale', this.props.locale);
       }
     }
   }
@@ -71,12 +71,12 @@ class IndexPage extends React.Component {
       cguEdges[0].node
     ];
 
-    const navLinks = pages.map(page => {
+    const navLinks = pages.map((page) => {
       const { title, id, navId } = page;
       return { id, navId, title };
     });
 
-    const footerNavLinks = footerPages.map(page => {
+    const footerNavLinks = footerPages.map((page) => {
       const { title, id, navId } = page;
       return { id, navId, title };
     });

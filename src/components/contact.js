@@ -16,34 +16,37 @@ export default class Contact extends React.Component {
     this.state = {};
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleRecaptcha = value => {
+  handleRecaptcha = (value) => {
     this.setState({ 'g-recaptcha-response': value });
   };
 
-  handleSubmit = e => {
-    const form = e.target;
-    const data = Object.assign({}, this.state, {'form-name': 'contact'});
-    // console.log(data);
-    // console.log(queryString.stringify(data));
-    // console.log(encode(data));
-    // console.log(new FormData(form));
-    axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-    axios.defaults.transformRequest = [function (data, headers) {
-        var str = [];
-        for(var p in data)
-          if (data.hasOwnProperty(p) && data[p]) {
-            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(data[p]));
-          }
-        return str.join("&");
-      }];
-    axios.post('/', data)
-      .then(() => navigateTo(form.getAttribute('action')))
-      .catch(error => alert(error));
+  handleSubmit = (e) => {
     e.preventDefault();
+
+    const form = e.target;
+    const data = Object.assign({}, this.state, { 'form-name': 'contact' });
+
+    axios.defaults.headers.post['Content-Type'] =
+      'application/x-www-form-urlencoded';
+    axios.defaults.transformRequest = [
+      (data, headers) => {
+        const str = [];
+        for (let p in data)
+          if (data.hasOwnProperty(p) && data[p]) {
+            str.push(encodeURIComponent(p) + '=' + encodeURIComponent(data[p]));
+          }
+        return str.join('&');
+      }
+    ];
+
+    axios
+      .post('/', data)
+      .then(() => navigateTo(form.getAttribute('action')))
+      .catch((error) => alert(error));
   };
 
   render() {
@@ -94,12 +97,13 @@ export default class Contact extends React.Component {
               <form
                 id="contact-form2"
                 method="post"
-                action="/thanks"
-                netlify=""
-                netlify-recaptcha=""
+                action="thanks"
+                name="contact"
+                data-netlify="true"
+                data-netlify-recaptcha="true"
                 onSubmit={this.handleSubmit}
               >
-
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="row">
                   <div className="col-md-6">
                     <div className="form-group label-floating is-empty has-blue">

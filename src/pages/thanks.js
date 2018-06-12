@@ -8,9 +8,9 @@ import GridContainer from '../components/Grid/GridContainer.jsx';
 import GridItem from '../components/Grid/GridItem.jsx';
 
 const ThankYouPage = ({ classes, data }) => {
-  let locale = 'fr'
+  let locale = 'fr';
   if (typeof window !== 'undefined') {
-    locale = localStorage.getItem('locale')
+    locale = localStorage.getItem('locale');
   }
   const isFr = locale === 'fr';
   // localStorage.getItem('locale')
