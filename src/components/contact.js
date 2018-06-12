@@ -5,11 +5,11 @@ import axios from 'axios';
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
-// function encode(data) {
-//   return Object.keys(data)
-//     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-//     .join('&');
-// }
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+}
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -25,28 +25,38 @@ export default class Contact extends React.Component {
   };
 
   handleSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     const form = e.target;
-    const data = Object.assign({}, this.state, { 'form-name': 'contact' });
+    // const data = Object.assign({}, this.state, { 'form-name': 'contact' });
 
-    axios.defaults.headers.post['Content-Type'] =
-      'application/x-www-form-urlencoded';
-    axios.defaults.transformRequest = [
-      (data, headers) => {
-        const str = [];
-        for (let p in data)
-          if (data.hasOwnProperty(p) && data[p]) {
-            str.push(encodeURIComponent(p) + '=' + encodeURIComponent(data[p]));
-          }
-        return str.join('&');
-      }
-    ];
+    // axios.defaults.headers.post['Content-Type'] =
+    //   'application/x-www-form-urlencoded';
+    // axios.defaults.transformRequest = [
+    //   (data, headers) => {
+    //     const str = [];
+    //     for (let p in data)
+    //       if (data.hasOwnProperty(p) && data[p]) {
+    //         str.push(encodeURIComponent(p) + '=' + encodeURIComponent(data[p]));
+    //       }
+    //     return str.join('&');
+    //   }
+    // ];
 
-    axios
-      .post('/', data)
+    // axios
+    //   .post('/', data)
+    //   .then(() => navigateTo(form.getAttribute('action')))
+    //   .catch((error) => alert(error));
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...this.state })
+    })
       .then(() => navigateTo(form.getAttribute('action')))
       .catch((error) => alert(error));
+
+    e.preventDefault();
   };
 
   render() {
