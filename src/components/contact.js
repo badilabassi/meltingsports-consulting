@@ -3,15 +3,13 @@ import { navigateTo } from 'gatsby-link';
 import Recaptcha from 'react-google-recaptcha';
 import axios from 'axios';
 
-const queryString = require('query-string');
-
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-}
+// function encode(data) {
+//   return Object.keys(data)
+//     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+//     .join('&');
+// }
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
