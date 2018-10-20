@@ -1,13 +1,6 @@
 import React from 'react';
-// import * as PropTypes from 'prop-types';
-// import classNames from 'classnames';
-// import Img from 'gatsby-image';
-// import withStyles from 'material-ui/styles/withStyles';
-// import 'font-awesome/css/font-awesome.min.css';
-// import landingPageStyle from '../jss/material-kit-react/views/landingPage.jsx';
-
 import Index from '../index';
-
+import { graphql } from 'gatsby'
 export default Index;
 
 export const pageQueryEn = graphql`

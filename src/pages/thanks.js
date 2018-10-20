@@ -1,11 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
-
 import withRoot from '../withRoot';
 import withStyles from 'material-ui/styles/withStyles';
 import landingPageStyle from '../jss/material-kit-react/views/landingPage.jsx';
 import GridContainer from '../components/Grid/GridContainer.jsx';
 import GridItem from '../components/Grid/GridItem.jsx';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
 
 const ThankYouPage = ({ classes, data }) => {
   let locale = 'fr';
@@ -19,7 +20,7 @@ const ThankYouPage = ({ classes, data }) => {
   const { title, copy, backToHome } = localizedData;
 
   return (
-    <React.Fragment>
+    <Layout>
       <div className={classes.staticHeroContainer}>
         <div className={classes.staticHero} style={{ height: '100vh' }}>
           <GridContainer style={{ maxWidth: 500, margin: '0 auto' }}>
@@ -39,7 +40,7 @@ const ThankYouPage = ({ classes, data }) => {
           </GridContainer>
         </div>
       </div>
-    </React.Fragment>
+    </Layout>
   );
 };
 

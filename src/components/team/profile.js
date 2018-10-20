@@ -3,7 +3,7 @@ import GridItem from '../Grid/GridItem.jsx';
 import Card from '../Card/Card.jsx';
 import CardBody from '../Card/CardBody.jsx';
 import CardFooter from '../Card/CardFooter.jsx';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn } from '@fortawesome/fontawesome-free-brands';
 
 const Profile = ({

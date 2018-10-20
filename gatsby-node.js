@@ -1,7 +1,7 @@
 // const path = require(`path`);
 
-// exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-//   const { createNodeField } = boundActionCreators;
+// exports.onCreateNode = ({ node, actions, getNode }) => {
+//   const { createNodeField } = actions;
 
 //   if (node.internal.type === `MarkdownRemark`) {
 //     const fileNode = getNode(node.parent);
@@ -36,8 +36,8 @@
 // // // called after the Gatsby bootstrap is finished so you have
 // // // access to any information necessary to programmatically
 // // // create pages.
-// // exports.createPages = ({ graphql, boundActionCreators }) => {
-// //   const { createPage } = boundActionCreators;
+// // exports.createPages = ({ graphql, actions }) => {
+// //   const { createPage } = actions;
 // //   return new Promise((resolve, reject) => {
 // //     // The “graphql” function allows us to run arbitrary
 // //     // queries against the local Contentful graphql schema. Think of

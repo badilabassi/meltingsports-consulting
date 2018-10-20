@@ -21,10 +21,12 @@ import About from '../components/about';
 import TeamSection from '../components/team';
 import Services from '../components/services';
 import ContactUs from '../components/contact';
-
+import { graphql } from 'gatsby';
 import { initGoogleMaps } from '../utils/googleMaps';
+import Layout from '../components/layout'
 
-const _ = require('lodash');
+
+import _ from 'lodash';
 
 const propTypes = {
   data: PropTypes.object.isRequired
@@ -82,14 +84,14 @@ class IndexPage extends React.Component {
     });
 
     return (
-      <React.Fragment>
+      <Layout>
         <Helmet>
           <html lang={locale} />
         </Helmet>
         <Header
           color="transparent"
           brand="Melting Sports Consulting"
-          rightLinks={<HeaderLinks isRoot routes={navLinks} />}
+          rightLinks={<HeaderLinks isRoot routes={navLinks} locale={locale} />}
           fixed
           defaultColor="white"
           alternateColor="#0b3e79"
@@ -97,6 +99,7 @@ class IndexPage extends React.Component {
             height: 200,
             color: 'white'
           }}
+          locale={locale}
         />
         {heroEdges.map(({ node }) => <Hero key={node.id} {...node} />)}
         <div className={classNames(classes.main, classes.mainRaised)}>
@@ -112,8 +115,8 @@ class IndexPage extends React.Component {
         </div>
         {contactEdges.map(({ node }) => <ContactUs key={node.id} {...node} />)}
 
-        <Footer isRoot routes={footerNavLinks} />
-      </React.Fragment>
+        <Footer isRoot routes={footerNavLinks} locale={locale} />
+      </Layout>
     );
   }
 }

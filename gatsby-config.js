@@ -1,5 +1,3 @@
-var autoprefixer = require('autoprefixer');
-
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 });
@@ -11,14 +9,20 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-react-next',
+    `gatsby-plugin-jss`,
     {
-      resolve: 'gatsby-plugin-postcss-sass',
+      resolve: `@wapps/gatsby-plugin-material-ui`,
       options: {
-        postCssPlugins: [autoprefixer()],
-        precision: 8 // SASS default: 5
+        theme: {
+          typography: {
+            useNextVariants: true
+          }
+        },
+        productionPrefix: 'c'
       }
     },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-purgecss`,
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -37,12 +41,6 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_API_KEY,
         host: process.env.CONTENTFUL_HOST
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-google-fonts',
-      options: {
-        fonts: ['Roboto\:300,400,500,700']
       }
     },
     'gatsby-plugin-offline',

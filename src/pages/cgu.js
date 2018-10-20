@@ -21,10 +21,11 @@ import About from '../components/about';
 import TeamSection from '../components/team';
 import Services from '../components/services';
 import ContactUs from '../components/contact';
-
+import { graphql } from 'gatsby'
 import { initGoogleMaps } from '../utils/googleMaps';
+import Layout from '../components/layout';
 
-const _ = require('lodash');
+import _ from 'lodash';
 
 const propTypes = {
   data: PropTypes.object.isRequired
@@ -70,7 +71,7 @@ const CguPage = ({ classes, data }) => {
   });
 
   return (
-    <React.Fragment>
+    <Layout>
       <Helmet>
         <html lang={locale} />
       </Helmet>
@@ -111,7 +112,7 @@ const CguPage = ({ classes, data }) => {
       ))}
 
       <Footer routes={footerNavLinks} />
-    </React.Fragment>
+    </Layout>
   );
 };
 

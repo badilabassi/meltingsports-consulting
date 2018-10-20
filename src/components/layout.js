@@ -1,15 +1,15 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
-// import emergence from 'emergence.js';
-// import SmoothScroll from 'smooth-scroll';
+
+import '../css/style.scss';
 import 'animate.css/animate.css';
-import '../styles/main.scss';
+
 
 const propTypes = {
-  children: PropTypes.func.isRequired
+  children: PropTypes.any
 };
 
-class DefaultLayout extends React.Component {
+class Layout extends React.Component {
   componentDidMount() {
     // emergence.init();
     if (typeof window !== 'undefined') {
@@ -30,10 +30,10 @@ class DefaultLayout extends React.Component {
   render() {
     const { children } = this.props;
 
-    return <React.Fragment>{children()}</React.Fragment>;
+    return <React.Fragment>{children}</React.Fragment>;
   }
 }
 
-DefaultLayout.propTypes = propTypes;
+Layout.propTypes = propTypes;
 
-export default DefaultLayout;
+export default Layout;

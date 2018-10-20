@@ -5,14 +5,14 @@ import * as PropTypes from 'prop-types';
 
 // import '@fortawsome/font-awesome/css/font-awesome.min.css';
 
-let stylesStr;
-if (process.env.NODE_ENV === 'production') {
-  try {
-    stylesStr = require('!raw-loader!../public/styles.css');
-  } catch (e) {
-    console.log(e);
-  }
-}
+// let stylesStr;
+// if (process.env.NODE_ENV === 'production') {
+//   try {
+//     stylesStr = require('!raw!../public/styles.css');
+//   } catch (e) {
+//     console.log(e);
+//   }
+// }
 
 const propTypes = {
   headComponents: PropTypes.node.isRequired,
@@ -23,15 +23,15 @@ const propTypes = {
 class Html extends React.Component {
   render() {
     const { headComponents, body, postBodyComponents } = this.props;
-    let css;
-    if (process.env.NODE_ENV === 'production') {
-      css = (
-        <style
-          id="gatsby-inlined-css"
-          dangerouslySetInnerHTML={{ __html: stylesStr }}
-        />
-      );
-    }
+    // let css;
+    // if (process.env.NODE_ENV === 'production') {
+    //   css = (
+    //     <style
+    //       id="gatsby-inlined-css"
+    //       dangerouslySetInnerHTML={{ __html: stylesStr }}
+    //     />
+    //   );
+    // }
 
     return (
       <html>
@@ -53,13 +53,16 @@ class Html extends React.Component {
           />
           <title>Melting Sports | Consulting</title>
           {headComponents}
-          {css}
-
+          {/* {css} */}
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
+          />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-          {process.env.NODE_ENV === 'production' ? (
+          {/* {process.env.NODE_ENV === 'production' ? (
             <link href="/styles.css" rel="stylesheet" />
-          ) : null}
+          ) : null} */}
           {/* <link
             href="//use.fontawesome.com/releases/v5.0.10/css/all.css"
             rel="stylesheet"
