@@ -12,7 +12,7 @@ class Html extends React.Component {
     const { headComponents, body, postBodyComponents } = this.props;
 
     return (
-      <html>
+      <html {...this.props.htmlAttributes}>
         <head>
           <meta name="referrer" content="origin" />
           <meta charSet="utf-8" />
@@ -52,7 +52,8 @@ class Html extends React.Component {
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         </head>
-        <body>
+        <body {...this.props.bodyAttributes}>
+          {this.props.preBodyComponents}
           <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
           {postBodyComponents}
           <script
