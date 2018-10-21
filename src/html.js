@@ -63,6 +63,11 @@ class Html extends React.Component {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" 
           />
           <link
+            rel="preload"
+            as="script"
+            href="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0GE3dFR0orMQ7l8PJKtRU_3p99pgbrmw" 
+          />
+          <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"
           />
@@ -77,7 +82,7 @@ class Html extends React.Component {
           /> */}
           <script
             type="text/javascript"
-            src="//maps.googleapis.com/maps/api/js?key=AIzaSyA0GE3dFR0orMQ7l8PJKtRU_3p99pgbrmw"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0GE3dFR0orMQ7l8PJKtRU_3p99pgbrmw"
           />
         </head>
         <body>
