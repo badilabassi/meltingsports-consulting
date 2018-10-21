@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react';
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
-import { Manager, Target, Popper } from "react-popper";
+import PropTypes from 'prop-types';
+import { Manager, Target, Popper } from 'react-popper';
 
 // material-ui components
-import withStyles from "material-ui/styles/withStyles";
-import MenuItem from "material-ui/Menu/MenuItem";
-import MenuList from "material-ui/Menu/MenuList";
-import ClickAwayListener from "material-ui/utils/ClickAwayListener";
-import Paper from "material-ui/Paper";
-import Grow from "material-ui/transitions/Grow";
-import Divider from "material-ui/Divider";
+import withStyles from 'material-ui/styles/withStyles';
+import MenuItem from 'material-ui/Menu/MenuItem';
+import MenuList from 'material-ui/Menu/MenuList';
+import ClickAwayListener from 'material-ui/utils/ClickAwayListener';
+import Paper from 'material-ui/Paper';
+import Grow from 'material-ui/transitions/Grow';
+import Divider from 'material-ui/Divider';
 
 // core components
-import Button from "../CustomButtons/Button.jsx";
+import Button from '../CustomButtons/Button.jsx';
 
-import customDropdownStyle from "../../jss/material-kit-react/components/customDropdownStyle.jsx";
+import customDropdownStyle from '../../jss/material-kit-react/components/customDropdownStyle.jsx';
 
 class CustomDropdown extends React.Component {
   constructor(props) {
@@ -56,7 +56,7 @@ class CustomDropdown extends React.Component {
     });
     const dropdownItem = classNames({
       [classes.dropdownItem]: true,
-      [classes[hoverColor + "Hover"]]: true,
+      [classes[hoverColor + 'Hover']]: true,
       [classes.dropdownItemRTL]: rtlActive
     });
     return (
@@ -64,7 +64,7 @@ class CustomDropdown extends React.Component {
         <Target>
           <Button
             aria-label="Notifications"
-            aria-owns={open ? "menu-list" : null}
+            aria-owns={open ? 'menu-list' : null}
             aria-haspopup="true"
             {...buttonProps}
             onClick={this.handleClick}
@@ -79,8 +79,12 @@ class CustomDropdown extends React.Component {
         <Popper
           placement={
             dropup
-              ? left ? "top-end" : "top-start"
-              : left ? "bottom-end" : "bottom-start"
+              ? left
+                ? 'top-end'
+                : 'top-start'
+              : left
+                ? 'bottom-end'
+                : 'bottom-start'
           }
           eventsEnabled={open}
           className={classNames({
@@ -94,8 +98,8 @@ class CustomDropdown extends React.Component {
               id="menu-list"
               style={
                 dropup
-                  ? { transformOrigin: "0 100% 0" }
-                  : { transformOrigin: "0 0 0" }
+                  ? { transformOrigin: '0 100% 0' }
+                  : { transformOrigin: '0 0 0' }
               }
             >
               <Paper className={classes.dropdown}>
@@ -140,12 +144,12 @@ class CustomDropdown extends React.Component {
 
 CustomDropdown.defaultProps = {
   caret: true,
-  hoverColor: "primary"
+  hoverColor: 'primary'
 };
 
 CustomDropdown.propTypes = {
   classes: PropTypes.object.isRequired,
-  hoverColor: PropTypes.oneOf(["primary", "black"]),
+  hoverColor: PropTypes.oneOf(['primary', 'black']),
   buttonText: PropTypes.node,
   buttonIcon: PropTypes.func,
   dropdownList: PropTypes.array,

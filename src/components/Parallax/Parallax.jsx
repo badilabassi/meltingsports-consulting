@@ -1,19 +1,19 @@
-import React from "react";
+import React from 'react';
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 // material-ui components
-import withStyles from "material-ui/styles/withStyles";
+import withStyles from 'material-ui/styles/withStyles';
 
 // core components
-import parallaxStyle from "../../jss/material-kit-react/components/parallaxStyle.jsx";
+import parallaxStyle from '../../jss/material-kit-react/components/parallaxStyle.jsx';
 
 class Parallax extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      transform: "translate3d(0,0px,0)"
+      transform: 'translate3d(0,0px,0)'
     };
     // this.resetTransform = this.resetTransform.bind(this);
   }
@@ -54,7 +54,7 @@ class Parallax extends React.Component {
         className={parallaxClasses}
         style={{
           ...style,
-          backgroundImage: "url(" + image + ")",
+          backgroundImage: 'url(' + image + ')',
           ...this.state
         }}
         ref="parallax"

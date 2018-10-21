@@ -14,7 +14,7 @@ import {
   transition,
   boxShadow,
   drawerWidth
-} from '../../material-kit-react.jsx'
+} from '../../material-kit-react.jsx';
 
 const headerStyle = {
   appBar: {
@@ -168,6 +168,6 @@ const headerStyle = {
     //   opacity: ".8"
     // }
   }
-}
+};
 
-export default headerStyle
+export default headerStyle;

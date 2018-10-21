@@ -1,6 +1,6 @@
 import React from 'react';
 import Index from '../index';
-import { graphql } from 'gatsby'
+import { graphql } from 'gatsby';
 export default Index;
 
 export const pageQueryEn = graphql`
@@ -31,25 +31,28 @@ export const pageQueryEn = graphql`
             }
           }
           image: slideshow {
-            file {
-              url
-              fileName
-              contentType
-              details {
-                image {
-                  width
-                  height
-                }
-                size
-              }
+            fluid(maxWidth: 1920) {
+              ...GatsbyContentfulFluid_withWebp_noBase64
             }
-            resolutions(width: 1920, quality: 90) {
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
-            }
+            # file {
+            #   url
+            #   fileName
+            #   contentType
+            #   details {
+            #     image {
+            #       width
+            #       height
+            #     }
+            #     size
+            #   }
+            # }
+            # resolutions(width: 1920, quality: 90) {
+            #   aspectRatio
+            #   src
+            #   srcSet
+            #   srcWebp
+            #   srcSetWebp
+            # }
           }
         }
       }
@@ -67,13 +70,16 @@ export const pageQueryEn = graphql`
             }
           }
           image: aboutImage {
-            resolutions(width: 500, quality: 80) {
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
+            fluid(maxWidth: 500) {
+              ...GatsbyContentfulFluid_withWebp_noBase64
             }
+            # resolutions(width: 500, quality: 80) {
+            #   aspectRatio
+            #   src
+            #   srcSet
+            #   srcWebp
+            #   srcSetWebp
+            # }
           }
           backgroundImageToggle
         }
@@ -89,13 +95,16 @@ export const pageQueryEn = graphql`
           team {
             id
             image: teamImage {
-              resolutions(width: 400, quality: 80) {
-                aspectRatio
-                src
-                srcSet
-                srcWebp
-                srcSetWebp
+              fluid(maxWidth: 400) {
+                ...GatsbyContentfulFluid_withWebp_noBase64
               }
+              # resolutions(width: 400, quality: 80) {
+              #   aspectRatio
+              #   src
+              #   srcSet
+              #   srcWebp
+              #   srcSetWebp
+              # }
             }
             name
             position
@@ -120,13 +129,16 @@ export const pageQueryEn = graphql`
             id
             title
             image: serviceImage {
-              resolutions(width: 300, quality: 50) {
-                aspectRatio
-                src
-                srcSet
-                srcWebp
-                srcSetWebp
+              fluid(maxWidth: 300) {
+                ...GatsbyContentfulFluid_withWebp_noBase64
               }
+              # resolutions(width: 300, quality: 50) {
+              #   aspectRatio
+              #   src
+              #   srcSet
+              #   srcWebp
+              #   srcSetWebp
+              # }
             }
             description {
               markdown: childMarkdownRemark {

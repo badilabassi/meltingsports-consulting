@@ -2,9 +2,10 @@ import React from 'react';
 import GridItem from '../Grid/GridItem.jsx';
 import Card from '../Card/Card.jsx';
 import CardBody from '../Card/CardBody.jsx';
-import CardFooter from '../Card/CardFooter.jsx';
+// import CardFooter from '../Card/CardFooter.jsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn } from '@fortawesome/fontawesome-free-brands';
+import Img from 'gatsby-image';
 
 const Profile = ({
   classes,
@@ -19,12 +20,20 @@ const Profile = ({
     <Card plain>
       <GridItem xs={12} sm={12} md={6} className={classes.itemGrid}>
         {!!image && (
-          <img
-            src={image.resolutions.src}
-            srcSet={image.resolutions.srcSet}
+          <Img
             alt={name}
             className={imageClasses}
+            fluid={image.fluid}
+            backgroundColor={'#eeeeee'}
+            fadeIn
           />
+
+          // <img
+          //   src={image.resolutions.src}
+          //   srcSet={image.resolutions.srcSet}
+          //   alt={name}
+          //   className={imageClasses}
+          // />
         )}
       </GridItem>
       <h4 className={classes.cardTitle}>

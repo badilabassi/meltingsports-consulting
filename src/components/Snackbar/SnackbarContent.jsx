@@ -1,10 +1,10 @@
-import React from "react";
-import { withStyles, SnackbarContent as Snack, IconButton } from "material-ui";
-import { Close } from "@material-ui/icons";
+import React from 'react';
+import { withStyles, SnackbarContent as Snack, IconButton } from 'material-ui';
+import { Close } from '@material-ui/icons';
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import snackbarContentStyle from "assets/jss/material-kit-react/components/snackbarContentStyle.jsx";
+import snackbarContentStyle from 'assets/jss/material-kit-react/components/snackbarContentStyle.jsx';
 
 class SnackbarContent extends React.Component {
   constructor(props) {
@@ -38,8 +38,8 @@ class SnackbarContent extends React.Component {
             </div>
           }
           classes={{
-            root: classes.root + " " + classes[color],
-            message: classes.message + " " + classes.container
+            root: classes.root + ' ' + classes[color],
+            message: classes.message + ' ' + classes.container
           }}
           // action={action}
         />
@@ -57,7 +57,7 @@ class SnackbarContent extends React.Component {
 SnackbarContent.propTypes = {
   classes: PropTypes.object.isRequired,
   message: PropTypes.node.isRequired,
-  color: PropTypes.oneOf(["info", "success", "warning", "danger", "primary"]),
+  color: PropTypes.oneOf(['info', 'success', 'warning', 'danger', 'primary']),
   close: PropTypes.bool,
   icon: PropTypes.func
 };

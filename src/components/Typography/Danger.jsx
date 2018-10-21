@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
-import { withStyles } from "material-ui";
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui';
 
-import typographyStyle from "assets/jss/material-kit-react/components/typographyStyle.jsx";
+import typographyStyle from 'assets/jss/material-kit-react/components/typographyStyle.jsx';
 
 function Danger({ ...props }) {
   const { classes, children } = props;
   return (
-    <div className={classes.defaultFontStyle + " " + classes.dangerText}>
+    <div className={classes.defaultFontStyle + ' ' + classes.dangerText}>
       {children}
     </div>
   );

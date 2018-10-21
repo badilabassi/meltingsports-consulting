@@ -3,13 +3,9 @@ import GridContainer from './Grid/GridContainer.jsx';
 import GridItem from './Grid/GridItem.jsx';
 import withStyles from 'material-ui/styles/withStyles';
 import teamStyle from '../jss/material-kit-react/views/landingPageSections/teamStyle.jsx';
+import Img from 'gatsby-image';
 
-const About = ({
-  classes = {},
-  title = '',
-  description = '',
-  image = null
-}) => {
+const About = ({ classes = {}, title = '', description = '', image }) => {
   return (
     <div id="about" className={classes.section}>
       <h2 className={classes.title}>{title}</h2>
@@ -28,11 +24,17 @@ const About = ({
         >
           <GridItem xs={12} sm={12} md={5} style={{ padding: '0 1rem 0 0' }}>
             {!!image && (
-              <img
-                src={image.resolutions.src}
-                srcSet={image.resolutions.srcSet}
+              <Img
                 alt={title}
+                fluid={image.fluid}
+                backgroundColor={'#eeeeee'}
+                fadeIn
               />
+              // <img
+              //   src={image.resolutions.src}
+              //   srcSet={image.resolutions.srcSet}
+              //   alt={title}
+              // />
             )}
           </GridItem>
           <GridItem xs={12} sm={12} md={7}>

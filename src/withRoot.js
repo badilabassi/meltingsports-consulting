@@ -27,7 +27,7 @@ function withRoot(Component) {
         ? 'en-US'
         : 'fr';
 
-        // console.log(this.pageContext)
+      // console.log(this.pageContext)
 
       // MuiThemeProvider makes the theme available down the React tree thanks to React context.
       return (

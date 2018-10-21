@@ -1,4 +1,4 @@
-import { container, title } from '../../material-kit-react.jsx'
+import { container, title } from '../../material-kit-react.jsx';
 
 const landingPageStyle = {
   container: {
@@ -26,7 +26,7 @@ const landingPageStyle = {
   },
   aboutDescription: {
     color: '#333',
-    "& > h2": {
+    '& > h2': {
       fontWeight: 'bold',
       color: '#3C4858'
     }
@@ -44,59 +44,59 @@ const landingPageStyle = {
       '0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)'
   },
   staticHeroContainer: {
-    overflow: "hidden",
-    position: "relative",
-    backgroundPosition: "center center",
-    backgroundSize: "cover",
-    margin: "0",
-    padding: "0",
-    border: "0",
-    display: "flex",
-    alignItems: "center",
+    overflow: 'hidden',
+    position: 'relative',
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    margin: '0',
+    padding: '0',
+    border: '0',
+    display: 'flex',
+    alignItems: 'center',
     backgroundBlendMode: 'darken',
-    "&:after": {
-      position: "absolute",
-      zIndex: "-1",
-      width: "100%",
-      height: "100%",
-      display: "block",
-      left: "0",
-      top: "0",
+    '&:after': {
+      position: 'absolute',
+      zIndex: '-1',
+      width: '100%',
+      height: '100%',
+      display: 'block',
+      left: '0',
+      top: '0',
       bottom: 0,
       content: "''",
-      backgroundColor: '#1D2844',
-    },
+      backgroundColor: '#1D2844'
+    }
   },
   staticHero: {
     ...container,
     height: '80vh',
-    overflow: "hidden",
-    position: "relative",
-    backgroundPosition: "center center",
-    backgroundSize: "cover",
-    margin: "0",
-    padding: "0",
-    border: "0",
-    display: "flex",
-    alignItems: "center",
+    overflow: 'hidden',
+    position: 'relative',
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    margin: '0',
+    padding: '0',
+    border: '0',
+    display: 'flex',
+    alignItems: 'center',
     backgroundBlendMode: 'darken',
-    "@media screen and (min-width: 768px)": {
-      height: '80vh',
+    '@media screen and (min-width: 768px)': {
+      height: '80vh'
     },
-    marginRight: "auto",
-    marginLeft: "auto",
-    width: "100%",
-    "@media (min-width: 576px)": {
-      maxWidth: "540px"
+    marginRight: 'auto',
+    marginLeft: 'auto',
+    width: '100%',
+    '@media (min-width: 576px)': {
+      maxWidth: '540px'
     },
-    "@media (min-width: 768px)": {
-      maxWidth: "720px"
+    '@media (min-width: 768px)': {
+      maxWidth: '720px'
     },
-    "@media (min-width: 992px)": {
-      maxWidth: "960px"
+    '@media (min-width: 992px)': {
+      maxWidth: '960px'
     },
-    "@media (min-width: 1200px)": {
-      maxWidth: "1140px"
+    '@media (min-width: 1200px)': {
+      maxWidth: '1140px'
     }
   },
   genericTitle: {
@@ -110,13 +110,13 @@ const landingPageStyle = {
   },
   section: {
     padding: '25px 0 70px'
-  },
+  }
   // mainRaised: {
   //   margin: "-60px 30px 0px",
   //   borderRadius: "6px",
   // boxShadow:
   //   "0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2)"
   // }
-}
+};
 
-export default landingPageStyle
+export default landingPageStyle;

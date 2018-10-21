@@ -1,0 +1,4648 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "hero",
+        "type": "ContentType",
+        "createdAt": "2018-05-20T16:23:46.139Z",
+        "updatedAt": "2018-05-28T01:10:12.096Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 13,
+        "version": 26,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 25,
+        "firstPublishedAt": "2018-05-20T16:23:46.356Z",
+        "publishedAt": "2018-05-28T01:10:12.096Z"
+      },
+      "displayField": "title",
+      "name": "Hero",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slideshow",
+          "name": "Slideshow",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkMimetypeGroup": [
+                  "image",
+                  "video"
+                ]
+              }
+            ],
+            "linkType": "Asset"
+          }
+        },
+        {
+          "id": "category",
+          "name": "category",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "about",
+        "type": "ContentType",
+        "createdAt": "2018-05-20T16:26:53.094Z",
+        "updatedAt": "2018-05-28T01:09:28.293Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 17,
+        "firstPublishedAt": "2018-05-20T16:26:53.348Z",
+        "publishedAt": "2018-05-28T01:09:28.293Z"
+      },
+      "displayField": "title",
+      "name": "About",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "navId",
+          "name": "navId",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "aboutImage",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "backgroundImageToggle",
+          "name": "Background image toggle",
+          "type": "Boolean",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "category",
+          "name": "category",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "team",
+        "type": "ContentType",
+        "createdAt": "2018-05-20T16:41:08.685Z",
+        "updatedAt": "2018-05-28T02:38:24.230Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 10,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 19,
+        "firstPublishedAt": "2018-05-20T16:41:08.976Z",
+        "publishedAt": "2018-05-28T02:38:24.230Z"
+      },
+      "displayField": "name",
+      "name": "Team",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "position",
+          "name": "Position",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "teamImage",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "experienceTitle",
+          "name": "ExperienceTitle",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "experience",
+          "name": "Experience",
+          "type": "Array",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        },
+        {
+          "id": "summary",
+          "name": "Summary",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "linkedInLink",
+          "name": "LinkedIn link",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "teamSection",
+        "type": "ContentType",
+        "createdAt": "2018-05-21T15:29:31.577Z",
+        "updatedAt": "2018-05-28T01:11:34.736Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 17,
+        "firstPublishedAt": "2018-05-21T15:29:32.033Z",
+        "publishedAt": "2018-05-28T01:11:34.736Z"
+      },
+      "displayField": "title",
+      "name": "Team section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "team",
+          "name": "team",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "team"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "navId",
+          "name": "navId",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "category",
+          "name": "category",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "service",
+        "type": "ContentType",
+        "createdAt": "2018-05-21T20:15:49.602Z",
+        "updatedAt": "2018-05-26T00:46:56.143Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 9,
+        "firstPublishedAt": "2018-05-21T20:15:50.145Z",
+        "publishedAt": "2018-05-26T00:46:56.143Z"
+      },
+      "displayField": "title",
+      "name": "Service",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "serviceImage",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "services",
+        "type": "ContentType",
+        "createdAt": "2018-05-21T20:16:57.893Z",
+        "updatedAt": "2018-05-28T01:10:37.049Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 9,
+        "firstPublishedAt": "2018-05-21T20:16:58.278Z",
+        "publishedAt": "2018-05-28T01:10:37.049Z"
+      },
+      "displayField": "title",
+      "name": "Services",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "service",
+          "name": "service",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "service"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "navId",
+          "name": "navId",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "category",
+          "name": "category",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "slider",
+        "type": "ContentType",
+        "createdAt": "2018-05-25T12:14:28.881Z",
+        "updatedAt": "2018-05-25T12:14:29.487Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 1,
+        "firstPublishedAt": "2018-05-25T12:14:29.487Z",
+        "publishedAt": "2018-05-25T12:14:29.487Z"
+      },
+      "displayField": null,
+      "name": "Slider",
+      "description": "",
+      "fields": [
+        {
+          "id": "slide",
+          "name": "Slide",
+          "type": "Array",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "hero"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "contactForm",
+        "type": "ContentType",
+        "createdAt": "2018-05-27T14:55:28.342Z",
+        "updatedAt": "2018-06-11T01:03:32.900Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 13,
+        "firstPublishedAt": "2018-05-27T14:55:28.948Z",
+        "publishedAt": "2018-06-11T01:03:32.900Z"
+      },
+      "displayField": "title",
+      "name": "ContactForm",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "navId",
+          "name": "navId",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "officeTitleField",
+          "name": "OfficeTitleField",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "officeAddressField",
+          "name": "OfficeAddressField",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "mapCoordinate",
+          "name": "MapCoordinate",
+          "type": "Location",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "nameField",
+          "name": "NameField",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "emailField",
+          "name": "EmailField",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "messageField",
+          "name": "MessageField",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "disclaimer",
+          "name": "Disclaimer",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "submitButton",
+          "name": "SubmitButton",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "robot",
+          "name": "Robot",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "category",
+          "name": "category",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "thanksTitle",
+          "name": "Thanks Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "thanksCopy",
+          "name": "Thanks Copy",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "backToHome",
+          "name": "back to home",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "termsOfService",
+        "type": "ContentType",
+        "createdAt": "2018-06-03T18:08:43.175Z",
+        "updatedAt": "2018-06-03T18:08:43.369Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 1,
+        "firstPublishedAt": "2018-06-03T18:08:43.369Z",
+        "publishedAt": "2018-06-03T18:08:43.369Z"
+      },
+      "displayField": "title",
+      "name": "Terms of Service",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "3rkpxhjpyn87",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 26,
+        "createdAt": "2018-05-20T16:23:46.609Z",
+        "createdBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-05-28T01:10:12.673Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "hero",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "slideshow",
+          "widgetId": "assetGalleryEditor"
+        },
+        {
+          "fieldId": "category",
+          "widgetId": "slugEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "3rkpxhjpyn87",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 18,
+        "createdAt": "2018-05-20T16:26:53.554Z",
+        "createdBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-05-28T01:09:28.758Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "about",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "navId",
+          "widgetId": "slugEditor"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "aboutImage",
+          "widgetId": "assetLinkEditor"
+        },
+        {
+          "fieldId": "backgroundImageToggle",
+          "settings": {
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean"
+        },
+        {
+          "fieldId": "category",
+          "widgetId": "slugEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "3rkpxhjpyn87",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 20,
+        "createdAt": "2018-05-20T16:41:09.199Z",
+        "createdBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-05-28T02:38:24.951Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "team",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "position",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "teamImage",
+          "widgetId": "assetLinkEditor"
+        },
+        {
+          "fieldId": "experienceTitle",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "experience",
+          "widgetId": "tagEditor"
+        },
+        {
+          "fieldId": "summary",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "linkedInLink",
+          "widgetId": "urlEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "3rkpxhjpyn87",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 18,
+        "createdAt": "2018-05-21T15:29:32.150Z",
+        "createdBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-05-28T01:11:35.238Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "teamSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "team",
+          "settings": {
+            "bulkEditing": false
+          },
+          "widgetId": "entryCardsEditor"
+        },
+        {
+          "fieldId": "navId",
+          "widgetId": "slugEditor"
+        },
+        {
+          "fieldId": "category",
+          "widgetId": "slugEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "3rkpxhjpyn87",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2018-05-21T20:15:50.448Z",
+        "createdBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-05-26T00:46:56.625Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "service",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "serviceImage",
+          "widgetId": "assetLinkEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "3rkpxhjpyn87",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2018-05-21T20:16:58.386Z",
+        "createdBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-05-28T01:10:37.697Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "services",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "service",
+          "settings": {
+            "bulkEditing": false
+          },
+          "widgetId": "entryLinksEditor"
+        },
+        {
+          "fieldId": "navId",
+          "widgetId": "slugEditor"
+        },
+        {
+          "fieldId": "category",
+          "widgetId": "slugEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "3rkpxhjpyn87",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2018-05-25T12:14:29.851Z",
+        "createdBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-05-25T12:14:30.435Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "slider",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "slide",
+          "settings": {
+            "bulkEditing": false
+          },
+          "widgetId": "entryLinksEditor"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "3rkpxhjpyn87",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 14,
+        "createdAt": "2018-05-27T14:55:29.083Z",
+        "createdBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-06-11T01:03:33.445Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "contactForm",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "navId",
+          "widgetId": "slugEditor"
+        },
+        {
+          "fieldId": "officeTitleField",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "officeAddressField",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "mapCoordinate",
+          "widgetId": "locationEditor"
+        },
+        {
+          "fieldId": "nameField",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "emailField",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "messageField",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "disclaimer",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "submitButton",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "robot",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "category",
+          "widgetId": "slugEditor"
+        },
+        {
+          "fieldId": "thanksTitle",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "thanksCopy",
+          "widgetId": "markdown"
+        },
+        {
+          "fieldId": "backToHome",
+          "widgetId": "singleLine"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "3rkpxhjpyn87",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2018-06-03T18:08:43.541Z",
+        "createdBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2018-06-03T18:08:43.904Z",
+        "updatedBy": {
+          "sys": {
+            "id": "6JFFwbgkiV6V8RKWphQOai",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "termsOfService",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "markdown"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "1EiXgUHxoksScUUww04oMW",
+        "type": "Entry",
+        "createdAt": "2018-05-20T16:33:35.472Z",
+        "updatedAt": "2018-06-02T22:08:32.198Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 19,
+        "version": 425,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 424,
+        "firstPublishedAt": "2018-05-20T16:35:29.416Z",
+        "publishedAt": "2018-06-02T22:08:32.198Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "fr": "MELTING SPORTS CONSULTING"
+        },
+        "description": {
+          "fr": "#### Notre passion est notre métier.\n#### Nous accompagnons nos clients à chaque étape de leurs projets, afin de garantir la meilleure expérience et les plus belles émotions possibles.",
+          "en-US": "#### Our job, our passion.\n#### We support our clients in each and every step of their projects, guaranteeing them the best possible experiences and emotions."
+        },
+        "slideshow": {
+          "fr": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2n5pJbQ2cQAwKCQIWoUAyy"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1rpbTrYx6gO6YCqUaguyuM"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4fukILG9RKk6oO4S2MOOyi"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "23SCoD1E4EiOkYQcsCk8gS"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "3Qax7xa1Z6uWuKKcgwqK6S",
+        "type": "Entry",
+        "createdAt": "2018-05-20T21:01:06.663Z",
+        "updatedAt": "2018-07-07T18:48:28.593Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 31,
+        "version": 1160,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 1159,
+        "firstPublishedAt": "2018-05-20T21:03:34.365Z",
+        "publishedAt": "2018-07-07T18:48:28.593Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "team"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "fr": "Salah Ben Meftah"
+        },
+        "position": {
+          "fr": "Co-fondateur & Associé - Sales & Développment",
+          "en-US": "Co-founder & Associate - Sales & Development"
+        },
+        "teamImage": {
+          "fr": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4dqhCm3UQMCuawe2wSQcCg"
+            }
+          }
+        },
+        "experienceTitle": {
+          "fr": "Expériences",
+          "en-US": "Experiences"
+        },
+        "summary": {
+          "fr": "15 ans d’expérience en tant que business développeur dans le secteur du sport et des médias sur le continent africain.\n\nSalah a débuté sa carrière au sein du cabinet Price Waterhouse Coopers en tant que consultant en gestion de projet notamment pour le compte de Maroc Telecom. Après un Master en Sport et Stratégie d’entreprise à l’ESSEC, il occupe le poste de Manager de Zone Afrique au sein du groupe Canal Plus pour contribuer au développement commercial de la marque en Afrique en couvrant une dizaine de pays francophones. Il poursuit avec passion son parcours sur le continent en charge de la commercialisation des droits marketing et audiovisuels de quelques compétitions de la Confédération Africaine de Football et pour nombre de fédérations africaines de football. \n\nVéritable expert des marchés africains, Salah offre la garantie d'une stratégie et approche adaptées aux spécificités et besoins de chaque acteur.\n\n",
+          "en-US": "15 years of experience developing business in the sport and media industry on the African market.\n\nSalah has started his career path at Price Waterhouse Coopers as a project manager consultant, in charge notably of the Maroc Telecom account. After obtaining a Master in Sport and Business Strategy at ESSEC Business School, he held the position of Area Manager Africa at Canal Plus group, aiming at developing the business in over 10 French-speaking countries.\nSubsequently, he has continued his journey on the continent with passion, in charge of the commercialization of several African Football Confederation marketing and TV rights to African Football Associations.\n\nA genuine African markets expert, Salah offers the guarantee of a tailor-made strategy and approach covering the requirements of each stakeholder. "
+        },
+        "linkedInLink": {
+          "fr": "https://www.linkedin.com/in/salah-ben-meftah-70a318/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "6uoOmXRsJOAaaoE6k24QOy",
+        "type": "Entry",
+        "createdAt": "2018-05-20T21:03:41.972Z",
+        "updatedAt": "2018-06-07T19:25:46.799Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 31,
+        "version": 1526,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 1525,
+        "firstPublishedAt": "2018-05-20T21:04:26.025Z",
+        "publishedAt": "2018-06-07T19:25:46.799Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "team"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "fr": "Yasmine Arkoub"
+        },
+        "position": {
+          "fr": "Co-fondatrice & Associée - Legal & Business Affairs",
+          "en-US": "Co-founder & Associate - Legal & Business Affairs"
+        },
+        "teamImage": {
+          "fr": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "tq4whb5tyCMoiEAYK8ES0"
+            }
+          }
+        },
+        "experienceTitle": {
+          "fr": "Expériences",
+          "en-US": "Experiences"
+        },
+        "summary": {
+          "fr": "10 ans d'expérience dans la negociation et gestion de droits TV et Marketing.\n\nYasmine a développé son expertise au sein de grands groupes comme Lagardère Sports et Orange, mais également en tant que consultante indépendante. Avec un double parcours juridique (Masters in Business Law Paris V) et commercial (à l’ESG Paris) Yasmine a eu l'occasion d'embrasser plusieurs métiers passionnants autour du sport. Juriste -Lagardère Sports-, dans la communication -Groupe Orange-, puis au sein de la direction des droits médias sportifs du portfolio de Lagardère Sports Afrique (CAN, CAN Qualifiers, FIFA WC Qualifiers, Jeux Africains, etc…). Yasmine dispose également d'une solide expérience terrain à l'international (CAN, organisation de conventions). \n\nYasmine dispose d'une expertise métier complète/360°, qui lui permet de répondre aux besoins des différents acteurs sur le marché, autant les ayants droit que les responsables canaux médias. ",
+          "en-US": "10 years of experience in negotiation and TV/Marketing rights management.\n\nYasmine has developed her versatile expertise within major companies such as Lagardère Sports and Orange, but as well as a freelancer. Graduating from both Law and Business School, she is a natural, becoming a real dual skilled expert. She has mainly worked in the sport industry at Lagardère Sports Africa, where she has swiftly moved from legal expert to senior media rights manager (AFCON, AFCON Qualifiers, FIFA WC Qualifiers, All-Africa Games, etc…), with a short break at Orange working in communication. She additionally has a global and consistent on-field experience (AFCON, organizing conventions). \n\nYasmine has a 360° vision of the business, hence able to adequately work with right holders, channels or operational professionals. "
+        },
+        "linkedInLink": {
+          "fr": "https://www.linkedin.com/in/yasmine-arkoub-7b860939/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "AenYcQVLRQMySuEMykkCO",
+        "type": "Entry",
+        "createdAt": "2018-05-20T21:03:44.942Z",
+        "updatedAt": "2018-06-04T20:45:19.747Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 26,
+        "version": 1736,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 1735,
+        "firstPublishedAt": "2018-05-20T21:04:26.022Z",
+        "publishedAt": "2018-06-04T20:45:19.747Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "team"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "fr": "Ahmed Labassi"
+        },
+        "position": {
+          "fr": "Co-fondateur & Associé - Marketing & Opérations",
+          "en-US": "Co-founder & Associate - Marketing & Operations"
+        },
+        "teamImage": {
+          "fr": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4F8r1Rocl2ScqkgAaGcyIq"
+            }
+          }
+        },
+        "experienceTitle": {
+          "fr": "Expériences",
+          "en-US": "Experiences"
+        },
+        "summary": {
+          "fr": "Plus de 10 ans d'expérience dans le marketing sportif.\n\nDouble diplômé de l'Ecole des Mines de Nantes et Audencia, Ahmed a débuté sa carrière dans le conseil. \n\nRiche d'un parcours résolument tourné vers l'international, particulièrement lors de ses expériences au sein de PUMA International et Lagardère Sports, il a pu développer et se développer à l'occasion d'événements sportifs Européens et Africains d'envergure. \n\nVéritable expert en gestion opérationnelle et en marketing stratégique, notamment sur des compétitions de la FIFA (Coupes du Monde des Clubs) ou de la Confédération Africaine de Football (CAN, CHAN, compétitions interclubs), Ahmed sait appréhender des contextes culturels très variés et les sensibilités qui en découlent.\n\n",
+          "en-US": "Over 10 years of experience in Sports Marketing.\n\nAfter graduating from Ecole des Mines de Nantes and Audencia, Ahmed started his career as a consultant. \n\nDefinitely international, his career path within PUMA International and Lagardère Sports has led him to actively take part in major European and African sports events. \n\nTrue expert in operational management and marketing strategy, proven during FIFA competitions (Club World Cup) and African Football Confederation competitions (AFCON, African Nations Championship, interclubs), Ahmed knows how to grasp and embrace different cultural backgrounds and sensitivities."
+        },
+        "linkedInLink": {
+          "fr": "https://www.linkedin.com/in/ahmed-labassi/"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "21MQIpLsAImeQ8Akwk6SEE",
+        "type": "Entry",
+        "createdAt": "2018-05-20T21:03:48.639Z",
+        "updatedAt": "2018-10-19T08:00:23.334Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 34,
+        "version": 3294,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 3293,
+        "firstPublishedAt": "2018-05-20T21:04:26.069Z",
+        "publishedAt": "2018-10-19T08:00:23.334Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "about"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "fr": "A propos",
+          "en-US": "About us"
+        },
+        "navId": {
+          "fr": "about"
+        },
+        "description": {
+          "fr": "Le sport est vecteur de valeurs fortes et sans conteste le fournisseur officiel des plus grandes émotions. C'est sur ce constat qu’est née Melting Sports Consulting. \n\nDisposant d'expertises complémentaires acquises au sein de grands acteurs du monde du sport et des médias, nous offrons une approche stratégique et opérationnelle à 360°. En effet, nous nous appuyons sur plus de 15 ans d'expérience sur les plus grands événements sportifs dans les domaines de la vente et de la gestion de droits TV/Marketing, ainsi que du marketing opérationnel.\n\nMelting Sports Consulting capitalise sur ses relations privilégiées nouées au fil des années avec les institutions, les clubs sportifs, les médias, les opérateurs économiques et les ayants droit sur le continent africain et européen. \n\nMelting Sports Consulting développe une approche consciente de l'environnement client et des marchés, tout en proposant une large palette de services : \n\n- la négociation et la vente de packages sponsoring\n- la négociation et la gestion de droits commerciaux et médias sportifs\n- l'organisation et le management opérationnel d’évènements sportifs (notamment la conception et la mise en place de la stratégie billetterie sur des compétitions d'envergure internationale)\n- l’accompagnement des comités d’organisation de compétitions sportives au niveau local et continental\n- le conseil en développement marketing et commercial \n- l'activation clients \n\nPassion, excellence et proximité, telles sont les valeurs véhiculées par Melting Sports Consulting.",
+          "en-US": "Sport is a vehicle of strong values and offers without a doubt the greatest emotions. Based on this observation, we have decided to create Melting Sports Consulting. \n\nHaving complementary expertises acquired within major companies of the sports and media industry, we provide a 360° strategic and operational approach. Indeed, we rely on more than 15 years of experience in sales and management of TV/Marketing rights, as well as in marketing operations, working on major sport events.\n\nMelting Sports Consulting enjoys privileged relationships established over the years with the institutions, sports clubs, media, economic operators and rights-holders on the African and European continents. \n\nMelting Sports Consulting has a conscious approach of the client's environment and markets, while offering a wide range of services : \n\n- negotiation and sale of sponsoring packages\n- negotiation and management of commercial and media rights\n- organization and operational management of sports events (especially the conception and implementation of ticketing strategies with proven track record in international competitions)\n- coaching and support in organizing committees for local and continental competitions\n- marketing and commercial development consulting \n- client activation  \n\nPassion, excellence and proximity, these are the values conveyed by Melting Sports Consulting."
+        },
+        "aboutImage": {
+          "fr": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "64HtNaHTvak0YWIs4aOiQA"
+            }
+          }
+        },
+        "backgroundImageToggle": {
+          "fr": false
+        },
+        "category": {
+          "fr": "page"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "5aN5SH0vn2WWumYYa0icSM",
+        "type": "Entry",
+        "createdAt": "2018-05-21T17:10:04.642Z",
+        "updatedAt": "2018-05-28T01:12:10.201Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 35,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 34,
+        "firstPublishedAt": "2018-05-21T17:20:19.914Z",
+        "publishedAt": "2018-05-28T01:12:10.201Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "teamSection"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "fr": "Notre équipe",
+          "en-US": "Our team"
+        },
+        "team": {
+          "fr": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3Qax7xa1Z6uWuKKcgwqK6S"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6uoOmXRsJOAaaoE6k24QOy"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "AenYcQVLRQMySuEMykkCO"
+              }
+            }
+          ]
+        },
+        "navId": {
+          "fr": "team"
+        },
+        "category": {
+          "fr": "page"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "3DFZW8rivuwu6SIIA0Ui4k",
+        "type": "Entry",
+        "createdAt": "2018-05-21T20:17:33.477Z",
+        "updatedAt": "2018-05-28T01:11:48.821Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 28,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 27,
+        "firstPublishedAt": "2018-05-21T21:10:51.244Z",
+        "publishedAt": "2018-05-28T01:11:48.821Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "services"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "fr": "Nos services",
+          "en-US": "Our services"
+        },
+        "service": {
+          "fr": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6NxLRBZ8DCca8yIS6ygAe4"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5Vz15prrbygYqcAoqI24SG"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3cRIQHUgpWSSSU02g8So2w"
+              }
+            }
+          ]
+        },
+        "navId": {
+          "fr": "services"
+        },
+        "category": {
+          "fr": "page"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "6NxLRBZ8DCca8yIS6ygAe4",
+        "type": "Entry",
+        "createdAt": "2018-05-21T20:22:13.885Z",
+        "updatedAt": "2018-06-05T10:16:43.738Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 10,
+        "version": 410,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 409,
+        "firstPublishedAt": "2018-05-21T20:23:46.228Z",
+        "publishedAt": "2018-06-05T10:16:43.738Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "service"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "fr": "Sales & Développement",
+          "en-US": "Sales & Development"
+        },
+        "description": {
+          "fr": "- Vente et gestion des droits TV et Marketing\n- Développement de stratégies commerciales\n- Développement de nouvelles compétitions\n- Conception et vente de packages sponsoring \n",
+          "en-US": "- Sale and management of TV and Marketing rights\n- Development of business strategies\n- Development of new competitions\n- Design and sale of sponsoring packages"
+        },
+        "serviceImage": {
+          "fr": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6nm5xCC1RS6GOuM62ek8cy"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "5Vz15prrbygYqcAoqI24SG",
+        "type": "Entry",
+        "createdAt": "2018-05-21T20:23:56.703Z",
+        "updatedAt": "2018-06-05T10:20:34.272Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 13,
+        "version": 312,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 311,
+        "firstPublishedAt": "2018-05-21T20:24:42.146Z",
+        "publishedAt": "2018-06-05T10:20:34.272Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "service"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "fr": "Gestion de Droits",
+          "en-US": "Rights Management"
+        },
+        "description": {
+          "fr": "- Contractualisation des droits TV et Marketing\n- Suivi de l'implémentation de la production TV\n- Suivi des accords commerciaux avec les ayants-droit\n- Conseil en stratégie de contenu\n",
+          "en-US": "- Contractualisation of TV and Marketing rights\n- Monitoring of the TV production implementation\n- Monitoring of sales agreements with the rights-holders\n- Content strategy consulting"
+        },
+        "serviceImage": {
+          "fr": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6nm5xCC1RS6GOuM62ek8cy"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "3cRIQHUgpWSSSU02g8So2w",
+        "type": "Entry",
+        "createdAt": "2018-05-21T20:24:56.228Z",
+        "updatedAt": "2018-06-05T10:20:42.979Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 12,
+        "version": 514,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 513,
+        "firstPublishedAt": "2018-05-21T20:25:39.374Z",
+        "publishedAt": "2018-06-05T10:20:42.979Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "service"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "fr": "Opérations Marketing",
+          "en-US": "Marketing Operations"
+        },
+        "description": {
+          "fr": "- Implémentation opérationnelle des droits marketing\n- Activation client\n- Monitoring et reporting des retombées commerciales\n- Accompagnement en marketing stratégique\n",
+          "en-US": "- Operational implementation of marketing rights\n- Client activation\n- Monitoring and reporting of commercial spin-offs\n- Support in strategic marketing"
+        },
+        "serviceImage": {
+          "fr": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6nm5xCC1RS6GOuM62ek8cy"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "1kWH4i34E0cUIc06yKG4kY",
+        "type": "Entry",
+        "createdAt": "2018-05-27T14:55:48.752Z",
+        "updatedAt": "2018-06-11T07:39:09.133Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 18,
+        "version": 629,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 628,
+        "firstPublishedAt": "2018-05-27T14:57:29.553Z",
+        "publishedAt": "2018-06-11T07:39:09.133Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "contactForm"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "fr": "Nous Contacter",
+          "en-US": "Contact Us"
+        },
+        "navId": {
+          "fr": "contact"
+        },
+        "officeTitleField": {
+          "fr": "Nos bureaux",
+          "en-US": "Our office"
+        },
+        "officeAddressField": {
+          "fr": "157 Quai du President Roosevelt\n92130 Issy les Moulineaux\nFrance",
+          "en-US": "157 Quai du President Roosevelt\n92130 Issy les Moulineaux\nFrance"
+        },
+        "mapCoordinate": {
+          "fr": {
+            "lon": 2.2608377000000246,
+            "lat": 48.82748669999999
+          }
+        },
+        "nameField": {
+          "fr": "Nom",
+          "en-US": "Name"
+        },
+        "emailField": {
+          "fr": "Adresse E-mail",
+          "en-US": "Email Address"
+        },
+        "messageField": {
+          "fr": "Message",
+          "en-US": "Message"
+        },
+        "disclaimer": {
+          "fr": "*En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées dans le cadre de la demande de devis et de la relation commerciale qui peut en découler*",
+          "en-US": "*By submitting this form, I agree to the exploitation of the given information in the frame of quote requests and business relationships that might ensue*"
+        },
+        "submitButton": {
+          "fr": "Envoyer",
+          "en-US": "Submit"
+        },
+        "robot": {
+          "fr": "Je ne suis pas un robot",
+          "en-US": "I am not a robot"
+        },
+        "category": {
+          "fr": "page"
+        },
+        "thanksTitle": {
+          "fr": "Merci d'avoir pris contact avec nous!",
+          "en-US": "Thank you for getting in touch!"
+        },
+        "thanksCopy": {
+          "fr": "Nous vous remercions de nous avoir contacté. Un de nos collaborateurs vous contactera dans les plus brefs délais.",
+          "en-US": "We appreciate you contacting us. One of our colleagues will get back to you shortly."
+        },
+        "backToHome": {
+          "fr": "Retourner à la page d'accueil",
+          "en-US": "Go back to homepage"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "3TA50c4A3S6MIqEyqmc44S",
+        "type": "Entry",
+        "createdAt": "2018-06-03T18:08:57.031Z",
+        "updatedAt": "2018-10-18T14:55:23.838Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 11,
+        "version": 466,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 465,
+        "firstPublishedAt": "2018-06-03T18:09:50.426Z",
+        "publishedAt": "2018-10-18T14:55:23.838Z",
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "termsOfService"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "fr": "Mentions légales",
+          "en-US": "Terms of service"
+        },
+        "body": {
+          "fr": "<p>Ces conditions générales d’utilisation  (ci-après, les « CGU ») ont été rédigées conformément au textes suivants :\nRèglement 2016/679 du Parlement européen et du Conseil ;\nLa Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique et notamment son article 6\nSon amendement, la loi n° 2004-801 du 6 août 2004 relative à l'informatique, aux fichiers et aux libertés\nLa Loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés pour les questions de traitement de données à caractère personnel.</p> \n<p>Il est précisé aux utilisateurs du site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>\n<p><strong>Propriétaire</strong> : Melting Sports Consulting – SAS – 1 rue des Panoyaux - 75020 Paris - France<br />\n<strong>Créateur</strong>  : <a href=\"https://www.meltingsportsconsulting.com\">Ahmed Labassi</a><br />\n<strong>Responsable publication</strong> : Ahmed Labassi – alabassi@meltingsports.org<br />\nLe responsable publication est une personne physique ou une personne morale.<br />\n<strong>Webmaster</strong> : Ahmed Labassi – alabassi@meltingsports.org<br />\n<strong>Hébergeur</strong> : Netlify – 2325 3rd St #215, San Francisco, CA 94107, États-Unis<br />\n\n<h3>1. Présentation des conditions générales d’utilisation du site et des services proposés.</h3>\n<p>L’utilisation du site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> sont donc invités à les consulter de manière régulière.</p>\n<p>Ce site est normalement accessible à tout moment aux utilisateurs. Une interruption pour raison de maintenance technique peut être toutefois décidée par Melting Sports Consulting, qui s’efforcera alors de communiquer préalablement aux utilisateurs les dates et heures de l’intervention.</p>\n<p>Le site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> est mis à jour régulièrement par Ahmed Labassi. De la même façon, les mentions légales peuvent être modifiées à tout moment : elles s’imposent néanmoins à l’utilisateur qui est invité à s’y référer le plus souvent possible afin d’en prendre connaissance.</p>\n\n<h3>2. Description des services fournis.</h3>\n<p>Le site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> a pour objet de fournir une information concernant l’ensemble des activités de la société.</p>\n<p>Melting Sports Consulting s’efforce de fournir sur le site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> des informations aussi précises que possible. Toutefois, il ne pourra être tenue responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.</p>\n<p>Tous les informations indiquées sur le site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> sont données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant sur le site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.</p>\n\n<h3>3. Limitations contractuelles sur les données techniques.</h3>\n<p>Le site utilise la technologie JavaScript.</p>\n<p>Le site Internet ne pourra être tenu responsable de dommages matériels liés à l’utilisation du site. De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour</p>\n\n<h3>4. Propriété intellectuelle et contrefaçons.</h3>\n<p>Melting Sports Consulting est propriétaire des droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logo, icônes, sons, logiciels.</p>\n<p>Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de : Melting Sports Consulting.</p>\n<p>Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>\n\n<h3>5. Limitations de responsabilité.</h3>\n<p>Melting Sports Consulting ne pourra être tenue responsable des dommages directs et indirects causés au matériel de l’utilisateur, lors de l’accès au site www.meltingsportsconsulting.com, et résultant soit de l’utilisation d’un matériel ne répondant pas aux spécifications indiquées au point 4, soit de l’apparition d’un bug ou d’une incompatibilité.</p>\n<p>Melting Sports Consulting ne pourra également être tenue responsable des dommages indirects (tels par exemple qu’une perte de marché ou perte d’une chance) consécutifs à l’utilisation du site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a>.</p>\n<p>Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs. Melting Sports Consulting se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, Melting Sports Consulting se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…).</p>\n\n<h3>6. Gestion des données personnelles.</h3>\n<p>En France, les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004, l'article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995.</p>\n<p>A l'occasion de l'utilisation du site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a>, peuvent êtres recueillies : l'URL des liens par l'intermédiaire desquels l'utilisateur a accédé au site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a>, le fournisseur d'accès de l'utilisateur, l'adresse de protocole Internet (IP) de l'utilisateur.</p>\n<p> En tout état de cause Melting Sports Consulting ne collecte des informations personnelles relatives à l'utilisateur que pour le besoin de certains services proposés par le site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a>. L'utilisateur fournit ces informations en toute connaissance de cause, notamment lorsqu'il procède par lui-même à leur saisie. Il est alors précisé à l'utilisateur du site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> l’obligation ou non de fournir ces informations.</p>\n<p>Conformément aux dispositions des articles 38 et suivants de la loi 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, tout utilisateur dispose d’un droit d’accès, de rectification et d’opposition aux données personnelles le concernant, en effectuant sa demande écrite et signée, accompagnée d’une copie du titre d’identité avec signature du titulaire de la pièce, en précisant l’adresse à laquelle la réponse doit être envoyée.</p>\n<p>Aucune information personnelle de l'utilisateur du site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> n'est publiée à l'insu de l'utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Seule l'hypothèse du rachat de Melting Sports Consulting et de ses droits permettrait la transmission des dites informations à l'éventuel acquéreur qui serait à son tour tenu de la même obligation de conservation et de modification des données vis à vis de l'utilisateur du site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a>.</p>\n<p>Le site n'est pas déclaré à la CNIL car il ne recueille pas d'informations personnelles. .</p>\n<p>Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.</p>\n\n<h3>7. Liens hypertextes et cookies.</h3>\n<p>Le site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> contient un certain nombre de liens hypertextes vers d’autres sites, mis en place avec l’autorisation de Melting Sports Consulting. Cependant, Melting Sports Consulting n’a pas la possibilité de vérifier le contenu des sites ainsi visités, et n’assumera en conséquence aucune responsabilité de ce fait.</p>\n<p>La navigation sur le site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> est susceptible de provoquer l’installation de cookie(s) sur l’ordinateur de l’utilisateur. Un cookie est un fichier de petite taille, qui ne permet pas l’identification de l’utilisateur, mais qui enregistre des informations relatives à la navigation d’un ordinateur sur un site. Les données ainsi obtenues visent à faciliter la navigation ultérieure sur le site, et ont également vocation à permettre diverses mesures de fréquentation.</p>\n<p>Le refus d’installation d’un cookie peut entraîner l’impossibilité d’accéder à certains services. L’utilisateur peut toutefois configurer son ordinateur de la manière suivante, pour refuser l’installation des cookies :</p>\n<p>Sous Internet Explorer : onglet outil (pictogramme en forme de rouage en haut a droite) / options internet. Cliquez sur Confidentialité et choisissez Bloquer tous les cookies. Validez sur Ok.</p>\n<p>Sous Firefox : en haut de la fenêtre du navigateur, cliquez sur le bouton Firefox, puis aller dans l'onglet Options. Cliquer sur l'onglet Vie privée. Paramétrez les Règles de conservation sur :  utiliser les paramètres personnalisés pour l'historique. Enfin décochez-la pour  désactiver les cookies.</p>\n<p>Sous Safari : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par un rouage). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section \"Confidentialité\", cliquez sur Paramètres de contenu. Dans la section \"Cookies\", vous pouvez bloquer les cookies.</p>\n<p>Sous Chrome : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par trois lignes horizontales). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section \"Confidentialité\", cliquez sur préférences.  Dans l'onglet \"Confidentialité\", vous pouvez bloquer les cookies.</p>\n\n<h3>8. Droit applicable et compétence juridictionnelle.</h3>\n<p>Tout litige en relation avec l’utilisation du site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris.</p>\n\n<h3>9. Lexique.</h3>\n<p>Utilisateur : Internaute se connectant, utilisant le site susnommé.</p>\n<p>Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>",
+          "en-US": "<p>These general terms and conditions (hereinafter referred to as the \"Terms\") have been drafted in accordance with the following laws and regulations:\nRegulation 2016/679 of the European Parliament and of the European Council;\nFrench law of June 21, 2004 for confidence in the digital economy and the Data Privacy and in particular its Article 6.\nIts amendment law n° 2004-801 August 6, 2004 in the Act relating to data, files and freedoms\nLaw n° 78-17 of January 6, 1978 in the Act for Information Technology and Data Protection </p> \n<p>It is specified to the users of the website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> the identity of persons and entities involved in producing and operating this website :</p>\n<p><strong>Owner</strong> : Melting Sports Consulting – SAS – 1 rue des Panoyaux - 75020 Paris - France (the \"Company\")<br />\n<strong>Creator</strong>  : <a href=\"https://www.meltingsportsconsulting.com\">Ahmed Labassi</a><br />\n<strong>Content editor</strong> : Ahmed Labassi – alabassi@meltingsports.org<br />\nThe content editor is a legal entity or a private individual.<br />\n<strong>Webmaster</strong> : Ahmed Labassi – alabassi@meltingsports.org<br />\n<strong>Host</strong> : Netlify – 2325 3rd St #215, San Francisco, CA 94107, États-Unis<br />\n\n<h3>1. Presentation of the Terms of use of the website and any services provided:</h3>\n<p>Access to and use of the website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> implies full acceptance of the Terms described below. These Terms are subject to change and may be amended at any time, users of the website are thus invited to check these regularly.\nThis website is basically available to users at any time. An interruption due to technical intervention may however be decided by the Company, which will then endeavor to warn the users before the dates and times of such a technical intervention.\nThe website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> is regularly updated by the Publication Manager. Similarly, the legal mentions can be amended at any time: that implies for the users to refer and check these as often as possible.\n\n<h3>2. Description of the services provided.</h3>\n<p>The website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> is intended to provide information about all of the Company's activities.\nThe Company strives to provide information on<a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> as accurate and detailed as possible. However, the Company can not be held responsible for any omission, inaccuracy or deficiency in the update, whether by him or the third party partners who provide this information.\nAll the information indicated on the website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> are given as an indication, and are likely to be amended and/or evolve. In addition, the information on the website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> is not exhaustive. The information is thus given subject to change at any time since the website in online.\n\n<h3>3. Contractual Limitations regarding Technical Data.</h3>\n<p>This website uses JavaScript technology.</p>\n<p>This website can not be held responsible for material damage related to its use. In addition, the user agrees to access the website using recent equipment, not containing any viruses and using a browser with recent updates. </p>\n\n<h3>4. Intellectual property and anti-ambush policy.</h3>\n<p>Melting Sports Consulting owns the intellectual property or holds the rights to use all the elements available on the website, including text, images, graphics, logos, icons, sounds, software.</p>\n<p>TAny reproduction, representation, modification, publication, adaptation of all or part of the elements of the website, whatever means or process used, is prohibited without any prior written authorization of the Company.</p>\n<p>Any unauthorized use of the website or any of its content will be considered an infringement and prosecuted in accordance with the provisions of Articles L.335-2 and following of the Code of Intellectual Property.</p>\n\n<h3>5. Limitations of liability.</h3>\n<p>Melting Sports Consulting can not be held liable for direct or indirect damage caused to the user's equipment when accessing the website, and resulting from the use of material that does not meet the technical specifications indicated in point 4, either the appearance of a bug or an incompatibility.</p>\n<p>Melting Sports Consulting can not also be held liable for consequential damages (such as a loss of market or loss of opportunity) arising from the use of the website (tels par exemple qu’une perte de marché ou perte d’une chance) consécutifs à l’utilisation du site <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a>.</p>\n<p>Interactive devices (possibility to ask questions in the contact area) are available to users. Melting Sports Consulting reserves the right to remove, without prior notice, any content posted in this space that would violate the applicable law in France, especially the provisions of the data protection Acts. If necessary, Melting Sports Consulting also reserves all rights to question the user's civil and / or criminal liability, particularly in the event of a racist, abusive, defamatory statements or pornographic message, regardless of the medium used. (text, photography ...).</p>\n\n<h3>6. Personal data management.</h3>\n<p>In France, personal data are protected in particular by the law n ° 78-87 of January 6th, 1978, the law n ° 2004-801 of August 6th, 2004, the article L. 226-13 of the Penal Code and the European Directive of the October 24, 1995.</p>\n<p>When using the website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> can be collected: the URL of the links through which the user has accessed <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a>, the service provider of the user, the Internet Protocol (IP) address of the user.</p>\n<p> In any case the Company only collects personal information about the user for the need of certain services offered by the website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a>. The user provides this information with full acknowledgement of the facts, in particular when he proceeds to input them himself. It is then specified to the user of the website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> the obligation or not to provide this information.</p>\n<p>In accordance with the provisions of Article 38 et seq. Of Law 78-17 of 6 January 1978 relating to data, files and freedoms, all users have a right of access, rectification and opposition to personal data. concerning him, by making his written and signed request, accompanied by a copy of the identity document with signature of the holder of the document, specifying the address to which the answer must be sent.</p>\n<p>No personal information of the user of the website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> is published without the knowledge of the user, exchanged, transferred, assigned or sold on any support to third parties. Only the assumption of redemption of Melting Sports Consulting and its rights would allow the transmission of such information to the prospective purchaser who would in turn be given the same obligation to store and modify data with respect to the user of the website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a>.</p>\n<p>The site is not declared to the CNIL because it does not collect personal information.</p>\n<p>The databases are protected by the provisions of the Act of 1 July 1998 transposing Directive 96/9 of 11 March 1996 on the legal protection of databases.</p>\n\n<h3>7. Hypertext links and cookies.</h3>\n<p>The website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> contains a number of hypertext links to other sites, set up with the permission of Melting Sports Consulting. However, Melting Sports Consulting does not have the opportunity to check the content of the sites visited, and therefore assumes no liability for this fact.</p>\n<p>Browsing the website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> may cause the installation of cookie(s) on the user's computer. A cookie is a small file, which does not allow the identification of the user, but which records information relating to the navigation of a computer on a site. The data thus obtained are intended to facilitate subsequent navigation on the website and are also intended to allow various measures of attendance.</p>\n<p>The refusal to install a cookie may make it impossible to access certain services. The user can however configure his computer as follows, to refuse the installation of cookies:</p>\n<p>Internet Explorer : tool tab (pictogram in the form of a cog in the upper right corner) / internet options. Click Privacy and choose Block all cookies. Validate on Ok.</p>\n<p>Firefox: at the top of the browser window, click the Firefox button, then go to the Options tab. Click on the Privacy tab. Set the retention rules to: use custom settings for history. Finally uncheck it to disable cookies.\n<p>Safari : Click on the top right of the browser on the menu pictogram (symbolized by a cog). Select Settings. Click Show Advanced Settings. In the \"Privacy\" section, click Content Settings. In the \"Cookies\" section, you can block cookies.</p>\n<p>Chrome :Click at the top right of the browser on the menu icon (symbolized by three horizontal lines). Select Settings. Click Show Advanced Settings. In the \"Privacy\" section, click Preferences. In the \"Privacy\" tab, you can block cookies.</p>\n\n<h3>8. Governing law and jurisdiction.</h3>\n<p>Any dispute relevant or in connection with the use of the website <a href=\"http://www.meltingsportsconsulting.com/\">www.meltingsportsconsulting.com</a> is subject to French law. It is made exclusive jurisdiction to the competent courts of Paris.</p>\n\n<h3>9. Glossary.</h3>\n<p>User: Internet user connecting, using the aforementioned site.</p>\n<p>Personal information: \"information that allows, in any form whatsoever, directly or indirectly, the identification of natural persons to whom they apply\" (Article 4 of Law No. 78-17 of 6 January 1978).</p>"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "1nc8yQlDwg48IqeYs2SCwS",
+        "type": "Asset",
+        "createdAt": "2018-05-20T16:34:08.335Z",
+        "updatedAt": "2018-05-26T01:02:59.709Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 7,
+        "firstPublishedAt": "2018-05-20T16:35:13.910Z",
+        "publishedAt": "2018-05-26T01:02:59.709Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Fans welcome page"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/1nc8yQlDwg48IqeYs2SCwS/6805ab8f12a2022ea089bddb7385c9da/Fans_welcome_page.jpg",
+            "details": {
+              "size": 422726,
+              "image": {
+                "width": 1920,
+                "height": 959
+              }
+            },
+            "fileName": "Fans welcome page.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "6dsNsrPMWWUS2csasC8oeu",
+        "type": "Asset",
+        "createdAt": "2018-05-20T19:35:23.899Z",
+        "updatedAt": "2018-05-20T19:36:03.426Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-20T19:36:03.426Z",
+        "publishedAt": "2018-05-20T19:36:03.426Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "wrapper2"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/6dsNsrPMWWUS2csasC8oeu/33fdc7a9e2857a42a7937ab6d9d73c1f/wrapper2.jpg",
+            "details": {
+              "size": 1500876,
+              "image": {
+                "width": 3069,
+                "height": 2217
+              }
+            },
+            "fileName": "wrapper2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "2PHrHCgcdyOm4IY2uKeq6S",
+        "type": "Asset",
+        "createdAt": "2018-05-22T08:06:31.280Z",
+        "updatedAt": "2018-05-22T08:07:18.856Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-22T08:07:18.856Z",
+        "publishedAt": "2018-05-22T08:07:18.856Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Yasmine Arkoub"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/2PHrHCgcdyOm4IY2uKeq6S/cc14b0655025d7863ddf6f739d050132/Yasmine_Arkoub.jpg",
+            "details": {
+              "size": 30909,
+              "image": {
+                "width": 450,
+                "height": 450
+              }
+            },
+            "fileName": "Yasmine Arkoub.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "248LXttIG0aE4q6q2Ym6ic",
+        "type": "Asset",
+        "createdAt": "2018-05-22T08:10:43.717Z",
+        "updatedAt": "2018-05-22T08:11:01.675Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-22T08:11:01.675Z",
+        "publishedAt": "2018-05-22T08:11:01.675Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Salah Ben Meftah"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/248LXttIG0aE4q6q2Ym6ic/a67fd2cdd5036f8852a8a5f6d570dc3b/Salah_Ben_Meftah.jpg",
+            "details": {
+              "size": 18935,
+              "image": {
+                "width": 283,
+                "height": 283
+              }
+            },
+            "fileName": "Salah Ben Meftah.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "4xPoGR6WWsCOQAOI8GcAka",
+        "type": "Asset",
+        "createdAt": "2018-05-22T08:17:00.376Z",
+        "updatedAt": "2018-05-22T08:27:44.331Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 13,
+        "firstPublishedAt": "2018-05-22T08:17:38.509Z",
+        "publishedAt": "2018-05-22T08:27:44.331Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Ahmed Labassi"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/4xPoGR6WWsCOQAOI8GcAka/d86ffdb6bece27a54cbb761433d8221a/PI_2.jpg",
+            "details": {
+              "size": 89395,
+              "image": {
+                "width": 688,
+                "height": 688
+              }
+            },
+            "fileName": "PI_2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "3t2IkLjcSciMGcww6MW8gA",
+        "type": "Asset",
+        "createdAt": "2018-05-22T08:21:08.878Z",
+        "updatedAt": "2018-05-22T08:21:23.953Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-22T08:21:23.953Z",
+        "publishedAt": "2018-05-22T08:21:23.953Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Yasmine Arkoub"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/3t2IkLjcSciMGcww6MW8gA/5d5a6a74bdd1ded15ca2f7d6a07f6cf8/Yasmine_Arkoub.jpg",
+            "details": {
+              "size": 49241,
+              "image": {
+                "width": 450,
+                "height": 450
+              }
+            },
+            "fileName": "Yasmine Arkoub.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "2ANPNRwEs8Y0Q0qUeQeu6c",
+        "type": "Asset",
+        "createdAt": "2018-05-22T08:22:45.606Z",
+        "updatedAt": "2018-05-22T08:23:04.551Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-22T08:23:04.551Z",
+        "publishedAt": "2018-05-22T08:23:04.551Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Salah Ben Meftah"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/2ANPNRwEs8Y0Q0qUeQeu6c/3ff771e007b6b9822fe5172dbf682946/Salah_Ben_Meftah.jpg",
+            "details": {
+              "size": 45717,
+              "image": {
+                "width": 283,
+                "height": 283
+              }
+            },
+            "fileName": "Salah Ben Meftah.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "3ikBWlV4Zam4uK28Q82qgy",
+        "type": "Asset",
+        "createdAt": "2018-05-22T08:41:37.267Z",
+        "updatedAt": "2018-05-22T08:44:21.225Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-22T08:44:21.225Z",
+        "publishedAt": "2018-05-22T08:44:21.225Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "collaboration"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/3ikBWlV4Zam4uK28Q82qgy/0964f7a8087d1eecc30c0fc1c72a97a2/collaboration.jpg",
+            "details": {
+              "size": 3605409,
+              "image": {
+                "width": 6765,
+                "height": 4515
+              }
+            },
+            "fileName": "collaboration.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "6nm5xCC1RS6GOuM62ek8cy",
+        "type": "Asset",
+        "createdAt": "2018-05-26T01:43:41.026Z",
+        "updatedAt": "2018-05-26T01:43:51.278Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-26T01:43:51.278Z",
+        "publishedAt": "2018-05-26T01:43:51.278Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "white"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/6nm5xCC1RS6GOuM62ek8cy/466bcb86af88d6dbf4911cf559919293/white.jpg",
+            "details": {
+              "size": 1032,
+              "image": {
+                "width": 365,
+                "height": 300
+              }
+            },
+            "fileName": "white.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "2Qv590rP5eImo0qceyCck0",
+        "type": "Asset",
+        "createdAt": "2018-05-26T15:39:51.460Z",
+        "updatedAt": "2018-05-26T15:40:14.146Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-26T15:40:14.146Z",
+        "publishedAt": "2018-05-26T15:40:14.146Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Fumigene-laser-bombe-agricole-l-OM-met-en-garde-ses-supporters-avant-le-Classique-face-au-PSG"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/2Qv590rP5eImo0qceyCck0/1e3db180a7e53cbb8058c60e47cb580a/Fumigene-laser-bombe-agricole-l-OM-met-en-garde-ses-supporters-avant-le-Classique-face-au-PSG.jpg",
+            "details": {
+              "size": 7805581,
+              "image": {
+                "width": 4254,
+                "height": 2127
+              }
+            },
+            "fileName": "Fumigene-laser-bombe-agricole-l-OM-met-en-garde-ses-supporters-avant-le-Classique-face-au-PSG.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "23SCoD1E4EiOkYQcsCk8gS",
+        "type": "Asset",
+        "createdAt": "2018-05-28T07:35:06.673Z",
+        "updatedAt": "2018-05-28T07:35:35.232Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-28T07:35:35.232Z",
+        "publishedAt": "2018-05-28T07:35:35.232Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "CAN Handball"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/23SCoD1E4EiOkYQcsCk8gS/92e984aefbe29cad1c4418c30e4d83e1/CAN_Handball.jpg",
+            "details": {
+              "size": 564807,
+              "image": {
+                "width": 1920,
+                "height": 960
+              }
+            },
+            "fileName": "CAN Handball.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "3w6KEYjXv2McmGAgmwA4e8",
+        "type": "Asset",
+        "createdAt": "2018-05-28T07:39:20.585Z",
+        "updatedAt": "2018-05-28T07:39:32.572Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-28T07:39:32.572Z",
+        "publishedAt": "2018-05-28T07:39:32.572Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "FootFeminin"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/3w6KEYjXv2McmGAgmwA4e8/97221aa330fe8fc55097a062873df96d/FootFeminin.jpg",
+            "details": {
+              "size": 20910,
+              "image": {
+                "width": 500,
+                "height": 302
+              }
+            },
+            "fileName": "FootFeminin.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "11MmrKj3pKuaIsegocmEcA",
+        "type": "Asset",
+        "createdAt": "2018-05-28T09:49:20.806Z",
+        "updatedAt": "2018-05-28T09:49:38.991Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-28T09:49:38.991Z",
+        "publishedAt": "2018-05-28T09:49:38.991Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "FootFeminin"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/11MmrKj3pKuaIsegocmEcA/9c7f78df0e96609d425c436d9c9ee387/FootFeminin.jpg",
+            "details": {
+              "size": 245180,
+              "image": {
+                "width": 1920,
+                "height": 960
+              }
+            },
+            "fileName": "FootFeminin.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "4fukILG9RKk6oO4S2MOOyi",
+        "type": "Asset",
+        "createdAt": "2018-05-28T11:00:47.817Z",
+        "updatedAt": "2018-05-28T11:01:48.711Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-28T11:01:48.711Z",
+        "publishedAt": "2018-05-28T11:01:48.711Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Afrobasket"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/4fukILG9RKk6oO4S2MOOyi/ae98a7b431f379ed609d7876f9e85570/Afrobasket.jpg",
+            "details": {
+              "size": 385174,
+              "image": {
+                "width": 1920,
+                "height": 960
+              }
+            },
+            "fileName": "Afrobasket.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "2n5pJbQ2cQAwKCQIWoUAyy",
+        "type": "Asset",
+        "createdAt": "2018-05-28T11:02:07.162Z",
+        "updatedAt": "2018-05-28T11:02:21.690Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-28T11:02:21.690Z",
+        "publishedAt": "2018-05-28T11:02:21.690Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "CAN2017"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/2n5pJbQ2cQAwKCQIWoUAyy/70e227ecfe2f0ce287eb6c0914aaba7b/CAN2017.jpg",
+            "details": {
+              "size": 507565,
+              "image": {
+                "width": 1920,
+                "height": 960
+              }
+            },
+            "fileName": "CAN2017.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "1rpbTrYx6gO6YCqUaguyuM",
+        "type": "Asset",
+        "createdAt": "2018-05-28T11:09:12.657Z",
+        "updatedAt": "2018-05-28T11:09:28.146Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-28T11:09:28.146Z",
+        "publishedAt": "2018-05-28T11:09:28.146Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "CANFeminine"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/1rpbTrYx6gO6YCqUaguyuM/b1083af867ea1b67d96d1101acf6b783/CANFeminine.jpg",
+            "details": {
+              "size": 332340,
+              "image": {
+                "width": 1920,
+                "height": 961
+              }
+            },
+            "fileName": "CANFeminine.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "3WbOhWFoJWGoY4mEM6yqqE",
+        "type": "Asset",
+        "createdAt": "2018-05-29T21:20:40.299Z",
+        "updatedAt": "2018-05-29T21:21:06.386Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-29T21:21:06.386Z",
+        "publishedAt": "2018-05-29T21:21:06.386Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "PI 2"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/3WbOhWFoJWGoY4mEM6yqqE/038f568820d47700f2ce15f35bcf32b9/PI_2.jpg",
+            "details": {
+              "size": 17473,
+              "image": {
+                "width": 283,
+                "height": 283
+              }
+            },
+            "fileName": "PI 2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "2R2DzEZI0UYeOYwOA2MISA",
+        "type": "Asset",
+        "createdAt": "2018-05-29T21:22:37.184Z",
+        "updatedAt": "2018-05-29T21:23:01.346Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-29T21:23:01.346Z",
+        "publishedAt": "2018-05-29T21:23:01.346Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Yasmine Arkoub"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/2R2DzEZI0UYeOYwOA2MISA/3d1a5e62a65fce5bd07a276357ecb64e/Yasmine_Arkoub.jpg",
+            "details": {
+              "size": 12642,
+              "image": {
+                "width": 283,
+                "height": 283
+              }
+            },
+            "fileName": "Yasmine Arkoub.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "5osWUeAGFqKqY2mMOGCE0A",
+        "type": "Asset",
+        "createdAt": "2018-05-29T22:10:39.504Z",
+        "updatedAt": "2018-05-29T22:11:03.355Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-29T22:11:03.355Z",
+        "publishedAt": "2018-05-29T22:11:03.355Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Together"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/5osWUeAGFqKqY2mMOGCE0A/78da09618fedb91a205961fab7b42f4b/Together.jpg",
+            "details": {
+              "size": 561357,
+              "image": {
+                "width": 1920,
+                "height": 1280
+              }
+            },
+            "fileName": "Together.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "X9R7JGeEU0IYEAG6gyseS",
+        "type": "Asset",
+        "createdAt": "2018-05-29T22:26:54.687Z",
+        "updatedAt": "2018-05-29T22:27:14.705Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-29T22:27:14.705Z",
+        "publishedAt": "2018-05-29T22:27:14.705Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Liverpool together"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/X9R7JGeEU0IYEAG6gyseS/415977826ecf494f86c9346944bb9837/Liverpool_together.jpg",
+            "details": {
+              "size": 18404,
+              "image": {
+                "width": 273,
+                "height": 184
+              }
+            },
+            "fileName": "Liverpool together.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "64HtNaHTvak0YWIs4aOiQA",
+        "type": "Asset",
+        "createdAt": "2018-05-29T22:39:40.453Z",
+        "updatedAt": "2018-05-29T22:40:16.642Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-05-29T22:40:16.642Z",
+        "publishedAt": "2018-05-29T22:40:16.642Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "Liverpool together"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/64HtNaHTvak0YWIs4aOiQA/c446be03e90dfa091a229a9d278b982f/Liverpool_together.jpg",
+            "details": {
+              "size": 91045,
+              "image": {
+                "width": 710,
+                "height": 399
+              }
+            },
+            "fileName": "Liverpool together.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "5QGbdxTVTOege8sYs4IUyC",
+        "type": "Asset",
+        "createdAt": "2018-06-04T19:38:39.364Z",
+        "updatedAt": "2018-06-04T19:39:10.615Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-06-04T19:39:10.615Z",
+        "publishedAt": "2018-06-04T19:39:10.615Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "PI Salah"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/5QGbdxTVTOege8sYs4IUyC/7b556dd28ad0ecdd4828218bccd9c787/PI_Salah.jpg",
+            "details": {
+              "size": 1224394,
+              "image": {
+                "width": 1181,
+                "height": 1772
+              }
+            },
+            "fileName": "PI Salah.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "60w8OCJu48iwaiaGqeEmSq",
+        "type": "Asset",
+        "createdAt": "2018-06-04T19:40:18.695Z",
+        "updatedAt": "2018-06-04T19:40:29.200Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-06-04T19:40:29.200Z",
+        "publishedAt": "2018-06-04T19:40:29.200Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "PI Yasmine"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/60w8OCJu48iwaiaGqeEmSq/2f5b4c1b40351fddd0cffa00dd3f296b/PI_Yasmine.jpg",
+            "details": {
+              "size": 1629084,
+              "image": {
+                "width": 1181,
+                "height": 1772
+              }
+            },
+            "fileName": "PI Yasmine.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "4c6UyoDofKOi2WCuy00OgS",
+        "type": "Asset",
+        "createdAt": "2018-06-04T19:46:14.526Z",
+        "updatedAt": "2018-06-04T19:46:23.970Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-06-04T19:46:23.970Z",
+        "publishedAt": "2018-06-04T19:46:23.970Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "PI Ahmed"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/4c6UyoDofKOi2WCuy00OgS/bd48600c853f954c2c3cc1d5301a4406/PI_Ahmed.jpg",
+            "details": {
+              "size": 1485010,
+              "image": {
+                "width": 1181,
+                "height": 1772
+              }
+            },
+            "fileName": "PI Ahmed.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "4dqhCm3UQMCuawe2wSQcCg",
+        "type": "Asset",
+        "createdAt": "2018-06-04T20:43:26.610Z",
+        "updatedAt": "2018-06-04T20:43:39.172Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-06-04T20:43:39.172Z",
+        "publishedAt": "2018-06-04T20:43:39.172Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "PI Salah"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/4dqhCm3UQMCuawe2wSQcCg/c6599ad58d9e68b7679f7234bf0be038/PI_Salah.jpg",
+            "details": {
+              "size": 228647,
+              "image": {
+                "width": 1181,
+                "height": 1181
+              }
+            },
+            "fileName": "PI Salah.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "4F8r1Rocl2ScqkgAaGcyIq",
+        "type": "Asset",
+        "createdAt": "2018-06-04T20:44:02.924Z",
+        "updatedAt": "2018-06-04T20:44:33.148Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-06-04T20:44:33.148Z",
+        "publishedAt": "2018-06-04T20:44:33.148Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "PI Ahmed"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/4F8r1Rocl2ScqkgAaGcyIq/6d7490b6e3251528cabb2c8cf0301a64/PI_Ahmed.jpg",
+            "details": {
+              "size": 288358,
+              "image": {
+                "width": 1181,
+                "height": 1181
+              }
+            },
+            "fileName": "PI Ahmed.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "id": "tq4whb5tyCMoiEAYK8ES0",
+        "type": "Asset",
+        "createdAt": "2018-06-04T20:44:49.624Z",
+        "updatedAt": "2018-06-04T20:45:00.797Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "publishedVersion": 4,
+        "firstPublishedAt": "2018-06-04T20:45:00.797Z",
+        "publishedAt": "2018-06-04T20:45:00.797Z"
+      },
+      "fields": {
+        "title": {
+          "fr": "PI Yasmine"
+        },
+        "file": {
+          "fr": {
+            "url": "//images.ctfassets.net/3rkpxhjpyn87/tq4whb5tyCMoiEAYK8ES0/21e2c4bf5487a28f93e7de46a346a3fb/PI_Yasmine.jpg",
+            "details": {
+              "size": 377599,
+              "image": {
+                "width": 1181,
+                "height": 1181
+              }
+            },
+            "fileName": "PI Yasmine.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "French",
+      "code": "fr",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "5iFSWEaPZEs4qQg1YbWL4m",
+        "version": 2,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "createdAt": "2018-05-20T16:20:48Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedAt": "2018-05-21T15:31:44Z"
+      }
+    },
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": "fr",
+      "default": false,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": true,
+      "sys": {
+        "type": "Locale",
+        "id": "4lafNalEOf3Bei9Zm4BY4m",
+        "version": 3,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "createdAt": "2018-05-25T22:26:13Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedAt": "2018-05-25T23:54:03Z"
+      }
+    }
+  ],
+  "webhooks": [
+    {
+      "name": "Trigger Netlify Build",
+      "url": "https://api.netlify.com/build_hooks/5b0227cee39e7c152cfc73b0",
+      "httpBasicUsername": null,
+      "topics": [
+        "Entry.publish",
+        "Entry.unpublish",
+        "Entry.delete"
+      ],
+      "filters": null,
+      "transformation": null,
+      "sys": {
+        "type": "WebhookDefinition",
+        "id": "4O7CBmUvD5fWWxn98aNguO",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "3rkpxhjpyn87"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "createdAt": "2018-05-21T02:00:10Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "6JFFwbgkiV6V8RKWphQOai"
+          }
+        },
+        "updatedAt": "2018-10-21T02:39:26Z"
+      },
+      "headers": [
+      ]
+    }
+  ],
+  "roles": [
+  ]
+}

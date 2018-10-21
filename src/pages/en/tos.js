@@ -1,6 +1,6 @@
 import React from 'react';
 import Cgu from '../cgu';
-import { graphql } from 'gatsby'
+import { graphql } from 'gatsby';
 export default Cgu;
 
 export const tosQueryEn = graphql`
@@ -33,6 +33,9 @@ export const tosQueryEn = graphql`
             }
           }
           image: slideshow {
+            fluid(maxWidth: 1920) {
+              ...GatsbyContentfulFluid_withWebp_noBase64
+            }
             file {
               url
               fileName
@@ -69,13 +72,16 @@ export const tosQueryEn = graphql`
             }
           }
           image: aboutImage {
-            resolutions(width: 500, quality: 80) {
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
+            fluid(maxWidth: 500) {
+              ...GatsbyContentfulFluid_withWebp_noBase64
             }
+            # resolutions(width: 500, quality: 80) {
+            #   aspectRatio
+            #   src
+            #   srcSet
+            #   srcWebp
+            #   srcSetWebp
+            # }
           }
           backgroundImageToggle
         }
@@ -91,13 +97,16 @@ export const tosQueryEn = graphql`
           team {
             id
             image: teamImage {
-              resolutions(width: 400, quality: 80) {
-                aspectRatio
-                src
-                srcSet
-                srcWebp
-                srcSetWebp
+              fluid(maxWidth: 400) {
+                ...GatsbyContentfulFluid_withWebp_noBase64
               }
+              # resolutions(width: 400, quality: 80) {
+              #   aspectRatio
+              #   src
+              #   srcSet
+              #   srcWebp
+              #   srcSetWebp
+              # }
             }
             name
             position
@@ -122,13 +131,16 @@ export const tosQueryEn = graphql`
             id
             title
             image: serviceImage {
-              resolutions(width: 300, quality: 50) {
-                aspectRatio
-                src
-                srcSet
-                srcWebp
-                srcSetWebp
+              fluid(maxWidth: 300) {
+                ...GatsbyContentfulFluid_withWebp_noBase64
               }
+              # resolutions(width: 300, quality: 50) {
+              #   aspectRatio
+              #   src
+              #   srcSet
+              #   srcWebp
+              #   srcSetWebp
+              # }
             }
             description {
               markdown: childMarkdownRemark {

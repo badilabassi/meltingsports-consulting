@@ -1,7 +1,6 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Img from 'gatsby-image';
 import withStyles from 'material-ui/styles/withStyles';
 import withRoot from '../withRoot';
 // import 'font-awesome/css/font-awesome.min.css';
@@ -9,20 +8,12 @@ import Helmet from 'react-helmet';
 
 import GridContainer from '../components/Grid/GridContainer.jsx';
 import GridItem from '../components/Grid/GridItem.jsx';
-import Card from '../components/Card/Card.jsx';
-import CardBody from '../components/Card/CardBody.jsx';
 import Footer from '../components/Footer/Footer.jsx';
 import landingPageStyle from '../jss/material-kit-react/views/landingPage.jsx';
 
 import Header from '../components/Header/Header';
 import HeaderLinks from '../components/Header/HeaderLinks';
-import Hero from '../components/hero';
-import About from '../components/about';
-import TeamSection from '../components/team';
-import Services from '../components/services';
-import ContactUs from '../components/contact';
-import { graphql } from 'gatsby'
-import { initGoogleMaps } from '../utils/googleMaps';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 
 import _ from 'lodash';
@@ -32,7 +23,6 @@ const propTypes = {
 };
 
 const CguPage = ({ classes, data }) => {
-  const heroEdges = data.hero.edges;
   const aboutEdges = data.about.edges;
   const teamEdges = data.team.edges;
   const servicesEdges = data.services.edges;
@@ -150,25 +140,28 @@ export const pageQuery = graphql`
             }
           }
           image: slideshow {
-            file {
-              url
-              fileName
-              contentType
-              details {
-                image {
-                  width
-                  height
-                }
-                size
-              }
+            fluid(maxWidth: 1920) {
+              ...GatsbyContentfulFluid_withWebp_noBase64
             }
-            resolutions(width: 1920, quality: 90) {
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
-            }
+            # file {
+            #   url
+            #   fileName
+            #   contentType
+            #   details {
+            #     image {
+            #       width
+            #       height
+            #     }
+            #     size
+            #   }
+            # }
+            # resolutions(width: 1920, quality: 90) {
+            #   aspectRatio
+            #   src
+            #   srcSet
+            #   srcWebp
+            #   srcSetWebp
+            # }
           }
         }
       }
@@ -186,13 +179,16 @@ export const pageQuery = graphql`
             }
           }
           image: aboutImage {
-            resolutions(width: 500, quality: 80) {
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
+            fluid(maxWidth: 500) {
+              ...GatsbyContentfulFluid_withWebp_noBase64
             }
+            # resolutions(width: 500, quality: 80) {
+            #   aspectRatio
+            #   src
+            #   srcSet
+            #   srcWebp
+            #   srcSetWebp
+            # }
           }
           backgroundImageToggle
         }
@@ -208,13 +204,16 @@ export const pageQuery = graphql`
           team {
             id
             image: teamImage {
-              resolutions(width: 400, quality: 80) {
-                aspectRatio
-                src
-                srcSet
-                srcWebp
-                srcSetWebp
+              fluid(maxWidth: 400) {
+                ...GatsbyContentfulFluid_withWebp_noBase64
               }
+              # resolutions(width: 400, quality: 80) {
+              #   aspectRatio
+              #   src
+              #   srcSet
+              #   srcWebp
+              #   srcSetWebp
+              # }
             }
             name
             position
@@ -239,13 +238,16 @@ export const pageQuery = graphql`
             id
             title
             image: serviceImage {
-              resolutions(width: 300, quality: 50) {
-                aspectRatio
-                src
-                srcSet
-                srcWebp
-                srcSetWebp
+              fluid(maxWidth: 300) {
+                ...GatsbyContentfulFluid_withWebp_noBase64
               }
+              # resolutions(width: 300, quality: 50) {
+              #   aspectRatio
+              #   src
+              #   srcSet
+              #   srcWebp
+              #   srcSetWebp
+              # }
             }
             description {
               markdown: childMarkdownRemark {

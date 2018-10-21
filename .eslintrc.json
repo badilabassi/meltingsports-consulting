@@ -1,12 +1,5 @@
 {
-  "parser": "babel-eslint",
-  "env": {
-    "browser": true
-  },
-  "globals": {
-    "graphql": false
-  },
-  "extends": ["prettier"],
+  "extends": ["gatsby-standard", "prettier"],
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": ["error", {
@@ -14,8 +7,6 @@
       "singleQuote": true,
       "trailingComma": "none"
     }],
-    "react/jsx-filename-extension": [0],
-    "import/no-named-as-default": 0,
-    "import/no-named-as-default-member": 0
+    "no-unsafe-finally": "off"
   }
 }

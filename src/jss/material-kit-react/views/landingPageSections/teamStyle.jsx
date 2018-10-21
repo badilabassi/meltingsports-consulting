@@ -1,5 +1,5 @@
-import { cardTitle, title } from '../../../material-kit-react.jsx'
-import imagesStyle from '../../imagesStyles.jsx'
+import { cardTitle, title } from '../../../material-kit-react.jsx';
+import imagesStyle from '../../imagesStyles.jsx';
 import iconButtonStyle from '../../components/iconButtonStyle';
 import {
   grayColor,
@@ -9,7 +9,7 @@ import {
   successColor,
   warningColor,
   dangerColor
-} from "../../../material-kit-react.jsx";
+} from '../../../material-kit-react.jsx';
 
 const teamStyle = {
   ...iconButtonStyle,
@@ -51,7 +51,7 @@ const teamStyle = {
     height: '100%',
     lineHeight: '41px',
     fontSize: '20px',
-    color: '#999',
+    color: '#999'
   },
   linkedInButton: {
     marginLeft: 'auto',
@@ -59,11 +59,11 @@ const teamStyle = {
   },
   linkedIn: {
     color: '#0073b1',
-    "&:hover,&:focus": {
+    '&:hover,&:focus': {
       color: '#0073b1',
       borderRadius: '50%',
       boxShadow:
-        "0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2)"
+        '0 14px 26px -12px rgba(153, 153, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(153, 153, 153, 0.2)'
     }
   },
   margin5: {
@@ -72,7 +72,7 @@ const teamStyle = {
   projectTitle: {
     lineHeight: '1.5',
     fontSize: '1.125rem',
-    fontWeight: "bold",
+    fontWeight: 'bold',
     color: '#fff',
     textAlign: 'center',
     textTransform: 'uppercase'
@@ -82,7 +82,7 @@ const teamStyle = {
     fontSize: '1rem',
     color: '#fff',
     textAlign: 'center'
-  },
-}
+  }
+};
 
-export default teamStyle
+export default teamStyle;

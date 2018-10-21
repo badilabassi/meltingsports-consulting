@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react';
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 // mterial-ui components
-import withStyles from "material-ui/styles/withStyles";
+import withStyles from 'material-ui/styles/withStyles';
 
 const style = {
   clearfix: {
-    "&:after,&:before": {
-      display: "table",
+    '&:after,&:before': {
+      display: 'table',
       content: '" "'
     },
-    "&:after": {
-      clear: "both"
+    '&:after': {
+      clear: 'both'
     }
   }
 };

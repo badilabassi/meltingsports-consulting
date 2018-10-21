@@ -1,4 +1,4 @@
-import createMuiTheme from 'material-ui/styles/createMuiTheme'
+import createMuiTheme from 'material-ui/styles/createMuiTheme';
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
 
@@ -6,7 +6,7 @@ import green from '@material-ui/core/colors/green';
 // It's optional.
 export default createMuiTheme({
   typography: {
-    useNextVariants: true,
+    useNextVariants: true
   }
 });
 

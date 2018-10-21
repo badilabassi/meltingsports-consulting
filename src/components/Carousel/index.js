@@ -14,7 +14,6 @@ class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      images: [],
       width: 0
     };
     this.imageRefs = [];
@@ -27,7 +26,7 @@ class Carousel extends Component {
   }
 
   componentWillMount() {
-    if (typeof window != 'undefined') {
+    if (typeof window !== 'undefined') {
       const width = window.innerWidth;
       this.setState({ width });
     }
@@ -41,7 +40,7 @@ class Carousel extends Component {
   }
 
   componentDidMount() {
-    if (typeof window != 'undefined') {
+    if (typeof window !== 'undefined') {
       const width = window.innerWidth;
       this.setState({ width });
     }
@@ -50,7 +49,7 @@ class Carousel extends Component {
   }
 
   getWrapperWidth() {
-    if (typeof window != 'undefined') {
+    if (typeof window !== 'undefined') {
       const width = window.innerWidth;
       this.setState({ width });
     }
@@ -73,7 +72,7 @@ class Carousel extends Component {
 
   applyStyle() {
     this.imageRefs.forEach((eachImage, index) => {
-      if (!!eachImage) {
+      if (eachImage) {
         eachImage.style.width = `${this.state.width}px`;
       }
     });
@@ -97,21 +96,22 @@ class Carousel extends Component {
               className="images-wrap"
               ref={(wrap) => (this.imageContainer = wrap)}
             >
-              {images.map((each, key) => (
-                <div
-                  ref={(el) => {
-                    this.imageRefs.push(el);
-                  }}
-                  onLoad={key === 0 ? this.getImageDim : null}
-                  data-index={key}
-                  key={key}
-                  style={{
-                    backgroundImage: `url(${each.file.url})`
-                  }}
-                >
-                  <span />
-                </div>
-              ))}
+              {!!this.props.images && this.props.images.reverse().map((image, key) => {
+                const backgroundImage = `url(${image.fluid.src})`;
+                return (
+                  <div
+                    ref={(el) => {
+                      this.imageRefs.push(el);
+                    }}
+                    onLoad={key === 0 ? this.getImageDim : null}
+                    data-index={key}
+                    key={key}
+                    style={{ backgroundImage }}
+                  >
+                    <span />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@ class Carousel extends Component {
     let { images } = this.state;
     let newImageArr = [];
     clearTimeout(this.timeout);
-    const lastImage = !!this.imageContainer
+    const lastImage = this.imageContainer
       ? this.imageContainer.children[images.length - 1]
       : null;
     if (type === 'prev') {
@@ -138,7 +138,7 @@ class Carousel extends Component {
         images.slice(0, images.length - 1)
       );
     }
-    if (!!lastImage) {
+    if (lastImage) {
       lastImage.style.transition = `all ${this.props.transitionDuration /
         1000}s`;
       lastImage.style.opacity = '0';

@@ -54,6 +54,14 @@ class Html extends React.Component {
           <title>Melting Sports | Consulting</title>
           {headComponents}
           {/* {css} */}
+          <link rel="dns-prefetch" href="https://gstatic.com" />
+          <link rel="dns-prefetch" href="https://googleapis.com" />
+          <link rel="dns-prefetch" href="https://www.google.com" />
+          <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" 
+          />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"

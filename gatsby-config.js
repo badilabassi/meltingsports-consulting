@@ -2,6 +2,26 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`
 });
 
+const path = require(`path`);
+
+let contentfulConfig
+
+try {
+  contentfulConfig = require('./.contentful')
+} catch (e) {
+  contentfulConfig = {
+    production: {
+      spaceId: process.env.SPACE_ID,
+      accessToken: process.env.ACCESS_TOKEN,
+    },
+  }
+} finally {
+  const { spaceId, accessToken } = contentfulConfig.production
+  if (!spaceId || !accessToken) {
+    throw new Error('Contentful space ID and access token need to be provided.')
+  }
+}
+
 module.exports = {
   siteMetadata: {
     title: 'Melting Sports | Consulting',
@@ -10,6 +30,19 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     `gatsby-plugin-jss`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`)
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://www.meltingsportsconsulting.com'
+      }
+    },
     {
       resolve: `@wapps/gatsby-plugin-material-ui`,
       options: {
@@ -37,32 +70,29 @@ module.exports = {
     },
     {
       resolve: 'gatsby-source-contentful',
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_API_KEY,
-        host: process.env.CONTENTFUL_HOST
-      }
+      options: process.env.NODE_ENV === 'development'
+          ? contentfulConfig.development
+          : contentfulConfig.production
     },
     'gatsby-plugin-offline',
+    `gatsby-plugin-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: 'gatsby-remark-images-contentful',
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590,
-              sizeByPixelDensity: true
+              maxWidth: 650
             }
           }
         ]
       }
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    `gatsby-plugin-catch-links`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -76,7 +106,12 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-sitemap'
-    }
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: '#0b3e79'
+      }
+    },
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-netlify'
   ]
 };

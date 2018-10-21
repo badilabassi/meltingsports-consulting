@@ -7,7 +7,7 @@ const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY;
 
 function encode(data) {
   return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 }
 export default class Contact extends React.Component {
@@ -16,15 +16,15 @@ export default class Contact extends React.Component {
     this.state = {};
   }
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  handleRecaptcha = (value) => {
+  handleRecaptcha = value => {
     this.setState({ 'g-recaptcha-response': value });
   };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     // e.preventDefault();
 
     const form = e.target;
@@ -54,7 +54,7 @@ export default class Contact extends React.Component {
       body: encode({ 'form-name': 'contact', ...this.state })
     })
       .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error));
+      .catch(error => alert(error));
 
     e.preventDefault();
   };

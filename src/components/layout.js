@@ -4,7 +4,6 @@ import * as PropTypes from 'prop-types';
 import '../css/style.scss';
 import 'animate.css/animate.css';
 
-
 const propTypes = {
   children: PropTypes.any
 };

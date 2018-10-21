@@ -1,9 +1,9 @@
-import React from "react";
-import { withStyles, IconButton } from "material-ui";
+import React from 'react';
+import { withStyles, IconButton } from 'material-ui';
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import iconButtonStyle from "../../jss/material-kit-react/components/iconButtonStyle.jsx";
+import iconButtonStyle from '../../jss/material-kit-react/components/iconButtonStyle.jsx';
 
 function IconCustomButton({ ...props }) {
   const { classes, color, children, className, ...rest } = props;
@@ -12,8 +12,8 @@ function IconCustomButton({ ...props }) {
       {...rest}
       className={
         classes.button +
-        (color ? " " + classes[color] : "") +
-        (className ? " " + className : "")
+        (color ? ' ' + classes[color] : '') +
+        (className ? ' ' + className : '')
       }
     >
       {children}
@@ -24,18 +24,18 @@ function IconCustomButton({ ...props }) {
 IconCustomButton.propTypes = {
   classes: PropTypes.object.isRequired,
   color: PropTypes.oneOf([
-    "primary",
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "rose",
-    "white",
-    "transparent",
-    "facebook",
-    "twitter",
-    "google",
-    "github"
+    'primary',
+    'info',
+    'success',
+    'warning',
+    'danger',
+    'rose',
+    'white',
+    'transparent',
+    'facebook',
+    'twitter',
+    'google',
+    'github'
   ]),
   simple: PropTypes.bool,
   disabled: PropTypes.bool
