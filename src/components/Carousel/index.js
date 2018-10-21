@@ -14,7 +14,7 @@ class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      width: 0
+      width: 900
     };
     this.imageRefs = [];
     this.width = 0;
@@ -97,7 +97,7 @@ class Carousel extends Component {
               ref={(wrap) => (this.imageContainer = wrap)}
             >
               {!!this.props.images && this.props.images.reverse().map((image, key) => {
-                const backgroundImage = `url(${image.fluid.src})`;
+                const backgroundImage = `url(${image.fluid.src.replace('w=1920', `w=${this.state.width * 2}`)})`;
                 return (
                   <div
                     ref={(el) => {
