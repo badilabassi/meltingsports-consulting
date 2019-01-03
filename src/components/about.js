@@ -1,7 +1,7 @@
 import React from 'react';
 import GridContainer from './Grid/GridContainer.jsx';
 import GridItem from './Grid/GridItem.jsx';
-import withStyles from 'material-ui/styles/withStyles';
+import withStyles from '@material-ui/core/styles/withStyles';
 import teamStyle from '../jss/material-kit-react/views/landingPageSections/teamStyle.jsx';
 import Img from 'gatsby-image';
 

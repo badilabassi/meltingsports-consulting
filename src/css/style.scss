@@ -9,8 +9,8 @@ img {
 }
 
 ul {
-    list-style-type: square;
-    text-align: left;
+  list-style-type: square;
+  text-align: left;
 }
 
 p {
@@ -74,20 +74,26 @@ p {
 
   &:hover {
     &:before {
-      background: rgba(0, 0, 0, .85 );
+      background: rgba(0, 0, 0, .85);
     }
+
     .service-title {
       opacity: 0;
     }
+
     .service-description {
       opacity: 1;
     }
+
     -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2),
     0 13px 24px -11px rgba(0, 0, 0, 0.6);
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2),
     0 13px 24px -11px rgba(0, 0, 0, 0.6);
   }
 
+  ul {
+    padding-left: 30px;
+  }
 
 }
 
@@ -106,7 +112,7 @@ footer a:hover {
   }
 }
 
-.about-item > div:first-child {
+.about-item>div:first-child {
   @media (max-width: 768px) {
     margin-bottom: 1.5em;
   }

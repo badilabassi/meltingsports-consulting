@@ -6,11 +6,8 @@ import React from 'react';
 // import { Link } from 'gatsby-link'
 
 // material-ui components
-import withStyles from 'material-ui/styles/withStyles';
-import List from 'material-ui/List';
-import ListItem from 'material-ui/List/ListItem';
-
-import Tooltip from 'material-ui/Tooltip';
+import { List, ListItem, withStyles } from '@material-ui/core';
+import Tooltip from '@material-ui/core/Tooltip';
 
 // @material-ui/icons
 import { Apps, CloudDownload } from '@material-ui/icons';

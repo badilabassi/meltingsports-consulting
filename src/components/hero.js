@@ -2,7 +2,7 @@ import React from 'react';
 import Parallax from './Parallax/Parallax.jsx';
 import GridContainer from './Grid/GridContainer.jsx';
 import GridItem from './Grid/GridItem.jsx';
-import withStyles from 'material-ui/styles/withStyles';
+import withStyles from '@material-ui/core/styles/withStyles';
 import landingPageStyle from '../jss/material-kit-react/views/landingPage.jsx';
 
 import classNames from 'classnames';

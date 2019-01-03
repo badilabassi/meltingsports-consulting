@@ -5,12 +5,12 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 // material-ui components
-import withStyles from 'material-ui/styles/withStyles';
+import withStyles from '@material-ui/core/styles/withStyles';
 // import Card from "material-ui/Card";
 // import CardContent from "material-ui/Card/CardContent";
 // import CardHeader from "material-ui/Card/CardHeader";
-import Tabs from 'material-ui/Tabs';
-import Tab from 'material-ui/Tabs/Tab';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tabs/Tab';
 
 // core components
 import Card from 'components/Card/Card.jsx';

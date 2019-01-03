@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import GridContainer from '../Grid/GridContainer.jsx';
 import teamStyle from '../../jss/material-kit-react/views/landingPageSections/teamStyle.jsx';
-import withStyles from 'material-ui/styles/withStyles';
+import withStyles from '@material-ui/core/styles/withStyles';
 
 import Profile from './profile';
 

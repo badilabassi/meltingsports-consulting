@@ -6,13 +6,15 @@ import PropTypes from 'prop-types';
 import { Manager, Target, Popper } from 'react-popper';
 
 // material-ui components
-import withStyles from 'material-ui/styles/withStyles';
-import MenuItem from 'material-ui/Menu/MenuItem';
-import MenuList from 'material-ui/Menu/MenuList';
-import ClickAwayListener from 'material-ui/utils/ClickAwayListener';
-import Paper from 'material-ui/Paper';
-import Grow from 'material-ui/transitions/Grow';
-import Divider from 'material-ui/Divider';
+import {
+  MenuItem,
+  MenuList,
+  withStyles,
+  Paper,
+  Grow,
+  Divider,
+  ClickAwayListener
+} from '@material-ui/core';
 
 // core components
 import Button from '../CustomButtons/Button.jsx';
@@ -83,8 +85,8 @@ class CustomDropdown extends React.Component {
                 ? 'top-end'
                 : 'top-start'
               : left
-                ? 'bottom-end'
-                : 'bottom-start'
+              ? 'bottom-end'
+              : 'bottom-start'
           }
           eventsEnabled={open}
           className={classNames({
